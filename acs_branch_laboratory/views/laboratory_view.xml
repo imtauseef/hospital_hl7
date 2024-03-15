@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <!-- Lab Request -->
+    <record id="patient_laboratory_test_request_form" model="ir.ui.view">
+        <field name="name">acs.laboratory.request.form</field>
+        <field name="model">acs.laboratory.request</field>
+        <field name="inherit_id" ref="acs_laboratory.patient_laboratory_test_request_form"/>
+        <field name="arch" type="xml">
+            <field name="company_id" position="before">
+                <field name="branch_id" groups="acs_branch_base.group_multi_branch"/>
+            </field>
+        </field>
+    </record>
+
+    <record id="view_acs_laboratory_request_search" model="ir.ui.view">
+        <field name="name">acs.laboratory.request.search</field>
+        <field name="model">acs.laboratory.request</field>
+        <field name="inherit_id" ref="acs_laboratory.view_acs_laboratory_request_search"/>
+        <field name="arch" type="xml">
+            <xpath expr="//group" position="inside">
+                <filter string="Branch" name="group_by_branch" domain="[]" context="{'group_by':'branch_id'}" groups="acs_branch_base.group_multi_branch"/>
+            </xpath>
+        </field>
+    </record>
+
+    <!-- Lab Result -->
+    <record id="patient_laboratory_test_view" model="ir.ui.view">
+        <field name="name">patient.laboratory.test.form</field>
+        <field name="model">patient.laboratory.test</field>
+        <field name="inherit_id" ref="acs_laboratory.patient_laboratory_test_view"/>
+        <field name="arch" type="xml">
+            <field name="company_id" position="before">
+                <field name="branch_id" groups="acs_branch_base.group_multi_branch"/>
+            </field>
+        </field>
+    </record>
+
+    <record id="view_hms_patient_laboratory_test_search" model="ir.ui.view">
+        <field name="name">patient.laboratory.test.search</field>
+        <field name="model">patient.laboratory.test</field>
+        <field name="inherit_id" ref="acs_laboratory.view_hms_patient_laboratory_test_search"/>
+        <field name="arch" type="xml">
+            <xpath expr="//group" position="inside">
+                <filter string="Branch" name="group_by_branch" domain="[]" context="{'group_by':'branch_id'}" groups="acs_branch_base.group_multi_branch"/>
+            </xpath>
+        </field>
+    </record>
+
+    <!-- Lab Sample -->
+    <record id="acs_patient_laboratory_sample_form" model="ir.ui.view">
+        <field name="name">acs.patient.laboratory.sample.form</field>
+        <field name="model">acs.patient.laboratory.sample</field>
+        <field name="inherit_id" ref="acs_laboratory.acs_patient_laboratory_sample_form"/>
+        <field name="arch" type="xml">
+            <field name="company_id" position="before">
+                <field name="branch_id" groups="acs_branch_base.group_multi_branch"/>
+            </field>
+        </field>
+    </record>
+
+    <record id="acs_patient_laboratory_sample_search" model="ir.ui.view">
+        <field name="name">acs.patient.laboratory.sample.search</field>
+        <field name="model">acs.patient.laboratory.sample</field>
+        <field name="inherit_id" ref="acs_laboratory.acs_patient_laboratory_sample_search"/>
+        <field name="arch" type="xml">
+            <xpath expr="//group" position="inside">
+                <filter string="Branch" name="group_by_branch" domain="[]" context="{'group_by':'branch_id'}" groups="acs_branch_base.group_multi_branch"/>
+            </xpath>
+        </field>
+    </record>
+
+</odoo>

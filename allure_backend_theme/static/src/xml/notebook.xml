@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<templates xml:space="preserve">
+
+    <t t-name="web.Notebook" t-inherit="web.Notebook" t-inherit-mode="extension" owl="1">
+        <xpath expr="//div" position="replace">
+            <div t-attf-class="o_notebook d-flex w-100 {{ props.orientation === 'horizontal' ? 'horizontal flex-column' : 'vertical flex-row' }} {{ props.className }}" t-if="state.currentPage and state.tab_type === 'horizontal_tabs'">
+                <div class="o_notebook_headers" t-att-class="{ 'm-0': props.orientation === 'vertical' }">
+                    <ul t-attf-class="nav nav-tabs {{ props.orientation === 'horizontal' ? 'flex-row flex-nowrap' : 'flex-column p-0' }}">
+                        <li t-foreach="navItems" t-as="navItem" t-key="navItem[0]" class="nav-item flex-nowrap cursor-pointer" t-if="navItem[1].isVisible">
+                            <a class="nav-link" t-attf-class="{{ navItem[0] === state.currentPage ? 'active' : '' }} {{ props.orientation === 'vertical' ? 'p-3 rounded-0' : '' }} {{ navItem[1].className }}" t-att-name="navItem[1].name" t-on-click.prevent="() => state.currentPage = navItem[0]" href="#" role="tab" tabindex="-1" t-esc="navItem[1].title"/>
+                        </li>
+                    </ul>
+                </div>
+                <div class="o_notebook_content tab-content">
+                    <div class="tab-pane active" t-ref="activePane">
+                        <t t-if="page" t-component="page.Component" t-key="state.currentPage" t-props="page.props" />
+                        <t t-else="" t-slot="{{ state.currentPage }}" />
+                    </div>
+                </div>
+            </div>
+            <div t-attf-class="o_notebook d-flex w-100 {{ props.orientation === 'horizontal' ? 'horizontal flex-column' : 'vertical flex-row' }} {{ props.className }}" t-if="state.currentPage and state.tab_type === 'vertical_tabs'">
+                
+                <ul class="panel-ul" role="tablist">
+                    <t T-esc="state.tab_configration"/>
+                    <li t-foreach="navItems" t-as="navItem" t-key="navItem[0]" t-if="navItem[1].isVisible" t-attf-class="nav-item flex-nowrap cursor-pointer {{ navItem[0] !== state.currentPage ? 'ad_close' : '' }} {{ navItem[0] === state.currentPage ? 'active' : '' }} {{ props.orientation === 'vertical' ? 'p-3 rounded-0' : '' }} {{ navItem[1].className }}">
+                        <!-- <a disable_anchor="true" role="tab">Order Lines</a> -->
+                        <a class="nav-link" t-attf-class="{{ navItem[0] === state.currentPage ? 'active' : '' }} {{ props.orientation === 'vertical' ? 'p-3 rounded-0' : '' }} {{ navItem[1].className }}" t-att-name="navItem[1].name" t-on-click.prevent="() => state.currentPage = navItem[0]" href="#" role="tab" tabindex="-1" t-esc="navItem[1].title"/>
+                        <div t-if="navItem[0] === state.currentPage" class="tab-pane active" t-ref="activePane">
+                            <t t-if="page" t-component="page.Component" t-key="state.currentPage" t-props="page.props" />
+                            <t t-else="" t-slot="{{ state.currentPage }}" />
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </xpath>
+    </t>
+</templates>
+s

@@ -1,0 +1,178 @@
+@include media-breakpoint-down(sm) {
+    body.ad_syc_login, .o_home_menu_background {
+        & > .ad_login.ad_custom_right{
+            display: table !important;
+            overflow: none !important;
+        }
+    }
+}
+@media (max-width: 576px) {
+    body.ad_syc_login, .o_home_menu_background {
+        display: block;
+        #wrapwrap{
+            main{
+                & > .ad_custom_left {
+                    & > video {
+                        left: 0;
+                    }
+                    & > .ad-image-box {
+                        .ad-img {
+                            //left: 0;
+                            position: relative;
+                        }
+                    }
+                }
+                & > .ad_login.ad_custom_right{
+                float: none;
+                }
+            }
+        }
+    }
+}
+@include media-breakpoint-down(md) {
+    body.ad_syc_login, .o_home_menu_background {
+        display: block;
+        #wrapwrap{
+            main{
+                & > .ad_custom_left {
+                    & > video {
+                        left: 0;
+                    }
+                    & > .ad-image-box {
+                        .ad-img {
+                            //left: 0;
+                            position: relative;
+                        }
+                    }
+                }
+                & > .ad_login.ad_custom_right{
+                    flex: 0 0 100%;
+                    display: flex;
+                    overflow: hidden;
+                    height: auto;
+                     & > .o_database_list {
+                        .card-body {
+                            & > .oe_signup_form, & > .oe_reset_password_form {
+                                & > .oe_login_buttons{
+                                    & > .justify-content-between {
+                                        display: block !important;
+                                        a[href="/web/login?"] {
+                                            width: 100%;
+                                            flex : none;
+                                            margin: 15px 0px 0px 0px;
+                                        }
+                                    }
+                                }
+                            }
+                            & > .oe_login_form, & > .oe_signup_form, & > .oe_reset_password_form {
+                                & > .oe_login_buttons {
+                                    display: block;
+                                    & > div.o_login_auth{
+                                            margin-top: 85px !important;
+                                        & > div.o_auth_oauth_providers{
+                                            display: block;
+                                            a {
+                                                &:nth-child(odd) {
+                                                    width: 100%;
+                                                    display: inline-block;
+                                                }
+                                                &:nth-child(even) {
+                                                    display: inline-block;
+                                                    width: 100%;
+                                                    margin-left: 0px !important;
+                                                }
+                                                &:last-child:not(:nth-child(even)) {
+                                                    width: 100%;
+                                                }
+                                            }
+                                        }
+                                        em.d-block.text-center.text-muted.small.my-1,em.d-block.text-center.text-muted.small.my-2, em.d-block.text-center.text-muted.small.my-3 {
+                                            display: none !important;
+                                        }
+                                    }
+                                    .btn.btn-primary[type="submit"], button.btn.btn-link.btn-sm.btn-block {
+                                        width: 100%;
+                                    }
+                                    & > .justify-content-between {
+                                        width: 100%;
+                                        margin-top: 1rem !important;
+                                        display: block !important;
+                                        a[href="/web/reset_password?"], a[href="/web/reset_password?debug="], a[href="/web/reset_password"],a[href="/web/reset_password?error=access"] {
+                                            display: flex;
+                                            justify-content: center;
+                                            width: 100%;
+                                        }
+                                        a[href="/web/reset_password?debug="]{
+                                            top: 135px !important;
+                                            width: 100%;
+                                        }
+                                        a[href="/web/login"], a[href="/web/signup"], a[href="/web/signup?"],a[href="/web/signup?error=access"],a[href="/web/signup?debug="] {
+                                            margin-left: 0px !important;
+                                            width: 100%;
+                                            margin-bottom: 15px;
+                                        }
+                                    }
+                                    a[href="/web/login?"], a[href="/web/login?error=access"]{
+                                        width: 100%;
+                                        margin: 15px 0px 0px 0px;
+                                    }
+                                }
+                                &[action="/web/login?debug"]{
+                                    .oe_login_buttons{
+                                        .justify-content-between{
+                                            a[href="/web/reset_password?"], a[href="/web/reset_password?debug="], a[href="/web/reset_password"],a[href="/web/reset_password?error=access"] {
+                                                top: 125px !important;
+                                                width: 100%;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                            & > .ad_manage_db {
+                                bottom: -55px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+ @include media-breakpoint-between(lg, md, $o-extra-grid-breakpoints) {
+    body.ad_syc_login, .o_home_menu_background {
+        .ad_login.ad_custom_right{
+            display: table;
+             & > .o_database_list {
+                .card-body {
+                    & > .oe_login_form, & > .oe_signup_form, & > .oe_reset_password_form {
+                        & > .oe_login_buttons {
+                            & > div.o_login_auth{
+                                & > div.o_auth_oauth_providers{
+                                    display: block;
+                                    a {
+                                        padding: 8px 0px 0px 0px;
+                                        font-size: 12px;
+                                        &:nth-child(odd) {
+                                            width: 48%;
+                                            display: inline-block;
+                                        }
+                                        &:nth-child(even) {
+                                            display: inline-block;
+                                            width: 49%;
+                                        }
+                                        &:last-child:not(:nth-child(even)) {
+                                            width: 100%;
+                                        }
+                                    }
+                                }
+                                em.d-block.text-center.text-muted.small.my-1,em.d-block.text-center.text-muted.small.my-2, em.d-block.text-center.text-muted.small.my-3 {
+                                    display: none !important;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

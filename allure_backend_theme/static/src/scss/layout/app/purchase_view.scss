@@ -1,0 +1,32 @@
+@mixin purchase_view() {
+    .o_purchase_dashboard {
+        .grid {
+            .py-2 {
+                border-top: 1px solid var(--border);
+            }
+            tbody,
+            thead {
+                >tr {
+                    >td {
+
+                        &:not(.o_text) {
+                            background-color: $tr-hover;
+
+                            &:hover {
+                                background-color: darken($tr-hover, 7%);
+                            }
+                        }
+
+                        &.o_main {
+                            background-color: var(--brand-secondary);
+
+                            &:hover {
+                                background-color: darken($brand-secondary, 7%);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

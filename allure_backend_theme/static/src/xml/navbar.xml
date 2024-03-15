@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates id="template" xml:space="preserve">
+    <t t-name="web.NavBar.favroitMenu" owl="1">
+        <div class="o_main_navbar oe_favorite_view d-flex">
+            <ul id="av_full_view" t-on-click='onFullViewClicked'>
+                <i class="fa fa-bars" />
+            </ul>
+            <ul class="oe_full_button" t-on-click='onFullScreen'>
+                <li class="oe_full"><i class="fa fa-expand" /></li>
+            </ul>
+            <div class="oe_menu_layout oe_theme_menu_layout">
+                <nav class="oe_favorite_menu">
+                    <div class="oe_apps_menu" id="oe_shorting">
+                        <t t-foreach="onOpenMenu()" t-as="app" t-key="app.id">
+                            <div class="dropdown-item o_app oe_favorite" t-att-data-id="app.id" t-on-click.prevent="() => this.OpenMenu(app)">
+                                <div t-if="app.xmlid !== 'allure_backend_theme.menu_global_search'" class="oe_menu_icon" t-attf-style="background-image: url({{app.theme_icon_data}});" />
+                                <div class="oe_menu_icon" t-else="" t-attf-style="background-image: url({{getGlobalSearchMenu(app)}});" />
+                                <span>
+                                    <t t-esc="app['favorite_menu_id'][1]" />
+                                </span>
+                            </div>
+                        </t>
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </t>
+    <t t-name="web.NavBar.AppsMenu" t-inherit="web.NavBar.AppsMenu" t-inherit-mode="extension" owl="1">
+        <xpath expr="//Dropdown" position="attributes">
+            <attribute name="class">'o_navbar_apps_menu menu_toggle'</attribute>
+        </xpath>
+    </t>
+    <t t-name="allure_backend_theme.CustomMenu" t-inherit="web.NavBar" t-inherit-mode="primary">
+        <xpath expr="//t[@t-call='web.NavBar.AppsMenu']" position="replace">
+            <a href="#" class="__menu_toggle" accesskey="h" t-on-click.prevent="() => this.CustomMenu.toggle()">
+                <div class="__icon">
+                    <span />
+                    <span />
+                    <span />
+                </div>
+            </a>
+        </xpath>
+        <xpath expr="//nav[contains(@class, 'o_main_navbar')]" position="after">
+            <t t-call="web.NavBar.favroitMenu" />
+        </xpath>
+        <xpath expr="//div[contains(@class, 'o_menu_systray')]" position="replace">
+            <div t-if="window['AllureTheme'].base_menu == 'base_menu'" class="o_menu_systray d-flex flex-shrink-0 ms-auto" role="menu">
+                <t t-foreach="systrayItems" t-as="item" t-key="item.key">
+                    <!-- <NotUpdatable> -->
+                        <ErrorHandler onError="error => handleItemError(error, item)">
+                            <t t-component="item.Component" t-props="item.props" />
+                        </ErrorHandler>
+                    <!-- </NotUpdatable> -->
+                </t>
+            </div>
+            <div t-else="" class="__menu_systray __user_menu" role="menu">
+                <a t-if="!state.activeSystray" role="button" data-hotkey="u" t-on-click="() => this.state.activeSystray = true" class="user_menu" data-toggle="collapse" data-target="#o_menu_systray" aria-expanded="true">
+                    <img class="rounded-circle" t-att-src="this.source" />
+                </a>
+                <a t-if="state.activeSystray" role="button" data-hotkey="u" t-on-click="() => this.state.activeSystray = false" class="user_menu" data-toggle="collapse" data-target="#o_menu_systray" aria-expanded="true">
+                    <img class="rounded-circle" t-att-src="this.source" />
+                </a>
+                <div id="o_menu_systray" class="" t-attf-class="o_menu_systray collapse {{state.activeSystray ? 'show' : ''}} ? '' : ''}}">
+                    <div class="__menu_helper" data-target="#o_menu_systray" t-on-click="() => this.state.activeSystray = false" data-toggle="collapse" />
+                    <t t-foreach="systrayItems" t-as="item" t-key="item.key">
+                        <!-- <NotUpdatable> -->
+                            <ErrorHandler onError="error => handleItemError(error, item)">
+                                <t t-component="item.Component" t-props="item.props" />
+                            </ErrorHandler>
+                        <!-- </NotUpdatable> -->
+                    </t>
+                </div>
+            </div>
+        </xpath>
+        <xpath expr="//t[@t-if='currentAppSections.length']" position="replace">
+            <t t-if="currentAppSections.length" t-call="web.NavBar.SectionsMenu">
+                <t t-set="currentAppName" t-value="currentApp.name" />
+                <t t-set="currentAppIcon" t-value="currentApp.webIconData" />
+                <t t-set="sections" t-value="currentAppSections" />
+            </t>
+        </xpath>
+    </t>
+    <t t-inherit="web.NavBar.SectionsMenu" t-inherit-mode="extension">
+        <xpath expr="//t[@t-call='web.NavBar.SectionsMenu.MoreDropdown']" position="inside">
+            <t t-set="currentAppName" t-value="currentAppName" />
+            <t t-set="currentAppIcon" t-value="currentApp.webIconData" />
+        </xpath>
+    </t>
+    <t t-inherit="web.NavBar.SectionsMenu.MoreDropdown" t-inherit-mode="extension">
+        <xpath expr="//Dropdown" position="attributes">
+            <attribute name="t-on-click">CloseUserMenu</attribute>
+        </xpath>
+        <xpath expr="//t[@t-set-slot='toggler']" position="after">
+            <div class="__main_menu" t-if="window['AllureTheme'].base_menu == 'theme_menu' or env.isSmall">
+                <div class="__menu_icon" t-attf-style="background-image: url(data:image/png;base64,{{currentAppIcon}})" />
+                <span class="__menu_title" t-esc="currentAppName" />
+            </div>
+        </xpath>
+    </t>
+
+    <t t-name="allure_backend_theme.CustomMenuLayout" owl="1">
+        <div class="__home_menu">
+            <div class="__editor btn btn-primary" t-on-click="onEditMenu">
+                <span class="fa fa-pencil" />
+            </div>
+            <div class="__search_menu">
+                <span label="Search" class="fa fa-search o_search_icon" role="img" title="Search" />
+                <input class="o_search_input" t-ref="input" t-on-input="ev => this._filterapps(ev.target.value)" name="search_menu" placeholder="Search..." type="text" aria-autocomplete="list" aria-activedescendant="result_app_0" aria-haspopup="listbox" aria-expanded="true" role="combobox" autofocus="1" autocomplete="off" />
+            </div>
+            <div class="__menu_item" t-ref="mainContent">
+                <!-- <span t-foreach="menuApps" t-as="app" t-key="app.id" class="o_app select_app" payload="app">
+                    <span t-attf-class="o_favorite {{state.menuEdit ? '' : 'd-none'}} {{state.favoriteMenuById[app.id] ? 'fa fa-star' : 'fa fa-star-o'}}" t-on-click='_onClickFavorite(app)' />
+                    <div>
+                        <div class="__app_img" t-attf-style="background-image: url(data:image/png;base64,{{app.webIconData}})" />
+                        <span class="name" t-esc="app.label or app.name" />
+                    </div>
+                </span> -->
+                <DropdownItem
+                    t-foreach="menuApps" 
+                    t-as="app" 
+                    t-key="app.id"
+                    class="'dropdown-item o_app select_app'"
+                    dataset="{ menuXmlid: app.xmlid, section: app.id }"
+                    onSelected="() => this.onNavBarDropdownItemSelection(app)"
+                >
+                      <span t-attf-class="o_favorite {{state.menuEdit ? '' : 'd-none'}} {{state.favoriteMenuById[app.id] ? 'fa fa-star' : 'fa fa-star-o'}}" t-on-click='() => this._onClickFavorite(app)' />
+                        <div>
+                            <div t-if="app.xmlid !== 'allure_backend_theme.menu_global_search'" class="__app_img"  t-attf-style="background-image: url(data:image/png;base64,{{app.webIconData}})" />
+                            <div t-else="" class="__app_img" t-attf-style="background-image: url({{app.webIconData}})" />
+                            <span class="name" t-esc="app.label or app.name" />
+                        </div>
+                </DropdownItem>
+                <!-- <t t-call="web.NavBar.SectionsMenu.Dropdown.MenuSlot">
+                    <t t-set="items" t-value="menuApps" />
+                </t> -->
+                <div class="__items_view" t-if="menuLinks.length">
+                    <t t-set="appsItems" t-value="menuLinks" />
+                    <a class="__items select_app" t-foreach="appsItems" t-as="appsItem" t-key="appsItem.id" t-att-href="appsItem.href ? appsItem.href : ('#menu_id='+appsItem.id+'&amp;action_id='+appsItem.actionID)">
+                        <span class="__parent text-muted" t-esc="appsItem.parents" />
+                        <span class="my-2"> / </span>
+                        <span class="__label" t-esc="appsItem.label" />
+                    </a>
+                </div>
+            </div>
+            <div class="__active_company mt-5 mb-5 text-center">
+                <img t-att-src="getCurrentCompany()" />
+            </div>
+        </div>
+    </t>
+</templates>

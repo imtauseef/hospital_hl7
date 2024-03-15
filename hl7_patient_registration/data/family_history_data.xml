@@ -1,0 +1,2457 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+
+    <data noupdate="0">
+
+        <record id="family_his_1" model="family.history">
+            <field name="name">Child abuse in family</field>
+            <field name="code">161062006</field>
+        </record>
+
+        <record id="family_his_2" model="family.history">
+            <field name="name">Child of subject has disability</field>
+            <field name="code">1254721002</field>
+        </record>
+
+        <record id="family_his_3" model="family.history">
+            <field name="name">Family distress</field>
+            <field name="code">720400005</field>
+        </record>
+
+        <record id="family_his_4" model="family.history">
+            <field name="name">Family history of abdominal wall defect</field>
+            <field name="code">64571000119104</field>
+        </record>
+
+        <record id="family_his_5" model="family.history">
+            <field name="name">Family history of acetylcholinesterase deficiency</field>
+            <field name="code">789240000</field>
+        </record>
+
+        <record id="family_his_6" model="family.history">
+            <field name="name">Family history of achondroplasia</field>
+            <field name="code">64121000119107</field>
+        </record>
+
+        <record id="family_his_7" model="family.history">
+            <field name="name">Family history of acquired immune deficiency syndrome</field>
+            <field name="code">441120009</field>
+        </record>
+
+        <record id="family_his_8" model="family.history">
+            <field name="name">Family history of acute medical disorder</field>
+            <field name="code">160953001</field>
+        </record>
+
+        <record id="family_his_9" model="family.history">
+            <field name="name">Family history of Addison disease</field>
+            <field name="code">699057005</field>
+        </record>
+
+        <record id="family_his_10" model="family.history">
+            <field name="name">Family history of alcoholism</field>
+            <field name="code">266890009</field>
+        </record>
+
+        <record id="family_his_11" model="family.history">
+            <field name="name">Family history of alpha thalassemia</field>
+            <field name="code">64431000119101</field>
+        </record>
+
+        <record id="family_his_12" model="family.history">
+            <field name="name">Family history of alpha-1-antitrypsin deficiency</field>
+            <field name="code">431912005</field>
+        </record>
+
+        <record id="family_his_13" model="family.history">
+            <field name="name">Family history of ambiguous genitalia</field>
+            <field name="code">64651000119109</field>
+        </record>
+
+        <record id="family_his_14" model="family.history">
+            <field name="name">Family history of amnesia</field>
+            <field name="code">430728001</field>
+        </record>
+
+        <record id="family_his_15" model="family.history">
+            <field name="name">Family history of amyotrophic lateral sclerosis</field>
+            <field name="code">430727006</field>
+        </record>
+
+        <record id="family_his_16" model="family.history">
+            <field name="name">Family history of anencephaly</field>
+            <field name="code">160418004</field>
+        </record>
+
+        <record id="family_his_17" model="family.history">
+            <field name="name">Family history of aneurysm of abdominal aorta</field>
+            <field name="code">725118003</field>
+        </record>
+
+        <record id="family_his_18" model="family.history">
+            <field name="name">Family history of aneurysm of artery</field>
+            <field name="code">430102007</field>
+        </record>
+
+        <record id="family_his_19" model="family.history">
+            <field name="name">Family history of aneurysm of blood vessel of brain</field>
+            <field name="code">10624451000119100</field>
+        </record>
+
+        <record id="family_his_20" model="family.history">
+            <field name="name">Family history of aneurysm of thoracic aorta</field>
+            <field name="code">430753003</field>
+        </record>
+
+        <record id="family_his_21" model="family.history">
+            <field name="name">Family history of anorexia nervosa</field>
+            <field name="code">433306000</field>
+        </record>
+
+        <record id="family_his_22" model="family.history">
+            <field name="name">Family history of antithrombin III deficiency</field>
+            <field name="code">108891000119103</field>
+        </record>
+
+        <record id="family_his_23" model="family.history">
+            <field name="name">Family history of asthma</field>
+            <field name="code">160377001</field>
+        </record>
+
+        <record id="family_his_24" model="family.history">
+            <field name="name">Family history of atrial fibrillation</field>
+            <field name="code">433276002</field>
+        </record>
+
+        <record id="family_his_25" model="family.history">
+            <field name="name">Family history of attention deficit hyperactivity disorder</field>
+            <field name="code">429950008</field>
+        </record>
+
+        <record id="family_his_26" model="family.history">
+            <field name="name">Family history of attention deficit hyperactivity disorder, predominantly inattentive
+                type
+            </field>
+            <field name="code">433380009</field>
+        </record>
+
+        <record id="family_his_27" model="family.history">
+            <field name="name">Family history of autism</field>
+            <field name="code">412750001</field>
+        </record>
+
+        <record id="family_his_28" model="family.history">
+            <field name="name">Family history of autism in sibling</field>
+            <field name="code">63761000119101</field>
+        </record>
+
+        <record id="family_his_29" model="family.history">
+            <field name="name">Family history of autosomal aneuploidy</field>
+            <field name="code">65011000119103</field>
+        </record>
+
+        <record id="family_his_30" model="family.history">
+            <field name="name">Family history of autosomal translocation</field>
+            <field name="code">144171000119108</field>
+        </record>
+
+        <record id="family_his_31" model="family.history">
+            <field name="name">Family history of backache</field>
+            <field name="code">429976008</field>
+        </record>
+
+        <record id="family_his_32" model="family.history">
+            <field name="name">Family history of benign prostatic hyperplasia</field>
+            <field name="code">430552005</field>
+        </record>
+
+        <record id="family_his_33" model="family.history">
+            <field name="name">Family history of beta thalassemia</field>
+            <field name="code">64371000119105</field>
+        </record>
+
+        <record id="family_his_34" model="family.history">
+            <field name="name">Family history of blood coagulation disorder</field>
+            <field name="code">108801000119109</field>
+        </record>
+
+        <record id="family_his_35" model="family.history">
+            <field name="name">Family history of breast cancer</field>
+            <field name="code">429740004</field>
+        </record>
+
+        <record id="family_his_36" model="family.history">
+            <field name="name">Family history of breast cancer 1 gene mutation</field>
+            <field name="code">431330007</field>
+        </record>
+
+        <record id="family_his_37" model="family.history">
+            <field name="name">Family history of breast cancer 2 gene mutation</field>
+            <field name="code">431331006</field>
+        </record>
+
+        <record id="family_his_38" model="family.history">
+            <field name="name">Family history of breast cancer gene BRCA mutation</field>
+            <field name="code">31881000119108</field>
+        </record>
+
+        <record id="family_his_39" model="family.history">
+            <field name="name">Family history of breast cancer gene mutation in first degree relative</field>
+            <field name="code">143691000119102</field>
+        </record>
+
+        <record id="family_his_40" model="family.history">
+            <field name="name">Family history of bulimia nervosa</field>
+            <field name="code">433277006</field>
+        </record>
+
+        <record id="family_his_41" model="family.history">
+            <field name="name">Family history of butyrylcholinesterase deficiency</field>
+            <field name="code">98011000119108</field>
+        </record>
+
+        <record id="family_his_42" model="family.history">
+            <field name="name">Family history of Canavan disease</field>
+            <field name="code">98251000119101</field>
+        </record>
+
+        <record id="family_his_43" model="family.history">
+            <field name="name">Family history of cancer of colon</field>
+            <field name="code">312824007</field>
+        </record>
+
+        <record id="family_his_44" model="family.history">
+            <field name="name">Family history of cancer of the esophagus</field>
+            <field name="code">430331003</field>
+        </record>
+
+        <record id="family_his_45" model="family.history">
+            <field name="name">Family history of cardiac arrhythmia</field>
+            <field name="code">698248002</field>
+        </record>
+
+        <record id="family_his_46" model="family.history">
+            <field name="name">Family history of cardiac disorder</field>
+            <field name="code">275120007</field>
+        </record>
+
+        <record id="family_his_47" model="family.history">
+            <field name="name">Family history of cardiovascular disease in first degree female relative less than 65
+                years of age
+            </field>
+            <field name="code">438825005</field>
+        </record>
+
+        <record id="family_his_48" model="family.history">
+            <field name="name">Family history of cardiovascular disease in first degree male relative less than 55 years
+                of age
+            </field>
+            <field name="code">439724007</field>
+        </record>
+
+        <record id="family_his_49" model="family.history">
+            <field name="name">Family history of celiac disease</field>
+            <field name="code">430329007</field>
+        </record>
+
+        <record id="family_his_50" model="family.history">
+            <field name="name">Family history of cerebral artery occlusion</field>
+            <field name="code">430674005</field>
+        </record>
+
+        <record id="family_his_51" model="family.history">
+            <field name="name">Family history of cerebral infarction</field>
+            <field name="code">440697006</field>
+        </record>
+
+        <record id="family_his_52" model="family.history">
+            <field name="name">Family history of Charcot-Marie-Tooth disease</field>
+            <field name="code">429970002</field>
+        </record>
+
+        <record id="family_his_53" model="family.history">
+            <field name="name">Family history of chromosomal anomaly</field>
+            <field name="code">160425006</field>
+        </record>
+
+        <record id="family_his_54" model="family.history">
+            <field name="name">Family history of chronic medical disorder</field>
+            <field name="code">266970001</field>
+        </record>
+
+        <record id="family_his_55" model="family.history">
+            <field name="name">Family history of chronic myeloid leukemia</field>
+            <field name="code">430330002</field>
+        </record>
+
+        <record id="family_his_56" model="family.history">
+            <field name="name">Family history of chronic obstructive lung disease</field>
+            <field name="code">297241004</field>
+        </record>
+
+        <record id="family_his_57" model="family.history">
+            <field name="name">Family history of chronic renal impairment</field>
+            <field name="code">430560006</field>
+        </record>
+
+        <record id="family_his_58" model="family.history">
+            <field name="name">Family history of chronic respiratory disease</field>
+            <field name="code">151181000119106</field>
+        </record>
+
+        <record id="family_his_59" model="family.history">
+            <field name="name">Family history of chronic ulcerative proctitis</field>
+            <field name="code">430729009</field>
+        </record>
+
+        <record id="family_his_60" model="family.history">
+            <field name="name">Family history of Churg Strauss syndrome</field>
+            <field name="code">14580001000004100</field>
+        </record>
+
+        <record id="family_his_61" model="family.history">
+            <field name="name">Family history of cleft lip</field>
+            <field name="code">429954004</field>
+        </record>
+
+        <record id="family_his_62" model="family.history">
+            <field name="name">Family history of cleft palate</field>
+            <field name="code">430086009</field>
+        </record>
+
+        <record id="family_his_63" model="family.history">
+            <field name="name">Family history of cleft palate with cleft lip</field>
+            <field name="code">433279009</field>
+        </record>
+
+        <record id="family_his_64" model="family.history">
+            <field name="name">Family history of clubfoot</field>
+            <field name="code">13961000119104</field>
+        </record>
+
+        <record id="family_his_65" model="family.history">
+            <field name="name">Family history of color blindness</field>
+            <field name="code">430336008</field>
+        </record>
+
+        <record id="family_his_66" model="family.history">
+            <field name="name">Family history of colorectal cancer</field>
+            <field name="code">1421000119104</field>
+        </record>
+
+        <record id="family_his_67" model="family.history">
+            <field name="name">Family history of combined hyperlipidemia</field>
+            <field name="code">64111000119100</field>
+        </record>
+
+        <record id="family_his_68" model="family.history">
+            <field name="name">Family history of complete trisomy 21 syndrome</field>
+            <field name="code">281022002</field>
+        </record>
+
+        <record id="family_his_69" model="family.history">
+            <field name="name">Family history of complex congenital heart disease</field>
+            <field name="code">64041000119100</field>
+        </record>
+
+        <record id="family_his_70" model="family.history">
+            <field name="name">Family history of conduction disorder of the heart</field>
+            <field name="code">429958001</field>
+        </record>
+
+        <record id="family_his_71" model="family.history">
+            <field name="name">Family history of congenital anomaly of cardiovascular system</field>
+            <field name="code">266908007</field>
+        </record>
+
+        <record id="family_his_72" model="family.history">
+            <field name="name">Family history of congenital cataract</field>
+            <field name="code">429977004</field>
+        </record>
+
+        <record id="family_his_73" model="family.history">
+            <field name="name">Family history of congenital disease</field>
+            <field name="code">160417009</field>
+        </record>
+
+        <record id="family_his_74" model="family.history">
+            <field name="name">Family history of congenital hip dysplasia</field>
+            <field name="code">700191004</field>
+        </record>
+
+        <record id="family_his_75" model="family.history">
+            <field name="name">Family history of congenital hydrocephalus</field>
+            <field name="code">63941000119102</field>
+        </record>
+
+        <record id="family_his_76" model="family.history">
+            <field name="name">Family history of congenital immunodeficiency disease</field>
+            <field name="code">50050161000188100</field>
+        </record>
+
+        <record id="family_his_77" model="family.history">
+            <field name="name">Family history of congenital long QT syndrome</field>
+            <field name="code">1269318001</field>
+        </record>
+
+        <record id="family_his_78" model="family.history">
+            <field name="name">Family history of congenital microcephaly</field>
+            <field name="code">1148759006</field>
+        </record>
+
+        <record id="family_his_79" model="family.history">
+            <field name="name">Family history of congestive heart failure</field>
+            <field name="code">433305001</field>
+        </record>
+
+        <record id="family_his_80" model="family.history">
+            <field name="name">Family history of connective tissue disorder</field>
+            <field name="code">65001000119101</field>
+        </record>
+
+        <record id="family_his_81" model="family.history">
+            <field name="name">Family history of consanguinity</field>
+            <field name="code">160475008</field>
+        </record>
+
+        <record id="family_his_82" model="family.history">
+            <field name="name">Family history of coronary arteriosclerosis</field>
+            <field name="code">430091005</field>
+        </record>
+
+        <record id="family_his_83" model="family.history">
+            <field name="name">Family history of Cowden syndrome</field>
+            <field name="code">65031000119108</field>
+        </record>
+
+        <record id="family_his_84" model="family.history">
+            <field name="name">Family history of craniosynostosis</field>
+            <field name="code">94721000119105</field>
+        </record>
+
+        <record id="family_his_85" model="family.history">
+            <field name="name">Family history of cystic fibrosis</field>
+            <field name="code">160309002</field>
+        </record>
+
+        <record id="family_his_86" model="family.history">
+            <field name="name">Family history of cystic hygroma</field>
+            <field name="code">64911000119103</field>
+        </record>
+
+        <record id="family_his_87" model="family.history">
+            <field name="name">Family history of degenerative disorder of macula</field>
+            <field name="code">431812006</field>
+        </record>
+
+        <record id="family_his_88" model="family.history">
+            <field name="name">Family history of dementia</field>
+            <field name="code">429961000</field>
+        </record>
+
+        <record id="family_his_89" model="family.history">
+            <field name="name">Family history of development disorder</field>
+            <field name="code">412749001</field>
+        </record>
+
+        <record id="family_his_90" model="family.history">
+            <field name="name">Family history of diabetes mellitus</field>
+            <field name="code">160303001</field>
+        </record>
+
+        <record id="family_his_91" model="family.history">
+            <field name="name">Family history of diabetes mellitus in first degree relative</field>
+            <field name="code">416855002</field>
+        </record>
+
+        <record id="family_his_92" model="family.history">
+            <field name="name">Family history of diabetes mellitus type 1</field>
+            <field name="code">430678008</field>
+        </record>
+
+        <record id="family_his_93" model="family.history">
+            <field name="name">Family history of diabetes mellitus type 2</field>
+            <field name="code">430679000</field>
+        </record>
+
+        <record id="family_his_94" model="family.history">
+            <field name="name">Family history of diabetes mellitus with complication</field>
+            <field name="code">698650004</field>
+        </record>
+
+        <record id="family_his_95" model="family.history">
+            <field name="name">Family history of disability</field>
+            <field name="code">1254722009</field>
+        </record>
+
+        <record id="family_his_96" model="family.history">
+            <field name="name">Family history of disorder of immune function</field>
+            <field name="code">737367001</field>
+        </record>
+
+        <record id="family_his_97" model="family.history">
+            <field name="name">Family history of disorder of lung</field>
+            <field name="code">430564002</field>
+        </record>
+
+        <record id="family_his_98" model="family.history">
+            <field name="name">Family history of disorder of pancreas</field>
+            <field name="code">430685007</field>
+        </record>
+
+        <record id="family_his_99" model="family.history">
+            <field name="name">Family history of disorder of peripheral nervous system</field>
+            <field name="code">431882002</field>
+        </record>
+        <record id="family_his_100" model="family.history">
+            <field name="name">Family history of disorder of vein</field>
+            <field name="code">704009004</field>
+        </record>
+
+        <record id="family_his_101" model="family.history">
+            <field name="name">Family history of dissection of aorta</field>
+            <field name="code">430568004</field>
+        </record>
+
+        <record id="family_his_102" model="family.history">
+            <field name="name">Family history of diverticulitis of colon</field>
+            <field name="code">433163001</field>
+        </record>
+
+        <record id="family_his_103" model="family.history">
+            <field name="name">Family history of double heterozygous familial hypercholesterolemia</field>
+            <field name="code">109271000119105</field>
+        </record>
+
+        <record id="family_his_104" model="family.history">
+            <field name="name">Family history of eating disorder</field>
+            <field name="code">429951007</field>
+        </record>
+
+        <record id="family_his_105" model="family.history">
+            <field name="name">Family history of edema of lower extremity</field>
+            <field name="code">473071007</field>
+        </record>
+
+        <record id="family_his_106" model="family.history">
+            <field name="name">Family history of endocarditis</field>
+            <field name="code">429978009</field>
+        </record>
+
+        <record id="family_his_107" model="family.history">
+            <field name="name">Family history of endocrine disorders</field>
+            <field name="code">160301004</field>
+        </record>
+
+        <record id="family_his_108" model="family.history">
+            <field name="name">Family history of eruptive xanthoma</field>
+            <field name="code">109241000119103</field>
+        </record>
+
+        <record id="family_his_109" model="family.history">
+            <field name="name">Family history of familial dysautonomia</field>
+            <field name="code">94691000119101</field>
+        </record>
+
+        <record id="family_his_110" model="family.history">
+            <field name="name">Family history of familial hypercholesterolemia</field>
+            <field name="code">443454007</field>
+        </record>
+
+        <record id="family_his_111" model="family.history">
+            <field name="name">Family history of familial multiple polyposis syndrome</field>
+            <field name="code">709090007</field>
+        </record>
+
+        <record id="family_his_112" model="family.history">
+            <field name="name">Family history of female genital tract disorder</field>
+            <field name="code">297246009</field>
+        </record>
+
+        <record id="family_his_113" model="family.history">
+            <field name="name">Family history of fracture of proximal end of femur</field>
+            <field name="code">430693007</field>
+        </record>
+
+        <record id="family_his_114" model="family.history">
+            <field name="name">Family history of fragile X syndrome</field>
+            <field name="code">65071000119106</field>
+        </record>
+
+        <record id="family_his_115" model="family.history">
+            <field name="name">Family history of Fredrickson type IIa hyperlipoproteinemia</field>
+            <field name="code">1264211006</field>
+        </record>
+
+        <record id="family_his_116" model="family.history">
+            <field name="name">Family history of galactosemia</field>
+            <field name="code">64081000119105</field>
+        </record>
+
+        <record id="family_his_117" model="family.history">
+            <field name="name">Family history of gene mutation</field>
+            <field name="code">138701000119105</field>
+        </record>
+
+        <record id="family_his_118" model="family.history">
+            <field name="name">Family history of genetic disorder carrier</field>
+            <field name="code">430695000</field>
+        </record>
+
+        <record id="family_his_119" model="family.history">
+            <field name="name">Family history of genetic mutation for Lynch syndrome</field>
+            <field name="code">1099601000119100</field>
+        </record>
+
+        <record id="family_his_120" model="family.history">
+            <field name="name">Family history of glycogen storage disease</field>
+            <field name="code">64251000119106</field>
+        </record>
+
+        <record id="family_his_121" model="family.history">
+            <field name="name">Family history of Hashimoto thyroiditis</field>
+            <field name="code">118651000119105</field>
+        </record>
+
+        <record id="family_his_122" model="family.history">
+            <field name="name">Family history of headache disorder</field>
+            <field name="code">429963002</field>
+        </record>
+
+        <record id="family_his_123" model="family.history">
+            <field name="name">Family history of hearing loss</field>
+            <field name="code">439750006</field>
+        </record>
+
+        <record id="family_his_124" model="family.history">
+            <field name="name">Family history of heart failure</field>
+            <field name="code">429959009</field>
+        </record>
+
+        <record id="family_his_125" model="family.history">
+            <field name="name">Family history of helminth infection</field>
+            <field name="code">309631001</field>
+        </record>
+
+        <record id="family_his_126" model="family.history">
+            <field name="name">Family history of hematuria</field>
+            <field name="code">138081000119104</field>
+        </record>
+
+        <record id="family_his_127" model="family.history">
+            <field name="name">Family history of hemochromatosis</field>
+            <field name="code">401119001</field>
+        </record>
+
+        <record id="family_his_128" model="family.history">
+            <field name="name">Family history of hemoglobinopathy</field>
+            <field name="code">64501000119109</field>
+        </record>
+
+        <record id="family_his_129" model="family.history">
+            <field name="name">Family history of hemoglobinopathy E</field>
+            <field name="code">64391000119106</field>
+        </record>
+
+        <record id="family_his_130" model="family.history">
+            <field name="name">Family history of hereditary diffuse gastric cancer</field>
+            <field name="code">218432961000119000</field>
+        </record>
+
+        <record id="family_his_131" model="family.history">
+            <field name="name">Family history of hereditary disease</field>
+            <field name="code">429962007</field>
+        </record>
+
+        <record id="family_his_132" model="family.history">
+            <field name="name">Family history of hereditary nonpolyposis colon cancer</field>
+            <field name="code">1098871000119100</field>
+        </record>
+
+        <record id="family_his_133" model="family.history">
+            <field name="name">Family history of heritable malignancy</field>
+            <field name="code">81651000119109</field>
+        </record>
+
+        <record id="family_his_134" model="family.history">
+            <field name="name">Family history of Hodgkin's disease</field>
+            <field name="code">433495007</field>
+        </record>
+
+        <record id="family_his_135" model="family.history">
+            <field name="name">Family history of human immunodeficiency virus infection</field>
+            <field name="code">438998000</field>
+        </record>
+
+        <record id="family_his_136" model="family.history">
+            <field name="name">Family history of hydronephrosis</field>
+            <field name="code">71261000119101</field>
+        </record>
+
+        <record id="family_his_137" model="family.history">
+            <field name="name">Family history of hyperbetalipoproteinemia</field>
+            <field name="code">74131000119101</field>
+        </record>
+
+        <record id="family_his_138" model="family.history">
+            <field name="name">Family history of hypercoagulable state</field>
+            <field name="code">130771000119102</field>
+        </record>
+
+        <record id="family_his_139" model="family.history">
+            <field name="name">Family history of hyperlipidemia</field>
+            <field name="code">725117008</field>
+        </record>
+
+        <record id="family_his_140" model="family.history">
+            <field name="name">Family history of hyperthyroidism</field>
+            <field name="code">430089002</field>
+        </record>
+
+        <record id="family_his_141" model="family.history">
+            <field name="name">Family history of hypertriglyceridemia</field>
+            <field name="code">275939003</field>
+        </record>
+
+        <record id="family_his_142" model="family.history">
+            <field name="name">Family history of hypoalphalipoproteinemia</field>
+            <field name="code">74171000119103</field>
+        </record>
+
+        <record id="family_his_143" model="family.history">
+            <field name="name">Family history of hypospadias</field>
+            <field name="code">71201000119102</field>
+        </record>
+
+        <record id="family_his_144" model="family.history">
+            <field name="name">Family history of impaired glucose tolerance</field>
+            <field name="code">429971003</field>
+        </record>
+
+        <record id="family_his_145" model="family.history">
+            <field name="name">Family history of infectious disease</field>
+            <field name="code">160279000</field>
+        </record>
+
+        <record id="family_his_146" model="family.history">
+            <field name="name">Family history of intellectual disability</field>
+            <field name="code">763598005</field>
+        </record>
+
+        <record id="family_his_147" model="family.history">
+            <field name="name">Family history of intestinal obstruction</field>
+            <field name="code">430088005</field>
+        </record>
+
+        <record id="family_his_148" model="family.history">
+            <field name="name">Family history of irritable colon</field>
+            <field name="code">429964008</field>
+        </record>
+
+        <record id="family_his_149" model="family.history">
+            <field name="name">Family history of ischemic heart disease</field>
+            <field name="code">297242006</field>
+        </record>
+
+        <record id="family_his_150" model="family.history">
+            <field name="name">Family history of juvenile idiopathic arthritis</field>
+            <field name="code">430696004</field>
+        </record>
+
+        <record id="family_his_151" model="family.history">
+            <field name="name">Family history of kidney disease</field>
+            <field name="code">289916006</field>
+        </record>
+
+        <record id="family_his_152" model="family.history">
+            <field name="name">Family history of learning disability</field>
+            <field name="code">275102003</field>
+        </record>
+
+        <record id="family_his_153" model="family.history">
+            <field name="name">Family history of leukemia</field>
+            <field name="code">160292002</field>
+        </record>
+
+        <record id="family_his_154" model="family.history">
+            <field name="name">Family history of lipoprotein (a) hyperlipoproteinemia</field>
+            <field name="code">1264214003</field>
+        </record>
+
+        <record id="family_his_155" model="family.history">
+            <field name="name">Family history of localized scleroderma</field>
+            <field name="code">1264398004</field>
+        </record>
+
+        <record id="family_his_156" model="family.history">
+            <field name="name">Family history of long QT syndrome</field>
+            <field name="code">700192006</field>
+        </record>
+
+        <record id="family_his_157" model="family.history">
+            <field name="name">Family history of lupus erythematosus</field>
+            <field name="code">433164007</field>
+        </record>
+
+        <record id="family_his_158" model="family.history">
+            <field name="name">Family history of lysosomal storage disease</field>
+            <field name="code">64171000119108</field>
+        </record>
+
+        <record id="family_his_159" model="family.history">
+            <field name="name">Family history of macrocephaly</field>
+            <field name="code">94741000119104</field>
+        </record>
+
+        <record id="family_his_160" model="family.history">
+            <field name="name">Family history of male genital tract disorder</field>
+            <field name="code">297245008</field>
+        </record>
+
+        <record id="family_his_161" model="family.history">
+            <field name="name">Family history of malignant epithelial neoplasm</field>
+            <field name="code">1149514007</field>
+        </record>
+
+        <record id="family_his_162" model="family.history">
+            <field name="name">Family history of malignant hematopoietic neoplasm</field>
+            <field name="code">71241000119100</field>
+        </record>
+
+        <record id="family_his_163" model="family.history">
+            <field name="name">Family history of malignant hyperthermia</field>
+            <field name="code">401052005</field>
+        </record>
+
+        <record id="family_his_164" model="family.history">
+            <field name="name">Family history of malignant lymphoma</field>
+            <field name="code">429965009</field>
+        </record>
+
+        <record id="family_his_165" model="family.history">
+            <field name="name">Family history of malignant melanoma</field>
+            <field name="code">427858005</field>
+        </record>
+
+        <record id="family_his_166" model="family.history">
+            <field name="name">Family history of malignant neoplasm</field>
+            <field name="code">275937001</field>
+        </record>
+
+        <record id="family_his_167" model="family.history">
+            <field name="name">Family history of malignant neoplasm of biliary tract</field>
+            <field name="code">428994006</field>
+        </record>
+
+        <record id="family_his_168" model="family.history">
+            <field name="name">Family history of malignant neoplasm of bone</field>
+            <field name="code">429252007</field>
+        </record>
+
+        <record id="family_his_169" model="family.history">
+            <field name="name">Family history of malignant neoplasm of brain</field>
+            <field name="code">429251000</field>
+        </record>
+
+        <record id="family_his_170" model="family.history">
+            <field name="name">Family history of malignant neoplasm of breast diagnosed before 45 years of age</field>
+            <field name="code">154141000119104</field>
+        </record>
+
+        <record id="family_his_171" model="family.history">
+            <field name="name">Family history of malignant neoplasm of cervix uteri</field>
+            <field name="code">428047000</field>
+        </record>
+
+        <record id="family_his_172" model="family.history">
+            <field name="name">Family history of malignant neoplasm of colon over age 50</field>
+            <field name="code">154051000119101</field>
+        </record>
+
+        <record id="family_his_173" model="family.history">
+            <field name="name">Family history of malignant neoplasm of digestive organ</field>
+            <field name="code">430813008</field>
+        </record>
+
+        <record id="family_his_174" model="family.history">
+            <field name="name">Family history of malignant neoplasm of endometrium</field>
+            <field name="code">154031000119107</field>
+        </record>
+
+        <record id="family_his_175" model="family.history">
+            <field name="name">Family history of malignant neoplasm of eye proper</field>
+            <field name="code">428935009</field>
+        </record>
+
+        <record id="family_his_176" model="family.history">
+            <field name="name">Family history of malignant neoplasm of gastrointestinal tract</field>
+            <field name="code">429006005</field>
+        </record>
+
+        <record id="family_his_177" model="family.history">
+            <field name="name">Family history of malignant neoplasm of genital structure</field>
+            <field name="code">430954001</field>
+        </record>
+
+        <record id="family_his_178" model="family.history">
+            <field name="name">Family history of malignant neoplasm of ileum</field>
+            <field name="code">428037003</field>
+        </record>
+
+        <record id="family_his_179" model="family.history">
+            <field name="name">Family history of malignant neoplasm of kidney</field>
+            <field name="code">430703009</field>
+        </record>
+
+        <record id="family_his_180" model="family.history">
+            <field name="name">Family history of malignant neoplasm of liver</field>
+            <field name="code">429236009</field>
+        </record>
+
+        <record id="family_his_181" model="family.history">
+            <field name="name">Family history of malignant neoplasm of lung</field>
+            <field name="code">429011007</field>
+        </record>
+
+        <record id="family_his_182" model="family.history">
+            <field name="name">Family history of malignant neoplasm of male breast</field>
+            <field name="code">428748002</field>
+        </record>
+
+        <record id="family_his_183" model="family.history">
+            <field name="name">Family history of malignant neoplasm of ovary</field>
+            <field name="code">430705002</field>
+        </record>
+
+        <record id="family_his_184" model="family.history">
+            <field name="name">Family history of malignant neoplasm of pancreas</field>
+            <field name="code">429000004</field>
+        </record>
+
+        <record id="family_his_185" model="family.history">
+            <field name="name">Family history of malignant neoplasm of pharynx</field>
+            <field name="code">430298005</field>
+        </record>
+
+        <record id="family_his_186" model="family.history">
+            <field name="name">Family history of malignant neoplasm of prostate</field>
+            <field name="code">414205003</field>
+        </record>
+
+        <record id="family_his_187" model="family.history">
+            <field name="name">Family history of malignant neoplasm of skin</field>
+            <field name="code">429405004</field>
+        </record>
+
+        <record id="family_his_188" model="family.history">
+            <field name="name">Family history of malignant neoplasm of testis</field>
+            <field name="code">430527008</field>
+        </record>
+
+        <record id="family_his_189" model="family.history">
+            <field name="name">Family history of malignant neoplasm of thoracic cavity structure</field>
+            <field name="code">430677003</field>
+        </record>
+
+        <record id="family_his_190" model="family.history">
+            <field name="name">Family history of malignant neoplasm of thyroid</field>
+            <field name="code">430534005</field>
+        </record>
+
+        <record id="family_his_191" model="family.history">
+            <field name="name">Family history of malignant neoplasm of trachea</field>
+            <field name="code">428269004</field>
+        </record>
+
+        <record id="family_his_192" model="family.history">
+            <field name="name">Family history of malignant neoplasm of ureter</field>
+            <field name="code">71221000119106</field>
+        </record>
+
+        <record id="family_his_193" model="family.history">
+            <field name="name">Family history of malignant neoplasm of urethra</field>
+            <field name="code">71231000119109</field>
+        </record>
+
+        <record id="family_his_194" model="family.history">
+            <field name="name">Family history of malignant neoplasm of urinary bladder</field>
+            <field name="code">430542006</field>
+        </record>
+
+        <record id="family_his_195" model="family.history">
+            <field name="name">Family history of malignant neoplasm of urinary tract</field>
+            <field name="code">788921007</field>
+        </record>
+
+        <record id="family_his_196" model="family.history">
+            <field name="name">Family history of malignant neoplasm of uterus</field>
+            <field name="code">429637009</field>
+        </record>
+
+        <record id="family_his_197" model="family.history">
+            <field name="name">Family history of malignant neoplasm of vagina</field>
+            <field name="code">428276009</field>
+        </record>
+
+        <record id="family_his_198" model="family.history">
+            <field name="name">Family history of Marfan syndrome</field>
+            <field name="code">64181000119106</field>
+        </record>
+
+        <record id="family_his_199" model="family.history">
+            <field name="name">Family history of mastoiditis</field>
+            <field name="code">430754009</field>
+        </record>
+
+        <record id="family_his_200" model="family.history">
+            <field name="name">Family history of Ménière disease</field>
+            <field name="code">430041006</field>
+        </record>
+
+        <record id="family_his_201" model="family.history">
+            <field name="name">Family history of mental disorder</field>
+            <field name="code">160324006</field>
+        </record>
+
+        <record id="family_his_202" model="family.history">
+            <field name="name">Family history of metabolic disorder</field>
+            <field name="code">160305008</field>
+        </record>
+
+        <record id="family_his_203" model="family.history">
+            <field name="name">Family history of methylmalonic aciduria</field>
+            <field name="code">64131000119105</field>
+        </record>
+
+        <record id="family_his_204" model="family.history">
+            <field name="name">Family history of microcephaly</field>
+            <field name="code">94761000119100</field>
+        </record>
+
+        <record id="family_his_205" model="family.history">
+            <field name="name">Family history of mitochondrial disease</field>
+            <field name="code">473070008</field>
+        </record>
+
+        <record id="family_his_206" model="family.history">
+            <field name="name">Family history of mitral valve regurgitation</field>
+            <field name="code">430730004</field>
+        </record>
+
+        <record id="family_his_207" model="family.history">
+            <field name="name">Family history of morphea</field>
+            <field name="code">443868006</field>
+        </record>
+
+        <record id="family_his_208" model="family.history">
+            <field name="name">Family history of movement disorder</field>
+            <field name="code">430809001</field>
+        </record>
+
+        <record id="family_his_209" model="family.history">
+            <field name="name">Family history of Muir-Torré syndrome</field>
+            <field name="code">138751000119109</field>
+        </record>
+
+        <record id="family_his_210" model="family.history">
+            <field name="name">Family history of multiple congenital anomalies</field>
+            <field name="code">64731000119106</field>
+        </record>
+
+        <record id="family_his_211" model="family.history">
+            <field name="name">Family history of multiple endocrine neoplasia</field>
+            <field name="code">117351000119101</field>
+        </record>
+
+        <record id="family_his_212" model="family.history">
+            <field name="name">Family history of multiple myeloma</field>
+            <field name="code">434462008</field>
+        </record>
+
+        <record id="family_his_213" model="family.history">
+            <field name="name">Family history of myocardial infarct in first degree female relative less than 65 years
+                of age
+            </field>
+            <field name="code">401066000</field>
+        </record>
+
+        <record id="family_his_214" model="family.history">
+            <field name="name">Family history of myocarditis</field>
+            <field name="code">439154009</field>
+        </record>
+
+        <record id="family_his_215" model="family.history">
+            <field name="name">Family history of neoplasm</field>
+            <field name="code">266883004</field>
+        </record>
+
+        <record id="family_his_216" model="family.history">
+            <field name="name">Family history of neoplasm of brain</field>
+            <field name="code">430090006</field>
+        </record>
+
+        <record id="family_his_217" model="family.history">
+            <field name="name">Family history of neoplasm of breast</field>
+            <field name="code">313102001</field>
+        </record>
+
+        <record id="family_his_218" model="family.history">
+            <field name="name">Family history of neoplasm of bronchus</field>
+            <field name="code">1149519002</field>
+        </record>
+
+        <record id="family_his_219" model="family.history">
+            <field name="name">Family history of neoplasm of central nervous system</field>
+            <field name="code">395089003</field>
+        </record>
+
+        <record id="family_his_220" model="family.history">
+            <field name="name">Family history of neoplasm of lung</field>
+            <field name="code">297247000</field>
+        </record>
+
+        <record id="family_his_221" model="family.history">
+            <field name="name">Family history of neoplasm of male genital organ</field>
+            <field name="code">160290005</field>
+        </record>
+
+        <record id="family_his_222" model="family.history">
+            <field name="name">Family history of neoplasm of skin</field>
+            <field name="code">160288009</field>
+        </record>
+
+        <record id="family_his_223" model="family.history">
+            <field name="name">Family history of neoplasm of trachea</field>
+            <field name="code">1149518005</field>
+        </record>
+
+        <record id="family_his_224" model="family.history">
+            <field name="name">Family history of neoplasm of upper aerodigestive tract</field>
+            <field name="code">439220002</field>
+        </record>
+
+        <record id="family_his_225" model="family.history">
+            <field name="name">Family history of neoplasm of urinary system</field>
+            <field name="code">1149524004</field>
+        </record>
+
+        <record id="family_his_226" model="family.history">
+            <field name="name">Family history of nephrotic syndrome</field>
+            <field name="code">430808009</field>
+        </record>
+
+        <record id="family_his_227" model="family.history">
+            <field name="name">Family history of neurofibromatosis</field>
+            <field name="code">65021000119105</field>
+        </record>
+
+        <record id="family_his_228" model="family.history">
+            <field name="name">Family history of neurological developmental delay</field>
+            <field name="code">64021000119106</field>
+        </record>
+
+        <record id="family_his_229" model="family.history">
+            <field name="name">Family history of neurological disorder</field>
+            <field name="code">297239000</field>
+        </record>
+
+        <record id="family_his_230" model="family.history">
+            <field name="name">Family history of neuropathy</field>
+            <field name="code">430814002</field>
+        </record>
+
+        <record id="family_his_231" model="family.history">
+            <field name="name">Family history of non-glaucomatous eye disorder</field>
+            <field name="code">329351000119105</field>
+        </record>
+
+        <record id="family_his_232" model="family.history">
+            <field name="name">Family history of non-Hodgkin's lymphoma</field>
+            <field name="code">433450000</field>
+        </record>
+
+        <record id="family_his_233" model="family.history">
+            <field name="name">Family history of nonleukemic lymphatic malignancy</field>
+            <field name="code">71251000119103</field>
+        </record>
+
+        <record id="family_his_234" model="family.history">
+            <field name="name">Family history of nutritional disorder</field>
+            <field name="code">737366005</field>
+        </record>
+
+        <record id="family_his_235" model="family.history">
+            <field name="name">Family history of osteogenesis imperfecta</field>
+            <field name="code">98041000119107</field>
+        </record>
+
+        <record id="family_his_236" model="family.history">
+            <field name="name">Family history of osteopenia</field>
+            <field name="code">430716009</field>
+        </record>
+
+        <record id="family_his_237" model="family.history">
+            <field name="name">Family history of osteoporosis</field>
+            <field name="code">160313009</field>
+        </record>
+
+        <record id="family_his_238" model="family.history">
+            <field name="name">Family history of Parkinson's disease</field>
+            <field name="code">297240003</field>
+        </record>
+
+        <record id="family_his_239" model="family.history">
+            <field name="name">Family history of perinatal disorder</field>
+            <field name="code">431170009</field>
+        </record>
+
+        <record id="family_his_240" model="family.history">
+            <field name="name">Family history of periodic limb movement disorder</field>
+            <field name="code">430807004</field>
+        </record>
+
+        <record id="family_his_241" model="family.history">
+            <field name="name">Family history of pernicious anemia</field>
+            <field name="code">297243001</field>
+        </record>
+
+        <record id="family_his_242" model="family.history">
+            <field name="name">Family history of phenylketonuria</field>
+            <field name="code">64161000119102</field>
+        </record>
+
+        <record id="family_his_243" model="family.history">
+            <field name="name">Family history of polycystic ovary</field>
+            <field name="code">412783008</field>
+        </record>
+
+        <record id="family_his_244" model="family.history">
+            <field name="name">Family history of polycystic ovary syndrome</field>
+            <field name="code">781073000</field>
+        </record>
+
+        <record id="family_his_245" model="family.history">
+            <field name="name">Family history of polyp of colon</field>
+            <field name="code">429969003</field>
+        </record>
+
+        <record id="family_his_246" model="family.history">
+            <field name="name">Family history of Prader-Willi syndrome</field>
+            <field name="code">64851000119105</field>
+        </record>
+
+        <record id="family_his_247" model="family.history">
+            <field name="name">Family history of pre-eclampsia</field>
+            <field name="code">700190003</field>
+        </record>
+
+        <record id="family_his_248" model="family.history">
+            <field name="name">Family history of presenile dementia</field>
+            <field name="code">433278001</field>
+        </record>
+
+        <record id="family_his_249" model="family.history">
+            <field name="name">Family history of problem behavior</field>
+            <field name="code">430334006</field>
+        </record>
+
+        <record id="family_his_250" model="family.history">
+            <field name="name">Family history of problem behavior</field>
+            <field name="code">430334006</field>
+        </record>
+
+        <record id="family_his_251" model="family.history">
+            <field name="name">Family history of protein C deficiency</field>
+            <field name="code">109001000119105</field>
+        </record>
+
+        <record id="family_his_252" model="family.history">
+            <field name="name">Family history of protein C resistance</field>
+            <field name="code">109011000119108</field>
+        </record>
+
+        <record id="family_his_253" model="family.history">
+            <field name="name">Family history of protein S deficiency</field>
+            <field name="code">108981000119107</field>
+        </record>
+
+        <record id="family_his_254" model="family.history">
+            <field name="name">Family history of psoriasis with psoriatic arthritis</field>
+            <field name="code">430543001</field>
+        </record>
+
+        <record id="family_his_255" model="family.history">
+            <field name="name">Family history of psychotic illness</field>
+            <field name="code">266969002</field>
+        </record>
+
+        <record id="family_his_256" model="family.history">
+            <field name="name">Family history of pulmonary embolism</field>
+            <field name="code">430801003</field>
+        </record>
+
+        <record id="family_his_257" model="family.history">
+            <field name="name">Family history of pulmonary emphysema</field>
+            <field name="code">429953005</field>
+        </record>
+
+        <record id="family_his_258" model="family.history">
+            <field name="name">Family history of pulmonary infundibular stenosis</field>
+            <field name="code">417648007</field>
+        </record>
+
+        <record id="family_his_259" model="family.history">
+            <field name="name">Family history of Raynaud phenomenon</field>
+            <field name="code">430681003</field>
+        </record>
+
+        <record id="family_his_260" model="family.history">
+            <field name="name">Family history of renal cell carcinoma</field>
+            <field name="code">433381008</field>
+        </record>
+
+        <record id="family_his_261" model="family.history">
+            <field name="name">Family history of renal failure syndrome</field>
+            <field name="code">430682005</field>
+        </record>
+
+        <record id="family_his_262" model="family.history">
+            <field name="name">Family history of renal stone</field>
+            <field name="code">416519002</field>
+        </record>
+
+        <record id="family_his_263" model="family.history">
+            <field name="name">Family history of restless legs syndrome</field>
+            <field name="code">430565001</field>
+        </record>
+
+        <record id="family_his_264" model="family.history">
+            <field name="name">Family history of retinal detachment</field>
+            <field name="code">11718821000119100</field>
+        </record>
+
+        <record id="family_his_265" model="family.history">
+            <field name="name">Family history of retinitis pigmentosa</field>
+            <field name="code">71271000119107</field>
+        </record>
+
+        <record id="family_his_266" model="family.history">
+            <field name="name">Family history of Rett syndrome</field>
+            <field name="code">63921000119108</field>
+        </record>
+
+        <record id="family_his_267" model="family.history">
+            <field name="name">Family history of rheumatic fever</field>
+            <field name="code">430777009</field>
+        </record>
+
+        <record id="family_his_268" model="family.history">
+            <field name="name">Family history of sarcoidosis</field>
+            <field name="code">430778004</field>
+        </record>
+
+        <record id="family_his_269" model="family.history">
+            <field name="name">Family history of scleroderma</field>
+            <field name="code">1264397009</field>
+        </record>
+
+        <record id="family_his_270" model="family.history">
+            <field name="name">Family history of scoliosis deformity of spine</field>
+            <field name="code">430544007</field>
+        </record>
+
+        <record id="family_his_271" model="family.history">
+            <field name="name">Family history of sebaceous adenoma</field>
+            <field name="code">138721000119101</field>
+        </record>
+
+        <record id="family_his_272" model="family.history">
+            <field name="name">Family history of sebaceous carcinoma</field>
+            <field name="code">138711000119108</field>
+        </record>
+
+        <record id="family_his_273" model="family.history">
+            <field name="name">Family history of seizure disorder</field>
+            <field name="code">430711004</field>
+        </record>
+
+        <record id="family_his_274" model="family.history">
+            <field name="name">Family history of sex chromosome aneuploidy</field>
+            <field name="code">64921000119105</field>
+        </record>
+
+        <record id="family_his_275" model="family.history">
+            <field name="name">Family history of short stature</field>
+            <field name="code">69731000119107</field>
+        </record>
+
+        <record id="family_his_276" model="family.history">
+            <field name="name">Family history of sickle cell anemia</field>
+            <field name="code">160320002</field>
+        </record>
+
+        <record id="family_his_277" model="family.history">
+            <field name="name">Family history of single congenital anomaly</field>
+            <field name="code">85951000119104</field>
+        </record>
+
+        <record id="family_his_278" model="family.history">
+            <field name="name">Family history of sleep apnea</field>
+            <field name="code">430337004</field>
+        </record>
+
+        <record id="family_his_279" model="family.history">
+            <field name="name">Family history of smoking</field>
+            <field name="code">443877004</field>
+        </record>
+
+        <record id="family_his_280" model="family.history">
+            <field name="name">Family history of speech and language disorder</field>
+            <field name="code">428932007</field>
+        </record>
+
+        <record id="family_his_281" model="family.history">
+            <field name="name">Family history of Spina bifida</field>
+            <field name="code">160419007</field>
+        </record>
+
+        <record id="family_his_282" model="family.history">
+            <field name="name">Family history of spinal stenosis</field>
+            <field name="code">430709008</field>
+        </record>
+
+        <record id="family_his_283" model="family.history">
+            <field name="name">Family history of spinocerebellar ataxia</field>
+            <field name="code">63881000119101</field>
+        </record>
+
+        <record id="family_his_284" model="family.history">
+            <field name="name">Family history of squamous cell carcinoma of skin</field>
+            <field name="code">700193001</field>
+        </record>
+
+        <record id="family_his_285" model="family.history">
+            <field name="name">Family history of Steinert myotonic dystrophy</field>
+            <field name="code">63931000119106</field>
+        </record>
+
+        <record id="family_his_286" model="family.history">
+            <field name="name">Family history of stenosis of aortic valve</field>
+            <field name="code">429952000</field>
+        </record>
+
+        <record id="family_his_287" model="family.history">
+            <field name="name">Family history of stroke</field>
+            <field name="code">275104002</field>
+        </record>
+
+        <record id="family_his_288" model="family.history">
+            <field name="name">Family history of stroke due to aneurysm</field>
+            <field name="code">10624401000119100</field>
+        </record>
+
+        <record id="family_his_289" model="family.history">
+            <field name="name">Family history of substance abuse</field>
+            <field name="code">134591000119102</field>
+        </record>
+
+        <record id="family_his_290" model="family.history">
+            <field name="name">Family history of substance dependency</field>
+            <field name="code">1254977008</field>
+        </record>
+
+        <record id="family_his_291" model="family.history">
+            <field name="name">Family history of sudden cardiac death</field>
+            <field name="code">117361000119104</field>
+        </record>
+
+        <record id="family_his_292" model="family.history">
+            <field name="name">Family history of sudden death</field>
+            <field name="code">430283008</field>
+        </record>
+
+        <record id="family_his_293" model="family.history">
+            <field name="name">Family history of syncope</field>
+            <field name="code">430815001</field>
+        </record>
+
+        <record id="family_his_294" model="family.history">
+            <field name="name">Family history of synovial cyst of popliteal space</field>
+            <field name="code">431479003</field>
+        </record>
+
+        <record id="family_his_295" model="family.history">
+            <field name="name">Family history of systemic lupus erythematosus</field>
+            <field name="code">15627891000119100</field>
+        </record>
+
+        <record id="family_his_296" model="family.history">
+            <field name="name">Family history of systemic sclerosis</field>
+            <field name="code">443720007</field>
+        </record>
+
+        <record id="family_his_297" model="family.history">
+            <field name="name">Family history of Tay-Sachs disease</field>
+            <field name="code">63901000119104</field>
+        </record>
+
+        <record id="family_his_298" model="family.history">
+            <field name="name">Family history of tendinous xanthoma in first degree relative</field>
+            <field name="code">699108005</field>
+        </record>
+
+        <record id="family_his_299" model="family.history">
+            <field name="name">Family history of tendinous xanthoma in second degree relative</field>
+            <field name="code">699109002</field>
+        </record>
+
+        <record id="family_his_300" model="family.history">
+            <field name="name">Family history of thromboembolic disorder</field>
+            <field name="code">430710003</field>
+        </record>
+
+        <record id="family_his_301" model="family.history">
+            <field name="name">Family history of tinnitus</field>
+            <field name="code">430719002</field>
+        </record>
+
+        <record id="family_his_302" model="family.history">
+            <field name="name">Family history of transient ischemic attack</field>
+            <field name="code">160363004</field>
+        </record>
+
+        <record id="family_his_303" model="family.history">
+            <field name="name">Family history of tremor</field>
+            <field name="code">430726002</field>
+        </record>
+
+        <record id="family_his_304" model="family.history">
+            <field name="name">Family history of trigeminal neuralgia</field>
+            <field name="code">433496008</field>
+        </record>
+
+        <record id="family_his_305" model="family.history">
+            <field name="name">Family history of trisomy 13</field>
+            <field name="code">64831000119104</field>
+        </record>
+
+        <record id="family_his_306" model="family.history">
+            <field name="name">Family history of trisomy 18</field>
+            <field name="code">64841000119108</field>
+        </record>
+
+        <record id="family_his_307" model="family.history">
+            <field name="name">Family history of tuberous sclerosis</field>
+            <field name="code">417001009</field>
+        </record>
+
+        <record id="family_his_308" model="family.history">
+            <field name="name">Family history of Turner syndrome</field>
+            <field name="code">64861000119107</field>
+        </record>
+
+        <record id="family_his_309" model="family.history">
+            <field name="name">Family history of urological disorder</field>
+            <field name="code">297244007</field>
+        </record>
+
+        <record id="family_his_311" model="family.history">
+            <field name="name">Family history of uveitis</field>
+            <field name="code">430805007</field>
+        </record>
+
+        <record id="family_his_312" model="family.history">
+            <field name="name">Family history of ventricular premature beats</field>
+            <field name="code">433449000</field>
+        </record>
+
+        <record id="family_his_313" model="family.history">
+            <field name="name">Family history of visual disturbance</field>
+            <field name="code">430723005</field>
+        </record>
+
+        <record id="family_his_314" model="family.history">
+            <field name="name">Family history of Von Hippel-Lindau syndrome</field>
+            <field name="code">64971000119106</field>
+        </record>
+
+        <record id="family_his_315" model="family.history">
+            <field name="name">Family history of Von Willebrand disease</field>
+            <field name="code">64521000119100</field>
+        </record>
+
+        <record id="family_his_316" model="family.history">
+            <field name="name">Family history: Cerebral palsy</field>
+            <field name="code">160340009</field>
+        </record>
+
+        <record id="family_his_317" model="family.history">
+            <field name="name">Family history: Gynecological problem</field>
+            <field name="code">275132006</field>
+        </record>
+
+        <record id="family_his_318" model="family.history">
+            <field name="name">Family history: Occupational lung disease</field>
+            <field name="code">160378006</field>
+        </record>
+
+        <record id="family_his_319" model="family.history">
+            <field name="name">Family illness</field>
+            <field name="code">266966009</field>
+        </record>
+
+        <record id="family_his_320" model="family.history">
+            <field name="name">FH: Allergy</field>
+            <field name="code">160469004</field>
+        </record>
+
+        <record id="family_his_321" model="family.history">
+            <field name="name">FH: Alopecia</field>
+            <field name="code">160409001</field>
+        </record>
+
+        <record id="family_his_322" model="family.history">
+            <field name="name">FH: Alzheimer's disease</field>
+            <field name="code">394877006</field>
+        </record>
+
+        <record id="family_his_323" model="family.history">
+            <field name="name">FH: Anemia</field>
+            <field name="code">266888008</field>
+        </record>
+
+        <record id="family_his_324" model="family.history">
+            <field name="name">FH: Angina</field>
+            <field name="code">275121006</field>
+        </record>
+
+        <record id="family_his_325" model="family.history">
+            <field name="name">FH: Angina at greater than 60 years</field>
+            <field name="code">275911004</field>
+        </record>
+
+        <record id="family_his_326" model="family.history">
+            <field name="name">FH: Angina at less than 60 years</field>
+            <field name="code">275932007</field>
+        </record>
+
+        <record id="family_his_327" model="family.history">
+            <field name="name">FH: Angina grandparent</field>
+            <field name="code">413302005</field>
+        </record>
+
+        <record id="family_his_328" model="family.history">
+            <field name="name">FH: Angina in 1st degree female relative &lt;65 years</field>
+            <field name="code">401065001</field>
+        </record>
+
+        <record id="family_his_329" model="family.history">
+            <field name="name">FH: Angina in 1st degree male relative &lt;55 years</field>
+            <field name="code">401122004</field>
+        </record>
+
+        <record id="family_his_330" model="family.history">
+            <field name="name">FH: Ankylosing spondylitis</field>
+            <field name="code">394990003</field>
+        </record>
+
+        <record id="family_his_331" model="family.history">
+            <field name="name">FH: Anxiety state</field>
+            <field name="code">160332003</field>
+        </record>
+
+        <record id="family_his_332" model="family.history">
+            <field name="name">FH: Aortic aneurysm</field>
+            <field name="code">395125009</field>
+        </record>
+
+        <record id="family_his_333" model="family.history">
+            <field name="name">FH: Arthritis</field>
+            <field name="code">275134007</field>
+        </record>
+
+        <record id="family_his_334" model="family.history">
+            <field name="name">FH: Atherosclerosis</field>
+            <field name="code">160362009</field>
+        </record>
+
+        <record id="family_his_335" model="family.history">
+            <field name="name">FH: Atopy</field>
+            <field name="code">160474007</field>
+        </record>
+
+        <record id="family_his_336" model="family.history">
+            <field name="name">FH: Autoimmune disease</field>
+            <field name="code">300933005</field>
+        </record>
+
+        <record id="family_his_337" model="family.history">
+            <field name="name">FH: Biliary disease</field>
+            <field name="code">266903003</field>
+        </record>
+
+        <record id="family_his_338" model="family.history">
+            <field name="name">FH: Blindness</field>
+            <field name="code">275118009</field>
+        </record>
+
+        <record id="family_his_339" model="family.history">
+            <field name="name">FH: Blindness/low vision</field>
+            <field name="code">266893006</field>
+        </record>
+
+        <record id="family_his_340" model="family.history">
+            <field name="name">FH: Blood disorder</field>
+            <field name="code">160316001</field>
+        </record>
+
+        <record id="family_his_341" model="family.history">
+            <field name="name">FH: Bowel cancer</field>
+            <field name="code">275109007</field>
+        </record>
+
+        <record id="family_his_342" model="family.history">
+            <field name="name">FH: Brain disorder</field>
+            <field name="code">275940001</field>
+        </record>
+
+        <record id="family_his_343" model="family.history">
+            <field name="name">FH: Breast disease</field>
+            <field name="code">160392000</field>
+        </record>
+
+        <record id="family_his_344" model="family.history">
+            <field name="name">FH: Bronchitis</field>
+            <field name="code">275125002</field>
+        </record>
+
+        <record id="family_his_345" model="family.history">
+            <field name="name">FH: Bronchitis/COAD</field>
+            <field name="code">266899005</field>
+        </record>
+
+        <record id="family_his_346" model="family.history">
+            <field name="name">FH: Bronchus cancer</field>
+            <field name="code">275110002</field>
+        </record>
+
+        <record id="family_his_347" model="family.history">
+            <field name="name">FH: Brother alive and well</field>
+            <field name="code">160445003</field>
+        </record>
+
+        <record id="family_his_348" model="family.history">
+            <field name="name">FH: Brother alive with problem</field>
+            <field name="code">160446002</field>
+        </record>
+
+        <record id="family_his_349" model="family.history">
+            <field name="name">FH: Cardiomyopathy</field>
+            <field name="code">390915000</field>
+        </record>
+
+        <record id="family_his_350" model="family.history">
+            <field name="name">FH: Cardiovascular disease</field>
+            <field name="code">266894000</field>
+        </record>
+
+        <record id="family_his_351" model="family.history">
+            <field name="name">FH: Cataract</field>
+            <field name="code">160348002</field>
+        </record>
+
+        <record id="family_his_352" model="family.history">
+            <field name="name">FH: CNS disorder</field>
+            <field name="code">266891008</field>
+        </record>
+
+        <record id="family_his_353" model="family.history">
+            <field name="name">FH: Colitis</field>
+            <field name="code">266901001</field>
+        </record>
+
+        <record id="family_his_354" model="family.history">
+            <field name="name">FH: Cong. orthopedic anomaly</field>
+            <field name="code">160424005</field>
+        </record>
+
+        <record id="family_his_355" model="family.history">
+            <field name="name">FH: Congenital GIT anomaly</field>
+            <field name="code">160422009</field>
+        </record>
+
+        <record id="family_his_356" model="family.history">
+            <field name="name">FH: Congenital GU anomaly</field>
+            <field name="code">160423004</field>
+        </record>
+
+        <record id="family_his_357" model="family.history">
+            <field name="name">FH: Congenital heart disease</field>
+            <field name="code">160364005</field>
+        </record>
+
+        <record id="family_his_358" model="family.history">
+            <field name="name">FH: Congenital RS anomaly</field>
+            <field name="code">160421002</field>
+        </record>
+
+        <record id="family_his_359" model="family.history">
+            <field name="name">FH: Coronary thrombosis</field>
+            <field name="code">275124003</field>
+        </record>
+
+        <record id="family_his_360" model="family.history">
+            <field name="name">FH: Crohn's disease</field>
+            <field name="code">160386006</field>
+        </record>
+
+        <record id="family_his_361" model="family.history">
+            <field name="name">FH: Daughter alive with problem</field>
+            <field name="code">160456003</field>
+        </record>
+
+        <record id="family_his_362" model="family.history">
+            <field name="name">FH: Deafness</field>
+            <field name="code">160353007</field>
+        </record>
+
+        <record id="family_his_363" model="family.history">
+            <field name="name">FH: Death under 60 years</field>
+            <field name="code">160473001</field>
+        </record>
+
+        <record id="family_his_364" model="family.history">
+            <field name="name">FH: Depression</field>
+            <field name="code">160329001</field>
+        </record>
+
+        <record id="family_his_365" model="family.history">
+            <field name="name">FH: Diabetes in pregnancy</field>
+            <field name="code">160402005</field>
+        </record>
+
+        <record id="family_his_366" model="family.history">
+            <field name="name">FH: Duodenal ulcer</field>
+            <field name="code">275127005</field>
+        </record>
+
+        <record id="family_his_367" model="family.history">
+            <field name="name">FH: Dyslexia</field>
+            <field name="code">390794009</field>
+        </record>
+
+        <record id="family_his_368" model="family.history">
+            <field name="name">FH: Ear disorder</field>
+            <field name="code">160352002</field>
+        </record>
+
+        <record id="family_his_369" model="family.history">
+            <field name="name">FH: Early menarche</field>
+            <field name="code">160394004</field>
+        </record>
+
+        <record id="family_his_370" model="family.history">
+            <field name="name">FH: Early menopause</field>
+            <field name="code">160397006</field>
+        </record>
+
+        <record id="family_his_371" model="family.history">
+            <field name="name">FH: Eczema</field>
+            <field name="code">160407004</field>
+        </record>
+
+        <record id="family_his_372" model="family.history">
+            <field name="name">FH: Enuresis</field>
+            <field name="code">412784002</field>
+        </record>
+
+        <record id="family_his_373" model="family.history">
+            <field name="name">FH: Epilepsy</field>
+            <field name="code">160341008</field>
+        </record>
+
+        <record id="family_his_374" model="family.history">
+            <field name="name">FH: Eye disorder</field>
+            <field name="code">160346003</field>
+        </record>
+
+        <record id="family_his_375" model="family.history">
+            <field name="name">FH: Father alive and well</field>
+            <field name="code">160434001</field>
+        </record>
+
+        <record id="family_his_376" model="family.history">
+            <field name="name">FH: Father alive with problem</field>
+            <field name="code">160435000</field>
+        </record>
+
+        <record id="family_his_377" model="family.history">
+            <field name="name">FH: Father deaf</field>
+            <field name="code">160437008</field>
+        </record>
+
+        <record id="family_his_378" model="family.history">
+            <field name="name">FH: Female infertility</field>
+            <field name="code">160391007</field>
+        </record>
+
+        <record id="family_his_379" model="family.history">
+            <field name="name">FH: Fragility fracture</field>
+            <field name="code">391098008</field>
+        </record>
+
+        <record id="family_his_380" model="family.history">
+            <field name="name">FH: Gallbladder disease</field>
+            <field name="code">275131004</field>
+        </record>
+
+        <record id="family_his_381" model="family.history">
+            <field name="name">FH: Gastric ulcer</field>
+            <field name="code">275128000</field>
+        </record>
+
+        <record id="family_his_382" model="family.history">
+            <field name="name">FH: Gastrointestinal disease</field>
+            <field name="code">160381001</field>
+        </record>
+
+        <record id="family_his_383" model="family.history">
+            <field name="name">FH: Genitourinary disease</field>
+            <field name="code">266904009</field>
+        </record>
+
+        <record id="family_his_384" model="family.history">
+            <field name="name">FH: Glaucoma</field>
+            <field name="code">160347007</field>
+        </record>
+
+        <record id="family_his_385" model="family.history">
+            <field name="name">FH: Gonorrhea</field>
+            <field name="code">160282005</field>
+        </record>
+
+        <record id="family_his_386" model="family.history">
+            <field name="name">FH: Gout</field>
+            <field name="code">160308005</field>
+        </record>
+
+        <record id="family_his_387" model="family.history">
+            <field name="name">FH: Hay fever</field>
+            <field name="code">160379003</field>
+        </record>
+
+        <record id="family_his_388" model="family.history">
+            <field name="name">FH: Hemiplegia</field>
+            <field name="code">160338004</field>
+        </record>
+
+        <record id="family_his_389" model="family.history">
+            <field name="name">FH: Hemophilia</field>
+            <field name="code">266889000</field>
+        </record>
+
+        <record id="family_his_390" model="family.history">
+            <field name="name">FH: Hepatitis</field>
+            <field name="code">275130003</field>
+        </record>
+
+        <record id="family_his_391" model="family.history">
+            <field name="name">FH: Hereditary spherocytosis</field>
+            <field name="code">160318000</field>
+        </record>
+
+        <record id="family_his_392" model="family.history">
+            <field name="name">FH: Hip fracture in first degree relative</field>
+            <field name="code">391097003</field>
+        </record>
+
+        <record id="family_his_393" model="family.history">
+            <field name="name">FH: Hirsutism</field>
+            <field name="code">160410006</field>
+        </record>
+
+        <record id="family_his_394" model="family.history">
+            <field name="name">FH: Huntington's chorea</field>
+            <field name="code">160336000</field>
+        </record>
+
+        <record id="family_his_395" model="family.history">
+            <field name="name">FH: Hypercholesterolemia</field>
+            <field name="code">160314003</field>
+        </record>
+
+        <record id="family_his_396" model="family.history">
+            <field name="name">FH: Hypercholesterolemia in first degree relative</field>
+            <field name="code">417072001</field>
+        </record>
+
+        <record id="family_his_397" model="family.history">
+            <field name="name">FH: Hypertension</field>
+            <field name="code">160357008</field>
+        </record>
+
+        <record id="family_his_398" model="family.history">
+            <field name="name">FH: Hypothyroidism</field>
+            <field name="code">300934004</field>
+        </record>
+
+        <record id="family_his_399" model="family.history">
+            <field name="name">FH: Ischemic heart disease at greater than 60 years</field>
+            <field name="code">266896003</field>
+        </record>
+
+        <record id="family_his_400" model="family.history">
+            <field name="name">FH: Ischemic heart disease at less than 60 years</field>
+            <field name="code">266895004</field>
+        </record>
+
+        <record id="family_his_401" model="family.history">
+            <field name="name">FH: Late menarche</field>
+            <field name="code">160396002</field>
+        </record>
+
+        <record id="family_his_402" model="family.history">
+            <field name="name">FH: Late menopause</field>
+            <field name="code">160398001</field>
+        </record>
+
+        <record id="family_his_403" model="family.history">
+            <field name="name">FH: Liver disease</field>
+            <field name="code">266902008</field>
+        </record>
+
+        <record id="family_his_404" model="family.history">
+            <field name="name">FH: Longevity</field>
+            <field name="code">160269002</field>
+        </record>
+
+        <record id="family_his_405" model="family.history">
+            <field name="name">FH: Low vision</field>
+            <field name="code">275119001</field>
+        </record>
+
+        <record id="family_his_406" model="family.history">
+            <field name="name">FH: Male infertility</field>
+            <field name="code">160390008</field>
+        </record>
+
+        <record id="family_his_407" model="family.history">
+            <field name="name">FH: Manic-depressive state</field>
+            <field name="code">160331005</field>
+        </record>
+
+        <record id="family_his_408" model="family.history">
+            <field name="name">FH: Maternal hip fracture</field>
+            <field name="code">391096007</field>
+        </record>
+
+        <record id="family_his_409" model="family.history">
+            <field name="name">FH: Menstrual disorder</field>
+            <field name="code">160393005</field>
+        </record>
+
+        <record id="family_his_410" model="family.history">
+            <field name="name">FH: Migraine</field>
+            <field name="code">160342001</field>
+        </record>
+
+        <record id="family_his_411" model="family.history">
+            <field name="name">FH: Motor neurone disease</field>
+            <field name="code">160344000</field>
+        </record>
+
+        <record id="family_his_412" model="family.history">
+            <field name="name">FH: Multiple pregnancy</field>
+            <field name="code">266906006</field>
+        </record>
+
+        <record id="family_his_413" model="family.history">
+            <field name="name">FH: Multiple sclerosis</field>
+            <field name="code">160337009</field>
+        </record>
+
+        <record id="family_his_414" model="family.history">
+            <field name="name">FH: Muscular dystrophy</field>
+            <field name="code">160343006</field>
+        </record>
+
+        <record id="family_his_415" model="family.history">
+            <field name="name">FH: Musculoskeletal disease</field>
+            <field name="code">266907002</field>
+        </record>
+
+        <record id="family_his_416" model="family.history">
+            <field name="name">FH: Myocardial infarct in 1st degree male relative 55 years
+            </field>
+            <field name="code">401067009</field>
+        </record>
+
+        <record id="family_his_417" model="family.history">
+            <field name="name">FH: Myocardial infarction</field>
+            <field name="code">266897007</field>
+        </record>
+
+        <record id="family_his_418" model="family.history">
+            <field name="name">FH: Neoplasm of cervix</field>
+            <field name="code">160298003</field>
+        </record>
+
+        <record id="family_his_419" model="family.history">
+            <field name="name">FH: Neoplasm of female genital organ</field>
+            <field name="code">266886007</field>
+        </record>
+
+        <record id="family_his_420" model="family.history">
+            <field name="name">FH: Neoplasm of ovary</field>
+            <field name="code">160297008</field>
+        </record>
+
+        <record id="family_his_421" model="family.history">
+            <field name="name">FH: Neoplasm of uterus</field>
+            <field name="code">160299006</field>
+        </record>
+
+        <record id="family_his_422" model="family.history">
+            <field name="name">FH: Non-accidental injury to child</field>
+            <field name="code">160472006</field>
+        </record>
+
+        <record id="family_his_423" model="family.history">
+            <field name="name">FH: Nutritional deficiency</field>
+            <field name="code">160306009</field>
+        </record>
+
+        <record id="family_his_424" model="family.history">
+            <field name="name">FH: Obesity</field>
+            <field name="code">160311006</field>
+        </record>
+
+        <record id="family_his_425" model="family.history">
+            <field name="name">FH: Osteoarthritis</field>
+            <field name="code">160414002</field>
+        </record>
+
+        <record id="family_his_426" model="family.history">
+            <field name="name">FH: Otosclerosis</field>
+            <field name="code">160354001</field>
+        </record>
+
+        <record id="family_his_427" model="family.history">
+            <field name="name">FH: Paraplegia</field>
+            <field name="code">160339007</field>
+        </record>
+
+        <record id="family_his_428" model="family.history">
+            <field name="name">FH: Parkinsonism</field>
+            <field name="code">275117004</field>
+        </record>
+
+        <record id="family_his_429" model="family.history">
+            <field name="name">FH: Peptic ulceration</field>
+            <field name="code">266900000</field>
+        </record>
+
+        <record id="family_his_430" model="family.history">
+            <field name="name">FH: Polycystic kidney</field>
+            <field name="code">160389004</field>
+        </record>
+
+        <record id="family_his_431" model="family.history">
+            <field name="name">FH: Porphyria</field>
+            <field name="code">160310007</field>
+        </record>
+
+        <record id="family_his_432" model="family.history">
+            <field name="name">FH: premature coronary heart disease</field>
+            <field name="code">134439009</field>
+        </record>
+
+        <record id="family_his_433" model="family.history">
+            <field name="name">FH: Psoriasis</field>
+            <field name="code">160408009</field>
+        </record>
+
+        <record id="family_his_434" model="family.history">
+            <field name="name">FH: Puerperal depression</field>
+            <field name="code">160403000</field>
+        </record>
+
+        <record id="family_his_435" model="family.history">
+            <field name="name">FH: Raised B.P. in pregnancy</field>
+            <field name="code">160401003</field>
+        </record>
+
+        <record id="family_his_436" model="family.history">
+            <field name="name">FH: Raised blood lipids</field>
+            <field name="code">266887003</field>
+        </record>
+
+        <record id="family_his_437" model="family.history">
+            <field name="name">FH: Respiratory disease</field>
+            <field name="code">266898002</field>
+        </record>
+
+        <record id="family_his_438" model="family.history">
+            <field name="name">FH: Rheumatoid arthritis</field>
+            <field name="code">160413008</field>
+        </record>
+
+        <record id="family_his_439" model="family.history">
+            <field name="name">FH: Schizophrenia</field>
+            <field name="code">160328009</field>
+        </record>
+
+        <record id="family_his_440" model="family.history">
+            <field name="name">FH: Senile dementia</field>
+            <field name="code">160325007</field>
+        </record>
+
+        <record id="family_his_441" model="family.history">
+            <field name="name">FH: Sickle cell trait</field>
+            <field name="code">160321003</field>
+        </record>
+
+        <record id="family_his_442" model="family.history">
+            <field name="name">FH: Skin disease</field>
+            <field name="code">160406008</field>
+        </record>
+
+        <record id="family_his_443" model="family.history">
+            <field name="name">FH: Spherocytosis</field>
+            <field name="code">308746008</field>
+        </record>
+
+        <record id="family_his_444" model="family.history">
+            <field name="name">FH: Squint</field>
+            <field name="code">160350005</field>
+        </record>
+
+        <record id="family_his_445" model="family.history">
+            <field name="name">FH: Stomach cancer</field>
+            <field name="code">275108004</field>
+        </record>
+
+        <record id="family_his_446" model="family.history">
+            <field name="name">FH: Sudden infant death</field>
+            <field name="code">160471004</field>
+        </record>
+
+        <record id="family_his_447" model="family.history">
+            <field name="name">FH: Suicide</field>
+            <field name="code">160333008</field>
+        </record>
+
+        <record id="family_his_448" model="family.history">
+            <field name="name">FH: Syphilis</field>
+            <field name="code">160281003</field>
+        </record>
+
+        <record id="family_his_449" model="family.history">
+            <field name="name">FH: Thalassemia</field>
+            <field name="code">160319008</field>
+        </record>
+
+        <record id="family_his_450" model="family.history">
+            <field name="name">FH: Thrombosis</field>
+            <field name="code">310247005</field>
+        </record>
+
+        <record id="family_his_451" model="family.history">
+            <field name="name">FH: Thyroid disorder</field>
+            <field name="code">160302006</field>
+        </record>
+
+        <record id="family_his_452" model="family.history">
+            <field name="name">FH: Tuberculosis</field>
+            <field name="code">160280002</field>
+        </record>
+
+        <record id="family_his_453" model="family.history">
+            <field name="name">FH: Twin pregnancy</field>
+            <field name="code">275133001</field>
+        </record>
+
+        <record id="family_his_454" model="family.history">
+            <field name="name">FH: Ulcerative colitis</field>
+            <field name="code">275129008</field>
+        </record>
+
+        <record id="family_his_455" model="family.history">
+            <field name="name">History of previous baby bottle and breast fed</field>
+            <field name="code">737015006</field>
+        </record>
+
+        <record id="family_his_456" model="family.history">
+            <field name="name">History of previous baby breast fed</field>
+            <field name="code">737014005</field>
+        </record>
+
+        <record id="family_his_457" model="family.history">
+            <field name="name">Maternal exposure to radiation</field>
+            <field name="code">704071002</field>
+        </record>
+
+        <record id="family_his_458" model="family.history">
+            <field name="name">Maternal history of congenital dislocated hip</field>
+            <field name="code">413308009</field>
+        </record>
+
+        <record id="family_his_459" model="family.history">
+            <field name="name">Maternal history of connective tissue disease</field>
+            <field name="code">704141008</field>
+        </record>
+
+        <record id="family_his_460" model="family.history">
+            <field name="name">Maternal history of diabetes mellitus</field>
+            <field name="code">704144000</field>
+        </record>
+
+        <record id="family_his_461" model="family.history">
+            <field name="name">Maternal history of diabetes mellitus type 1</field>
+            <field name="code">719761003</field>
+        </record>
+
+        <record id="family_his_462" model="family.history">
+            <field name="name">Maternal history of diabetes mellitus type 2</field>
+            <field name="code">719763000</field>
+        </record>
+
+        <record id="family_his_463" model="family.history">
+            <field name="name">Maternal history of disorder</field>
+            <field name="code">281667005</field>
+        </record>
+
+        <record id="family_his_464" model="family.history">
+            <field name="name">Maternal history of gestational diabetes</field>
+            <field name="code">721151003</field>
+        </record>
+
+        <record id="family_his_465" model="family.history">
+            <field name="name">Maternal history of insulin dependence</field>
+            <field name="code">444161008</field>
+        </record>
+
+        <record id="family_his_466" model="family.history">
+            <field name="name">Maternal history of pyrexia in labor</field>
+            <field name="code">785846009</field>
+        </record>
+
+        <record id="family_his_467" model="family.history">
+            <field name="name">Maternal history of systemic lupus erythematosus</field>
+            <field name="code">704143006</field>
+        </record>
+
+        <record id="family_his_468" model="family.history">
+            <field name="name">Maternal history of viral hepatitis B</field>
+            <field name="code">1237570003</field>
+        </record>
+
+        <record id="family_his_469" model="family.history">
+            <field name="name">Maternal infection</field>
+            <field name="code">288252009</field>
+        </record>
+
+        <record id="family_his_470" model="family.history">
+            <field name="name">Maternal injury</field>
+            <field name="code">268858006</field>
+        </record>
+
+        <record id="family_his_471" model="family.history">
+            <field name="name">Maternal nutritional disorder</field>
+            <field name="code">288254005</field>
+        </record>
+
+        <record id="family_his_472" model="family.history">
+            <field name="name">Maternal placental insufficiency</field>
+            <field name="code">268861007</field>
+        </record>
+
+        <record id="family_his_473" model="family.history">
+            <field name="name">Maternal prolapsed cord</field>
+            <field name="code">268862000</field>
+        </record>
+
+        <record id="family_his_474" model="family.history">
+            <field name="name">Maternal renal/urinary disorder</field>
+            <field name="code">288251002</field>
+        </record>
+
+        <record id="family_his_475" model="family.history">
+            <field name="name">Mother currently breastfeeding</field>
+            <field name="code">866041003</field>
+        </record>
+
+        <record id="family_his_476" model="family.history">
+            <field name="name">Mother victim of domestic violence</field>
+            <field name="code">720407008</field>
+        </record>
+
+        <record id="family_his_477" model="family.history">
+            <field name="name">Parent has disability</field>
+            <field name="code">1254718004</field>
+        </record>
+
+        <record id="family_his_478" model="family.history">
+            <field name="name">Parent unemployed</field>
+            <field name="code">281577004</field>
+        </record>
+
+        <record id="family_his_479" model="family.history">
+            <field name="name">Parental health issue</field>
+            <field name="code">716053000</field>
+        </record>
+
+        <record id="family_his_480" model="family.history">
+            <field name="name">Parents separated</field>
+            <field name="code">266947009</field>
+        </record>
+
+        <record id="family_his_481" model="family.history">
+            <field name="name">Relative with terminal illness</field>
+            <field name="code">248541003</field>
+        </record>
+
+        <record id="family_his_482" model="family.history">
+            <field name="name">Sibling has disability</field>
+            <field name="code">1254719007</field>
+        </record>
+
+        <record id="family_his_483" model="family.history">
+            <field name="name">Sick child</field>
+            <field name="code">275142008</field>
+        </record>
+
+        <record id="family_his_484" model="family.history">
+            <field name="name">Smoker in the family</field>
+            <field name="code">275105001</field>
+        </record>
+
+        <record id="family_his_485" model="family.history">
+            <field name="name">Spouse has disability</field>
+            <field name="code">1254720001</field>
+        </record>
+
+        <record id="family_his_486" model="family.history">
+            <field name="name">Spouse hemophiliac</field>
+            <field name="code">275113000</field>
+        </record>
+
+        <record id="family_his_487" model="family.history">
+            <field name="name">Unemployed father</field>
+            <field name="code">281662004</field>
+        </record>
+
+        <record id="family_his_488" model="family.history">
+            <field name="name">Unemployed mother</field>
+            <field name="code">281663009</field>
+        </record>
+
+        <record id="family_his_489" model="family.history">
+            <field name="name">Vulnerable child in family</field>
+            <field name="code">160891002</field>
+        </record>
+
+
+    </data>
+
+</odoo>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="acs_branch_view_form" model="ir.ui.view">
+        <field name="name">acs.branch.form</field>
+        <field name="model">acs.branch</field>
+        <field name="inherit_id" ref="acs_branch_base.acs_branch_view_form"/>
+        <field name="arch" type="xml">
+            <group name="general_info" position="after">
+                <group name="location_info" string="Stock Location">
+                    <group name="location_left_side">
+                        <field name="appointment_stock_location_id"/>
+                        <field name="appointment_usage_location_id"/> 
+                    </group>
+                    <group name="location_right_side">
+                    </group>
+                </group>
+            </group>
+        </field>
+    </record>
+
+</odoo>

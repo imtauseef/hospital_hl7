@@ -1,0 +1,257 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="0">
+
+        <record id="ASC" model="next.kin.relation">
+            <field name="name">Associate</field>
+            <field name="code">ASC</field>
+            <field name="family_terms">False</field>
+        </record>
+
+        <record id="AUN" model="next.kin.relation">
+            <field name="name">Aunty</field>
+            <field name="code">AUN</field>
+            <field name="family_terms">False</field>
+            <field name="gender">F</field>
+        </record>
+
+        <record id="BRO" model="next.kin.relation">
+            <field name="name">Brother</field>
+            <field name="code">BRO</field>
+            <field name="family_terms">True</field>
+            <field name="gender">M</field>
+        </record>
+
+        <record id="CGV" model="next.kin.relation">
+            <field name="name">Caregiver</field>
+            <field name="code">CGV</field>
+            <field name="family_terms">True</field>
+        </record>
+
+        <record id="CHD" model="next.kin.relation">
+            <field name="name">Child</field>
+            <field name="code">CHD</field>
+            <field name="family_terms">True</field>
+        </record>
+
+        <record id="DON" model="next.kin.relation">
+            <field name="name">Donor</field>
+            <field name="code">DON</field>
+            <field name="family_terms">False</field>
+        </record>
+
+        <record id="EMC" model="next.kin.relation">
+            <field name="name">Emergency Contact</field>
+            <field name="code">EMC</field>
+            <field name="family_terms">False</field>
+        </record>
+
+        <record id="EME" model="next.kin.relation">
+            <field name="name">Employee</field>
+            <field name="code">EME</field>
+            <field name="family_terms">False</field>
+
+        </record>
+
+        <record id="EMR" model="next.kin.relation">
+            <field name="name">Employer</field>
+            <field name="code">EMR</field>
+            <field name="family_terms">False</field>
+        </record>
+
+        <record id="EXF" model="next.kin.relation">
+            <field name="name">Extended Family</field>
+            <field name="code">EXF</field>
+            <field name="family_terms">True</field>
+        </record>
+
+        <record id="FTH" model="next.kin.relation">
+            <field name="name">Father</field>
+            <field name="code">FTH</field>
+            <field name="family_terms">True</field>
+            <field name="gender">M</field>
+        </record>
+
+        <record id="FCH" model="next.kin.relation">
+            <field name="name">Foster Child</field>
+            <field name="code">FCH</field>
+            <field name="family_terms">False</field>
+        </record>
+
+        <record id="FND" model="next.kin.relation">
+            <field name="name">Friend</field>
+            <field name="code">FND</field>
+            <field name="family_terms">False</field>
+        </record>
+
+        <record id="GCH" model="next.kin.relation">
+            <field name="name">Grandchild</field>
+            <field name="code">GCH</field>
+            <field name="family_terms">True</field>
+        </record>
+
+        <record id="GRP" model="next.kin.relation">
+            <field name="name">Grandparent</field>
+            <field name="code">GRP</field>
+            <field name="family_terms">True</field>
+        </record>
+
+        <record id="GRD" model="next.kin.relation">
+            <field name="name">Guardian</field>
+            <field name="code">GRD</field>
+            <field name="family_terms">True</field>
+        </record>
+
+        <record id="DEP" model="next.kin.relation">
+            <field name="name">Handicapped Dependent</field>
+            <field name="code">DEP</field>
+            <field name="family_terms">False</field>
+        </record>
+
+        <record id="DOM" model="next.kin.relation">
+            <field name="name">Life Partner</field>
+            <field name="code">DOM</field>
+            <field name="family_terms">False</field>
+        </record>
+
+        <record id="MGR" model="next.kin.relation">
+            <field name="name">Manager</field>
+            <field name="code">MGR</field>
+            <field name="family_terms">False</field>
+        </record>
+
+        <record id="MTH" model="next.kin.relation">
+            <field name="name">Mother</field>
+            <field name="code">MTH</field>
+            <field name="family_terms">True</field>
+            <field name="gender">F</field>
+        </record>
+
+        <record id="NCH" model="next.kin.relation">
+            <field name="name">Natural Child</field>
+            <field name="code">NCH</field>
+            <field name="family_terms">False</field>
+        </record>
+
+        <record id="NON" model="next.kin.relation">
+            <field name="name">None</field>
+            <field name="code">NON</field>
+            <field name="family_terms">False</field>
+        </record>
+
+        <record id="NA" model="next.kin.relation">
+            <field name="name">Not Available</field>
+            <field name="code">NA</field>
+            <field name="family_terms">False</field>
+        </record>
+
+        <record id="NRS" model="next.kin.relation">
+            <field name="name">Nurse</field>
+            <field name="code">NRS</field>
+            <field name="family_terms">False</field>
+        </record>
+
+        <record id="OTH" model="next.kin.relation">
+            <field name="name">Other</field>
+            <field name="code">OTH</field>
+            <field name="family_terms">False</field>
+        </record>
+
+        <record id="OAD" model="next.kin.relation">
+            <field name="name">Other Adult</field>
+            <field name="code">OAD</field>
+            <field name="family_terms">False</field>
+        </record>
+
+        <record id="OWN" model="next.kin.relation">
+            <field name="name">Owner</field>
+            <field name="code">OWN</field>
+            <field name="family_terms">False</field>
+        </record>
+
+        <record id="POR" model="next.kin.relation">
+            <field name="name">Porter</field>
+            <field name="code">POR</field>
+            <field name="family_terms">False</field>
+        </record>
+
+        <record id="REC" model="next.kin.relation">
+            <field name="name">Recipient</field>
+            <field name="code">REC</field>
+            <field name="family_terms">False</field>
+        </record>
+
+        <record id="SEL" model="next.kin.relation">
+            <field name="name">Self</field>
+            <field name="code">SEL</field>
+            <field name="family_terms">False</field>
+        </record>
+
+
+        <record id="SIB" model="next.kin.relation">
+            <field name="name">Sibling</field>
+            <field name="code">SIB</field>
+            <field name="family_terms">False</field>
+        </record>
+
+        <record id="SIS" model="next.kin.relation">
+            <field name="name">Sister</field>
+            <field name="code">SIS</field>
+            <field name="family_terms">False</field>
+            <field name="gender">F</field>
+        </record>
+
+        <record id="SPS" model="next.kin.relation">
+            <field name="name">Sponsor</field>
+            <field name="code">SPS</field>
+            <field name="family_terms">False</field>
+        </record>
+
+        <record id="SPO" model="next.kin.relation">
+            <field name="name">Spouse</field>
+            <field name="code">SPO</field>
+            <field name="family_terms">False</field>
+        </record>
+
+        <record id="SCH" model="next.kin.relation">
+            <field name="name">Stepchild</field>
+            <field name="code">SCH</field>
+            <field name="family_terms">True</field>
+        </record>
+
+        <record id="TRA" model="next.kin.relation">
+            <field name="name">Trainer</field>
+            <field name="code">TRA</field>
+            <field name="family_terms">False</field>
+        </record>
+	
+        <record id="UNC" model="next.kin.relation">
+            <field name="name">Uncle</field>
+            <field name="code">UNC</field>
+            <field name="family_terms">False</field>
+            <field name="gender">M</field>
+        </record>
+
+        <record id="UNK" model="next.kin.relation">
+            <field name="name">Unknown</field>
+            <field name="code">UNK</field>
+            <field name="family_terms">False</field>
+        </record>
+
+        <record id="PAR" model="next.kin.relation">
+            <field name="name">Parent</field>
+            <field name="code">PAR</field>
+            <field name="family_terms">False</field>
+        </record>
+
+        <record id="WRD" model="next.kin.relation">
+            <field name="name">Ward of court</field>
+            <field name="code">WRD</field>
+            <field name="family_terms">False</field>
+        </record>
+    
+    </data>
+    
+    
+
+</odoo>

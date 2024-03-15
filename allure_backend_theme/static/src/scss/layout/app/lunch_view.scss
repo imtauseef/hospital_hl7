@@ -1,0 +1,35 @@
+@mixin lunch-view() {
+    .o_lunch_content {
+        // flex-direction: row;
+        // flex-wrap: wrap;
+        // overflow: auto;
+
+        // span {
+        //     flex: 1;
+        //     position: sticky;
+        //     top: 0;
+        //     z-index: 1;
+        // }
+
+
+        .o_kanban_ungrouped {
+            height: 100%;
+            .o_kanban_record {
+                .o_field_image {
+                    div {
+                        border: none !important;
+                    }
+                }
+            }
+            .text-odoo {
+                color: var(--brand-primary) !important;
+            }
+        }
+    }
+    // .o_kanban_view {
+    //     height: auto;
+    //     flex: 1 1 100%;
+    //     max-height: unset;
+    //     overflow: auto;
+    // }
+}

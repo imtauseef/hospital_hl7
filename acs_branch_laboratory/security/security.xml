@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="0">
+        
+        <record id="laboratory_request_branch_rule" model="ir.rule" >
+            <field name="name">Laboratory Request multi-branch</field>
+            <field name="model_id" ref="acs_laboratory.model_acs_laboratory_request"/>
+            <field name="domain_force">['|',('branch_id','=',False),('branch_id', 'in', branch_ids)]</field>
+        </record>
+
+        <record id="patient_laboratory_test_branch_rule" model="ir.rule" >
+            <field name="name">Laboratory Test multi-branch</field>
+            <field name="model_id" ref="acs_laboratory.model_patient_laboratory_test"/>
+            <field name="domain_force">['|',('branch_id','=',False),('branch_id', 'in', branch_ids)]</field>
+        </record>
+
+        <record id="acs_patient_laboratory_sample_branch_rule" model="ir.rule" >
+            <field name="name">Laboratory Test multi-branch</field>
+            <field name="model_id" ref="acs_laboratory.model_acs_patient_laboratory_sample"/>
+            <field name="domain_force">['|',('branch_id','=',False),('branch_id', 'in', branch_ids)]</field>
+        </record>
+        
+
+    </data>
+</odoo>

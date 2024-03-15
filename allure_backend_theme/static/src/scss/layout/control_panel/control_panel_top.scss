@@ -1,0 +1,85 @@
+@mixin control-panel-top() {
+    align-items: center;
+    // height: 100%;
+    margin: auto;
+    width: 100%;
+    @include cp_search_option();
+    @include cp_action_buttons();
+
+    .o_cp_top_left {
+        ol.breadcrumb {
+            flex-wrap: nowrap;
+            align-items: center;
+
+            .breadcrumb-item {
+                font-size: 16px;
+
+                &.active {
+                    color: $o-main-text-color;
+                }
+            }
+        }
+    }
+
+    .o_cp_top_right {
+        @include cp-search-view();
+    }
+
+    .o_cp_switch_buttons {
+        .o_switch_view_type {
+            font-family: var(--fonts);
+            text-transform: capitalize;
+        }
+        button {
+            padding: 0 0 0 10px;
+            .btn-secondary {
+                border: 0;
+                background-color: transparent;
+                color: $o-main-text-color;
+                font-size: $font-size-8;
+            }
+        }
+
+        .dropdown-menu-right {
+            left: auto;
+            right: 0;
+            min-width: 250px;
+            border-radius: 0;
+            padding: 5px;
+            margin-top: 8px;
+            top: 30px;
+            button {
+                float: left;
+                width: 46%;
+                border: 0;
+                border-radius: 0;
+                box-shadow: none;
+                text-align: center;
+                font-size: $font-size-1;
+                padding: 10px;
+                color: $o-main-text-color;
+                outline: none;
+                margin-left: 5px;
+                background-color: transparent;
+
+                &.active {
+                    color: darken($o-main-text-color, 7%);
+                    @include border-animation();
+                }
+
+                &:hover {
+                    color: darken($o-main-text-color, 7%);
+                    @include border-animation();
+                }
+
+                &:before {
+                    margin-right: 5px;
+                    font-size: $font-size-6;
+                    display: block;
+                    width: 100%;
+                    text-align: center;
+                }
+            }
+        }
+    }
+}

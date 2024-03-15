@@ -1,0 +1,52 @@
+.o_spreadsheet_dashboard_action {
+	// background-color: var(--night-light) !important;
+	.o-spreadsheet {
+		.o-grid {
+			.mx-auto {
+				z-index: 1;
+			}
+		}
+	}
+}
+.oe_night_mode {
+	.o_spreadsheet_dashboard_action {
+		background-color: var(--night) !important;
+		.o_search_panel_section_header {
+			// background-color: var(--night-light) !important;
+		}
+		.o_search_panel_field {
+			li {
+				background-color: var(--night) !important;
+				color: var(--font-color) !important;
+				&.active {
+					color: var(--night-hover) !important;
+				    background-color: var(--night-hover) !important;
+				}
+			}
+		}
+		.o_renderer {
+			.o-grid {
+				background-color: var(--night) !important;
+			}
+		}
+
+		.o_control_panel {
+			.o_cp_top {
+				.o_cp_top_right {
+					.o-filter-value {
+						div {
+							select {
+								background-color: var(--night) !important;
+								color: var(--font-color) !important;	
+							}
+						}
+					}
+				}
+			}
+		}
+		// @include ni-search-view();
+		// @include sync_control_panel_layout();
+		// @include sync_search_panel_layout();
+		// @include m-control-panel-search();
+	}
+}

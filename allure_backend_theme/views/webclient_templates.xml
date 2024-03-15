@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <template id="sync_login_layout" inherit_id="web.login_layout" name="Login Layout">
+        <xpath expr="//t[@t-set='body_classname']" position="after">
+            <t t-set="body_classname" t-value="'ad_syc_login'"/>
+        </xpath>
+
+        <xpath expr="//div[hasclass('card-body')]/div[1]/img" position="attributes">
+            <attribute name="class">company_logo</attribute>
+        </xpath>
+
+        <xpath expr="//t[@t-call='web.frontend_layout']/div[1]" position="attributes">
+            <attribute name="class">ad_login col-lg-6 col-md-6 col-sm-6 col-xs-12 ad_custom_right
+            </attribute>
+        </xpath>
+
+        <xpath expr="//div[hasclass('ad_login')]" position="after">
+            <t t-set="ad_video_type"
+               t-value="request.env['ir.config_parameter'].sudo().get_param('base_setup.background_video_layout')"/>
+            <t t-set="ad_video"
+               t-value="request.env['ir.config_parameter'].sudo().get_param('base_setup.video_url')"/>
+            <div t-attf-class="col-lg-6 col-md-6 col-sm-6 col-xs-12 ad_custom_left#{' ad_other' if ad_video_type == 'other' else ''}">
+                <t t-if="ad_video">
+                    <video class="bckgd-video" t-att-src="ad_video" autoplay="autoplay" loop="loop" preload="auto"
+                           t-if="ad_video_type == 'other'"/>
+                    <iframe t-att-src="'%s?autoplay=1' % ad_video"
+                            frameborder="0" t-if="ad_video_type == 'youtube'"/>
+                </t>
+                <t t-set="ad_img"
+                   t-value="request.env['ir.config_parameter'].sudo().get_param('base_setup.login_image')"/>
+                <t t-if="not ad_video">
+                    <t t-if="ad_img">
+                        <div class="ad-image-box">
+                            <img class="ad-img"
+                                 t-att-src="'data:image/png;base64,%s' % ad_img"/>
+                        </div>
+                    </t>
+                </t>
+            </div>
+        </xpath>
+
+        <xpath expr="//t[@t-call='web.frontend_layout']/div[1]/div[1]" position="attributes">
+            <attribute name="class">ad_database_list</attribute>
+        </xpath>
+
+        <xpath expr="//div[@t-if='not disable_footer']" position="attributes">
+            <attribute name="class">text-center ad_manage_db</attribute>
+        </xpath>
+    </template>
+</odoo>

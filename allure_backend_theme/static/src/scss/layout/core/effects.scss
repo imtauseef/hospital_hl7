@@ -1,0 +1,45 @@
+@mixin effects-manager() {
+    .o_effects_manager {
+        .o_reward {
+            .o_reward_rainbow_man {
+                color: red;
+                .o_reward_rainbow_line:nth-child(1) {
+                    stroke: $text-info !important;
+                }
+
+                .o_reward_rainbow_line:nth-child(2) {
+                    stroke: $text-danger !important;
+                }
+
+                .o_reward_rainbow_line:nth-child(3) {
+                    stroke: var(--brand-secondary) !important;
+                }
+
+                .o_reward_rainbow_line:nth-child(4) {
+                    stroke: var(--brand-primary) !important;
+                }
+            }
+
+            .o_reward_stars {
+                svg {
+                    path {
+                        fill: white;
+                    }
+                }
+            }
+
+            .o_reward_face_group {
+                .o_reward_msg {
+                    .o_reward_msg_content {
+                        background-color: var(--primary) !important;
+                        color: white !important;
+                    }
+                }
+
+                .o_reward_shadow {
+                    background-color: $tr-hover;
+                }
+            }
+        }
+    }
+}

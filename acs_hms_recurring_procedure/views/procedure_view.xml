@@ -1,0 +1,130 @@
+<?xml version="1.0"?>
+<odoo>
+
+     <!-- Product -->
+    <record id="product_template_form_view_inherit" model="ir.ui.view">
+        <field name="name">product.template.product.recurrance.details</field>
+        <field name="model">product.template</field>
+        <field name="inherit_id" ref="acs_hms.product_template_form_view_inherit"/>
+        <field name="arch" type="xml">
+            <field name="procedure_time" position="after">
+                <field name="recurring_procedure"/>
+                <field name="repeat_number" attrs="{'invisible': [('recurring_procedure','=',False)]}"/>
+            </field>
+        </field>
+    </record>
+
+    <!-- Procedure Group -->
+    <record id="view_procedure_group_form" model="ir.ui.view">
+        <field name="name">procedure.group.form</field>
+        <field name="model">procedure.group</field>
+        <field name="inherit_id" ref="acs_hms.view_procedure_group_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='line_ids']//field[@name='days_to_add']" position="after">
+                <field name="recurring_procedure"/>
+                <field name="repeat_number" attrs="{'readonly': [('recurring_procedure','=',False)]}"/>
+            </xpath>
+        </field>
+    </record>
+
+    <!-- Treatement -->
+    <record id="view_hospital_hms_treatment_form" model="ir.ui.view">
+        <field name="name">hms.treatment.form</field>
+        <field name="model">hms.treatment</field>
+        <field name="inherit_id" ref="acs_hms.view_hospital_hms_treatment_form"/>
+        <field name="arch" type="xml">
+            <button name="action_create_procedure_invoice" position="before">
+                <button name="acs_create_recurring_procedures" class="pull-right" string="Create All Recurring Procedures" type="object" confirm="Are you sire you want to create all recurring procedures in advance? (NOTE: it will not create recurrance where it is forever.)"/>
+            </button>
+            <field name="patient_procedure_ids" position="attributes">
+                <attribute name="context">{'default_treatment_id': active_id, 'default_patient_id': patient_id, 'default_physician_id': physician_id, 'default_repeat_type': 'after', 'default_mon': True}</attribute>
+            </field>
+            <xpath expr="//field[@name='patient_procedure_ids']//field[@name='price_unit']" position="before">
+                <field name="recurring_procedure"/>
+                <field name="repeat_number"/>
+                <field name="mon" invisible="1"/>
+                <field name="repeat_type" invisible="1"/>
+            </xpath>
+        </field>
+    </record>
+
+    <record id="view_acs_patient_procedure_form" model="ir.ui.view">
+        <field name="name">acs.patient.procedure.form</field>
+        <field name="model">acs.patient.procedure</field>
+        <field name="inherit_id" ref="acs_hms.view_acs_patient_procedure_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//header" position="before">
+                <field name="repeat_show_dow" invisible="1" />
+                <field name="repeat_show_day" invisible="1" />
+                <field name="repeat_show_week" invisible="1" />
+                <field name="repeat_show_month" invisible="1" />
+                <field name="recurrence_id" invisible="1" />
+            </xpath>
+            <xpath expr="//header" position="after">
+                <div class="alert alert-info oe_edit_only" role="status" attrs="{'invisible': ['|', ('recurring_procedure', '=', False), ('recurrence_id', '=', False)]}" groups="acs_hms_recurring_procedure.group_recurring_procedures">
+                    <p>Edit recurring Procedures</p>
+                    <field name="recurrence_update" widget="radio"/>
+                </div>
+            </xpath>
+            <div name="button_box" position="inside">
+                <button name="action_recurring_procedures" type="object" attrs="{'invisible': [('recurrence_id', '=', False)]}" class="oe_stat_button" icon="fa-repeat" groups="acs_hms_recurring_procedure.group_recurring_procedures">
+                    <div class="o_field_widget o_stat_info">
+                        <span class="o_stat_value">
+                            <field name="recurring_count" widget="statinfo" nolabel="1" />
+                            Procedure
+                        </span>
+                        <span class="o_stat_text">in Recurrence</span>
+                    </div>
+                </button>
+            </div>
+            <field name="invoice_id" position="after">
+                <field name="recurring_procedure" groups="acs_hms_recurring_procedure.group_recurring_procedures"/>
+                <field name="recurring_procedure" invisible="1"/>
+            </field>
+
+            <page name="consumed_products" position="after">
+                <page name="recurrence" string="Recurrence" attrs="{'invisible': [('recurring_procedure', '=', False)]}">
+                    <group>
+                        <group>
+                            <label for="repeat_interval" />
+                            <div class="o_col">
+                                <div class="o_row">
+                                    <field name="repeat_interval" attrs="{'required': [('recurring_procedure', '=', True)]}" />
+                                    <field name="repeat_unit" attrs="{'required': [('recurring_procedure', '=', True)]}" />
+                                </div>
+                                <widget name="week_days" attrs="{'invisible': [('repeat_show_dow', '=', False)]}"/> 
+                            </div>
+
+                            <label for="repeat_on_month" string="Repeat On" attrs="{'invisible': [('repeat_unit', 'not in', ('month', 'year'))]}" />
+                            <div class="o_row">
+                                <field name="repeat_on_month" attrs="{'invisible': [('repeat_unit', '!=', 'month')], 'required': [('repeat_unit', '=', 'month')]}" />
+                                <field name="repeat_on_year" attrs="{'invisible': [('repeat_unit', '!=', 'year')], 'required': [('repeat_unit', '=', 'year')]}" />
+
+                                <field name="repeat_day" attrs="{'invisible': [('repeat_show_day', '=', False)], 'required': [('repeat_show_day', '=', True)]}" />
+                                <field name="repeat_week" attrs="{'invisible': [('repeat_show_week', '=', False)], 'required': [('repeat_show_week', '=', True)]}" />
+                                <field name="repeat_weekday" attrs="{'invisible': [('repeat_show_week', '=', False)], 'required': [('repeat_show_week', '=', True)]}" />
+                                <span attrs="{'invisible': ['|', ('repeat_show_week', '=', False), ('repeat_show_month', '=', False)]}">of</span>
+                                <field name="repeat_month" attrs="{'invisible': [('repeat_show_month', '=', False)], 'required': [('repeat_show_month', '=', True)]}" />
+                            </div>
+
+                            <label for="repeat_type" />
+                            <div class="o_row">
+                                <field name="repeat_type" attrs="{'required': [('recurring_procedure', '=', True)]}" />
+                                <field name="repeat_until" attrs="{'invisible': [('repeat_type', '!=', 'until')], 'required': [('repeat_type', '=', 'until')]}" />
+                                <field name="repeat_number" attrs="{'invisible': [('repeat_type', '!=', 'after')], 'required': [('repeat_type', '=', 'after')]}" />
+                            </div>
+                            <field name="recurrence_id" invisible="1"/>
+                            <field name="process_start_time" widget="float_time"/>
+                        </group>
+                    </group>
+                    <group attrs="{'invisible': ['|', ('recurring_procedure', '=', False), ('recurrence_message', '=', False)]}">
+                        <div class="alert alert-success o_form_project_recurrence_message" role="status">
+                            <field name="recurrence_message" widget="html" class="mb-0" />
+                        </div>
+                    </group>
+                </page>
+            </page>
+        </field>
+    </record>
+
+</odoo>

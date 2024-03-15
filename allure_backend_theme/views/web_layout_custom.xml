@@ -1,0 +1,50 @@
+<!-- <?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <template id="allure_backend_theme.layout" inherit_id="web.layout">
+        <xpath expr="//body" position="attributes">
+            <attribute name="t-attf-class">#{body_classname} allure_#{request.env.user.box_type} allure_radio_#{request.env.user.radio_type} uc_theme_#{request.env.user.font_type_values} #{'oe_base_menu' if request.env.user.base_menu == 'base_menu' else ''}</attribute>
+        </xpath>
+        <xpath expr="//head" position="inside">
+            <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+            <meta name="theme-color" content="#0b2f6d" />
+            <script type="text/javascript">
+            if (odoo.define) {
+                odoo.define('allure_backend_theme.AllureWebThemes', function(require) {
+                    var WebThemesDB = require('allure_backend_theme.WebThemesDB');
+                    var __themesDB = new WebThemesDB();
+                    __themesDB.add_themes(<t t-raw="request.env['ir.web.theme'].sudo().get_json_themes()"/>);
+                    return __themesDB;
+                });
+            }
+            </script>
+        </xpath>
+    </template>
+</odoo> -->
+<odoo>
+    <!-- <template id="allure_backend_theme.webclient_bootstrap" inherit_id="web_enterprise.webclient_bootstrap">
+        <xpath expr="//meta[@name='theme-color']" position="replace" />
+        <xpath expr="//meta[@name='msapplication-navbutton-color']" position="replace" />
+        <xpath expr="//meta[@name='msapplication-TileColor']" position="replace" />
+    </template> -->
+    <template id="allure_backend_theme.layout" inherit_id="web.layout">
+        <xpath expr="//head" position="inside">
+            <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+            <meta name="theme-color" content="#0b2f6d" />
+            <meta name="msapplication-navbutton-color" content="#0b2f6d" />
+            <meta name="msapplication-TileColor" content="#0b2f6d" />
+            <script type="text/javascript">
+            if (odoo.define) {
+                odoo.define('allure_backend_theme.AllureWebThemes', function(require) {
+                    var WebThemesDB = require('allure_backend_theme.WebThemesDB');
+                    var __themesDB = new WebThemesDB();
+                    __themesDB.add_themes(<t t-raw="request.env['ir.web.theme'].sudo().get_json_themes()"/>);
+                    return __themesDB;
+                });
+            }
+            </script>
+        </xpath>
+        <xpath expr="//body" position="attributes">
+            <attribute name="t-attf-class">#{body_classname} allure_#{request.env.user.box_type} allure_radio_#{request.env.user.radio_type} uc_theme_#{request.env.user.font_type_values} #{'oe_base_menu' if request.env.user.base_menu == 'base_menu' else ''}</attribute>
+        </xpath>
+    </template>
+</odoo>

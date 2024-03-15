@@ -1,0 +1,490 @@
+$border: #e6ecf0;
+$white: #fff;
+
+body.ad_syc_login, .o_home_menu_background {
+    font-family: var(--fonts);
+    display: table;
+    background: unset !important;
+    #wrapwrap {
+        height: 100%;
+        width: auto;
+        main {
+            height: 100%;
+            width: auto;
+            & > .ad_custom_left {
+                display: block;
+                height: 100%;
+                border-right: 1px solid $border;
+                background-color: $brand-primary-login;
+                padding: 0;
+                overflow: hidden;
+                &.ad_other {
+                    .bckgd-video {
+                        width: 100%;
+                        max-width: 100%;
+                        transform: unset;
+                        left: auto;
+                    }
+                }
+                & > video {
+                    height: 100%;
+                    width: auto;
+                    top: 0;
+                    left: 50%;
+                    -webkit-transform: translateX(-50%);
+                    -ms-transform: translateX(-50%);
+                    transform: translateX(-50%);
+                    //position: absolute;
+                }
+                & > .ad-color {
+                    width: 100%;
+                    height: auto;
+                }
+                & > .ad-image-box {
+                    flex: 0 0 100%;
+                    height: 100%;
+                    width: auto;
+                    top: 0;
+                    left: 50%;
+                    -ms-transform: translateX(-50%);
+                    transform: translateX(-50%);
+                    //position: absolute;
+                    display: block;
+                    .ad-img {
+                        height: 100%;
+                        width: 100%;
+                        top: 0;
+                        left: 50%;
+                       // -webkit-transform: translateX(-50%);
+                       // -ms-transform: translateX(-50%);
+                        //transform: translateX(-50%);
+                        position: absolute;
+                    }
+                }
+                & > iframe {
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+            & > .ad_login.ad_custom_right {
+                height: 100%;
+                display: table;
+                float: right;
+                & > .o_database_list {
+                    display: table-cell;
+                    margin: auto;
+                    vertical-align: middle;
+                    align-items: center;
+                    height: 100%;
+                    width: 100%;
+                    &.bg-100{
+                        background-color: transparent !important;
+                    }
+                    .card-body {
+                        .border-bottom{
+                            border-bottom: transparent !important;
+                        }
+                        .company_logo {
+                            margin-bottom: 5px;
+                        }
+                        & > .oe_signup_form, & > .oe_reset_password_form {
+                            & > .oe_login_buttons{
+                                flex-wrap: nowrap !important;
+                                a{
+                                    color: $brand-primary-login;
+                                }
+                                & > .o_login_auth{
+                                    display: none !important;
+                                }
+                                & > .justify-content-between {
+                                    width: 100% !important;
+                                    a[href="/web/login?"] {
+                                        text-decoration: none;
+                                        color: $brand-primary-login;
+                                        border: 1px solid $brand-primary-login;
+                                        flex: 1 1 45%;
+                                        border-radius: 0;
+                                        display: flex;
+                                        order: 2;
+                                        margin-left: 0px;
+                                        margin-bottom: 15px;
+                                        justify-content: center;
+                                        display: table;
+                                        width: 50%;
+                                        font-size: 14px;
+                                        padding: 5px 0px;
+                                        text-align: center;
+                                        height: 35px;
+                                        &:hover {
+                                            background-color: $brand-primary-login;
+                                            color: $white;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                        & > .oe_login_form, & > .oe_signup_form, & > .oe_reset_password_form {
+                            max-width: 440px;
+                            margin: auto;
+                            padding-bottom: 30px;
+                            & > .alert-danger{
+                                background-color: $brand-primary-login;
+                                color: $white;
+                                border: none;
+                                border-radius: 0;
+                            }
+                            & > .form-group {
+                                margin-top: 40px;
+                                position: relative;
+                                label {
+                                    position: absolute;
+                                    top: 10px;
+                                    bottom: 0;
+                                    left: 0;
+                                    width: 100%;
+                                    transition: 0.2s;
+                                    opacity: 0.5;
+                                    font-weight: bold;
+                                }
+                                &.field-db{
+                                    & > label{
+                                        position: absolute;
+                                        top: -20px;
+                                        color: #000;
+                                        opacity: 1;
+                                    }
+                                    .input-group{
+                                        #db{
+                                            border: none;
+                                            background-color: transparent;
+                                            border-bottom: 1px solid $border;
+                                            border-radius: 0;
+                                            box-shadow: none;
+                                            cursor: not-allowed;
+                                        }
+                                        .input-group-btn{
+                                            & > a.btn-default{
+                                                border-radius: 0;
+                                                border: none;
+                                                border-bottom: 1px solid $border;
+                                                margin-top: 1px;
+                                                color: $brand-primary-login;
+                                                box-shadow: none;
+                                                background-color: transparent;
+                                                &:hover{
+                                                    background-color: transparent;
+                                                    color: darken($brand-primary-login, 7%);
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                            .form-group {
+                                ::-webkit-input-placeholder {
+                                    opacity: 0;
+                                }
+                                input:placeholder-shown {
+                                    font-size: 0;
+                                }
+                            }
+                            .form-group {
+                                ::-webkit-input-placeholder {
+                                    opacity: 1;
+                                    transition: inherit;
+                                }
+                                input:placeholder-shown {
+                                    font-size: 14px;
+                                }
+                                label {
+                                    margin-top: -35px;
+                                    opacity: 1;
+                                }
+                            }
+                            & > .form-group {
+                                & > input {
+                                    border: none;
+                                    box-shadow: none;
+                                    border-radius: 0;
+                                    border-bottom: 1px solid $border;
+                                    &:focus {
+                                        background: repeating-linear-gradient(to right, $brand-primary-login 0%, $brand-primary-login 100%) left bottom transparent no-repeat;
+                                        background-size: 100% 1px;
+                                        background-position: center bottom;
+                                        -webkit-animation: login-line-animate .5s 1;
+                                        -moz-animation: login-line-animate .5s 1;
+                                        animation: login-line-animate .5s 1;
+                                    }
+                                }
+                            }
+                            & > .oe_login_buttons {
+                                margin-bottom: 15px;
+                                position: relative;
+                                display: flex;
+                                flex-wrap: wrap;
+                                & > div.o_login_auth{
+                                    position: relative;
+                                    left: 0;
+                                    -ms-flex-flow: row wrap;
+                                    -moz-flex-flow: row wrap;
+                                    -webkit-flex-flow: row wrap;
+                                    flex-flow: row wrap;
+                                    -moz-justify-content: flex-start;
+                                    -webkit-justify-content: flex-start;
+                                    justify-content: flex-start;
+                                    display: flex;
+                                    flex: 0 0 100%;
+                                    margin-top: 55px;
+                                    margin-bottom: 15px;
+                                    order: 2;
+                                    &:after{
+                                        content: "or login with";
+                                        margin: 0 auto;
+                                        position: absolute;
+                                        top: -35px;
+                                        left: 0%;
+                                        right: 0;
+                                        bottom: 0;
+                                        height: 5px;
+                                        width: 100px;
+                                        text-align: center;
+                                        background-color: $white;
+                                        color: $brand-primary-login;
+                                        display: table;
+                                    }
+                                    &:before{
+                                        border-top: 1px solid $brand-primary-login;
+                                        content: "";
+                                        margin: 0 auto;
+                                        position: absolute;
+                                        top: -25px;
+                                        height: 5px;
+                                        left: 0;
+                                        right: 0;
+                                        bottom: 0;
+                                        width: 100%;
+                                    }
+                                    & > div.o_auth_oauth_providers{
+                                        flex: 1 1 50%;
+                                        -ms-flex: 1 1 50%;
+                                        -moz-flex: 1 1 50%;
+                                        -webkit-box-flex: 1;
+                                        -webkit-flex: 1 1 50%;
+                                        text-align: center;
+                                        display: block;
+                                        margin-bottom: 15px;
+                                        .o_custom_icon{
+                                            border: 3px solid $brand-primary-login;
+                                            transform : none;
+                                        }
+                                        a {
+                                            padding-top: 5px !important;
+                                            color: $brand-primary-login;
+                                            border: 1px solid $brand-primary-login;
+                                            text-decoration: none;
+                                            height: 35px;
+                                            border-radius: 0px;
+                                            text-align: center;
+                                            &:hover , &:active{
+                                                background-color: $brand-primary-login;
+                                                color: $white;
+                                                & > i{
+                                                    color: $white;
+                                                }
+                                                & > .o_custom_icon{
+                                                    border: 3px solid $white;
+                                                }
+                                            }
+                                            & > i {
+                                                font-size: 18px;
+                                                vertical-align: middle;
+                                                color: $brand-primary-login;
+                                            }
+                                            &:nth-child(odd) {
+                                                width: 49%;
+                                                display: inline-block;
+                                                padding-right: 4px;
+                                                margin-bottom: 15px;
+                                            }
+                                            &:nth-child(even) {
+                                                display: inline-block;
+                                                width: 49%;
+                                                margin-left: 8px;
+                                                margin-bottom: 15px;
+                                            }
+                                            &:last-child:not(:nth-child(even)) {
+                                                width: 100%;
+                                                padding-left: 0;
+                                                padding-right: 0;
+                                            }
+                                        }
+                                    }
+                                    em.d-block.text-center.text-muted.small.my-1,em.d-block.text-center.text-muted.small.my-2, em.d-block.text-center.text-muted.small.my-3 {
+                                        display: none !important;
+                                    }
+                                }
+                                .btn.btn-primary[type="submit"], button.btn.btn-link.btn-sm.btn-block {
+                                    border-radius: 0;
+                                    background-color: $brand-primary-login;
+                                    border-color: $brand-primary-login;
+                                    justify-content: center;
+                                    order: 0;
+                                    flex: 0 0 49%;
+                                    height: 35px;
+                                    font-size: 14px;
+                                    padding: 5px 0px;
+                                    margin-bottom: 15px;
+                                    margin-right: 3px;
+                                    color: $white;
+                                    text-decoration:none;
+                                    &:hover {
+                                        background-color: darken($brand-primary-login, 7%);
+                                    }
+                                }
+                                & > .justify-content-between {
+                                    margin-top: 0rem !important;
+                                    order: 1;
+                                    flex: 1 1 49%;
+                                    flex-wrap: wrap;
+                                    a{
+                                        color: $brand-primary-login;
+                                    }
+                                    a[href="/web/reset_password?"], a[href="/web/reset_password"], a[href="/web/reset_password?error=access"]{
+                                        position: relative;
+                                        text-decoration: none;
+                                        flex: 1 1 49%;
+                                        border-radius: 0;
+                                        order: 2;
+                                        padding: 0;
+                                        display: flex;
+                                        text-align: right;
+                                        justify-content: flex-end;
+                                        align-items: center;
+                                        margin-bottom: 15px;
+                                        margin-right: 5px;
+                                        font-size: 14px;
+                                        color: $brand-primary-login;
+                                    }
+                                    a[href="/web/reset_password?debug="]{
+                                        text-decoration: none;
+                                        color: $brand-primary-login;
+                                        border: 1px solid $brand-primary-login;
+                                        flex: 0 0 100%;
+                                        border-radius: 0;
+                                        order: 2;
+                                        padding-top: 5px;
+                                        text-align: center;
+                                        margin-top: 20px;
+                                        position: absolute;
+                                        top: 38px;
+                                        right: 0px;
+                                        height: 35px;
+                                        font-size: 14px;
+                                        width: 48%;
+                                        color: $brand-primary-login;
+                                        &:hover {
+                                            background-color: $brand-primary-login;
+                                            color: $white;
+                                        }
+                                    }
+                                    a[href="/web/login"], a[href="/web/signup"], a[href="/web/signup?"],a[href="/web/signup?error=access"], a[href="/web/signup?debug="]{
+                                        text-decoration: none;
+                                        color: $brand-primary-login;
+                                        border: 1px solid $brand-primary-login;
+                                        flex: 1 1 45%;
+                                        border-radius: 0;
+                                        display: flex;
+                                        order: 2;
+                                        margin-bottom: 15px;
+                                        justify-content: center;
+                                        display: table;
+                                        font-size: 14px;
+                                        padding: 5px 0px;
+                                        text-align: center;
+                                        height: 35px;
+                                        min-width: 49%;
+                                        &:hover {
+                                            background-color: $brand-primary-login;
+                                            color: $white;
+                                        }
+                                    }
+
+                                }
+                                a[href="/web/login?"] , a[href="/web/login?error=access"]{
+                                    text-decoration: none;
+                                    color: $brand-primary-login;
+                                    border: 1px solid $brand-primary-login;
+                                    flex: 1 1 45%;
+                                    border-radius: 0;
+                                    display: flex;
+                                    order: 2;
+                                    margin-left: 8px;
+                                    justify-content: center;
+                                    display: table;
+                                    width: 50%;
+                                    font-size: 14px;
+                                    padding: 5px 0px;
+                                    text-align: center;
+                                    height: 35px;
+                                    &:hover {
+                                        background-color: $brand-primary-login;
+                                        color: $white;
+                                    }
+                                }
+                            }
+                            &[action="/web/login?debug"]{
+                                .oe_login_buttons{
+                                    .justify-content-between{
+                                        a[href="/web/reset_password?"], a[href="/web/reset_password"], a[href="/web/reset_password?error=access"]{
+                                            padding: 6px 0px;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                        & > .ad_manage_db {
+                            position: absolute;
+                            bottom: 10px;
+                            left: 0;
+                            right: 0;
+                            & > a{
+                                text-decoration: none;
+                                color: $brand-primary-login;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+// Tooltip view -stop
+
+@-webkit-keyframes login-line-animate {
+    0% {
+        background-size: 0 1px;
+    }
+    100% {
+        background-size: 100% 1px;
+    }
+}
+
+@-moz-keyframes login-line-animate {
+    0% {
+        background-size: 0 1px;
+    }
+    100% {
+        background-size: 100% 1px;
+    }
+}
+
+@keyframes login-line-animate {
+    0% {
+        background-size: 0 1px;
+    }
+    100% {
+        background-size: 100% 1px;
+    }
+}
+
+// animated tool tip - [stop]

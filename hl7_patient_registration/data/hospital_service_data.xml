@@ -1,0 +1,1873 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="0">
+
+        <record id="hsptl_ser_1" model="hospital.service">
+            <field name="name">Allergy &amp; Immunology</field>
+            <field name="code">1</field>
+        </record>
+
+    
+
+        <record id="hsptl_ser_2" model="hospital.service">
+            <field name="name">Allied Health</field>
+            <field name="code">2</field>
+        </record>
+
+    
+
+        <record id="hsptl_ser_3" model="hospital.service">
+            <field name="name">Alternative Medicine</field>
+            <field name="code">3</field>
+        </record>
+
+    
+
+        <record id="hsptl_ser_4" model="hospital.service">
+            <field name="name">Anesthesia</field>
+            <field name="code">4</field>
+        </record>
+
+    
+
+        <record id="hsptl_ser_5" model="hospital.service">
+            <field name="name">Audiology</field>
+            <field name="code">5</field>
+        </record>
+
+    
+
+        <record id="hsptl_ser_6" model="hospital.service">
+            <field name="name">Aviation Medicine</field>
+            <field name="code">6</field>
+        </record>
+
+    
+
+        <record id="hsptl_ser_7" model="hospital.service">
+            <field name="name">Cardiology</field>
+            <field name="code">7</field>
+        </record>
+
+    
+
+        <record id="hsptl_ser_8" model="hospital.service">
+            <field name="name">Clinical Toxicology</field>
+            <field name="code">8</field>
+        </record>
+
+    
+
+        <record id="hsptl_ser_9" model="hospital.service">
+            <field name="name">Community Medicine</field>
+            <field name="code">9</field>
+        </record>
+
+    
+
+        <record id="hsptl_ser_10" model="hospital.service">
+            <field name="name">Critical Care Medicine</field>
+            <field name="code">10</field>
+        </record>
+
+    
+
+        <record id="hsptl_ser_11" model="hospital.service">
+            <field name="name">Dermatology</field>
+            <field name="code">11</field>
+        </record>
+
+    
+
+        <record id="hsptl_ser_12" model="hospital.service">
+            <field name="name">Diagnostic Radiology</field>
+            <field name="code">12</field>
+        </record>
+
+    
+
+        <record id="hsptl_ser_13" model="hospital.service">
+            <field name="name">Emergency Medicine</field>
+            <field name="code">13</field>
+        </record>
+
+    
+
+        <record id="hsptl_ser_14" model="hospital.service">
+            <field name="name">Pediatric Emergency Medicine</field>
+            <field name="code">14</field>
+        </record>
+
+    
+
+        <record id="hsptl_ser_15" model="hospital.service">
+            <field name="name">Endodontics</field>
+            <field name="code">15</field>
+        </record>
+
+    
+
+        <record id="hsptl_ser_16" model="hospital.service">
+            <field name="name">Family Medicine</field>
+            <field name="code">16</field>
+        </record>
+
+    
+
+        <record id="hsptl_ser_17" model="hospital.service">
+            <field name="name">Forensic Dentistry</field>
+            <field name="code">17</field>
+        </record>
+
+    
+
+        <record id="hsptl_ser_18" model="hospital.service">
+            <field name="name">Forensic Medicine</field>
+            <field name="code">18</field>
+        </record>
+
+    
+
+        <record id="hsptl_ser_19" model="hospital.service">
+            <field name="name">General Dentist</field>
+            <field name="code">19</field>
+        </record>
+
+    
+
+        <record id="hsptl_ser_20" model="hospital.service">
+            <field name="name">General Practitioner</field>
+            <field name="code">20</field>
+        </record>
+
+    
+
+        <record id="hsptl_ser_21" model="hospital.service">
+            <field name="name">Genito Urinary Medicine</field>
+            <field name="code">21</field>
+        </record>
+
+    
+
+        <record id="hsptl_ser_22" model="hospital.service">
+            <field name="name">GP Dentist</field>
+            <field name="code">22</field>
+        </record>
+
+    
+
+        <record id="hsptl_ser_23" model="hospital.service">
+            <field name="name">Intensive care</field>
+            <field name="code">23</field>
+        </record>
+
+    
+
+        <record id="hsptl_ser_24" model="hospital.service">
+            <field name="name">Internal Medicine</field>
+            <field name="code">24</field>
+        </record>
+
+    
+
+        <record id="hsptl_ser_25" model="hospital.service">
+            <field name="name">Medical Genetics</field>
+            <field name="code">25</field>
+        </record>
+
+    
+
+        <record id="hsptl_ser_26" model="hospital.service">
+            <field name="name">Medical Practitioner</field>
+            <field name="code">26</field>
+        </record>
+
+    
+
+        <record id="hsptl_ser_27" model="hospital.service">
+            <field name="name">Neurology</field>
+            <field name="code">27</field>
+        </record>
+
+    
+
+        <record id="hsptl_ser_28" model="hospital.service">
+            <field name="name">Nuclear Medicine</field>
+            <field name="code">28</field>
+        </record>
+
+    
+
+        <record id="hsptl_ser_29" model="hospital.service">
+            <field name="name">Obstetrics &amp;amp; Gynecology</field>
+            <field name="code">29</field>
+        </record>
+
+    
+
+        <record id="hsptl_ser_30" model="hospital.service">
+            <field name="name">Occupational Medicine</field>
+            <field name="code">30</field>
+        </record>
+
+    
+
+        <record id="hsptl_ser_31" model="hospital.service">
+            <field name="name">Ophthalmology</field>
+            <field name="code">31</field>
+        </record>
+
+    
+
+        <record id="hsptl_ser_32" model="hospital.service">
+            <field name="name">Oral &amp;amp; Maxilofacial Surgery</field>
+            <field name="code">32</field>
+        </record>
+
+    
+
+        <record id="hsptl_ser_33" model="hospital.service">
+            <field name="name">Oral Surgery</field>
+            <field name="code">33</field>
+        </record>
+
+    
+
+        <record id="hsptl_ser_34" model="hospital.service">
+            <field name="name">Orthodontics</field>
+            <field name="code">34</field>
+        </record>
+
+    
+
+        <record id="hsptl_ser_35" model="hospital.service">
+            <field name="name">Otolaryngology</field>
+            <field name="code">35</field>
+        </record>
+
+    
+
+        <record id="hsptl_ser_36" model="hospital.service">
+            <field name="name">Pathology</field>
+            <field name="code">36</field>
+        </record>
+
+    
+
+        <record id="hsptl_ser_37" model="hospital.service">
+            <field name="name">Pediatric Dentistry</field>
+            <field name="code">37</field>
+        </record>
+
+    
+
+        <record id="hsptl_ser_38" model="hospital.service">
+            <field name="name">Pediatrics</field>
+            <field name="code">38</field>
+        </record>
+
+    
+
+        <record id="hsptl_ser_39" model="hospital.service">
+            <field name="name">Periodontics</field>
+            <field name="code">39</field>
+        </record>
+
+    
+
+        <record id="hsptl_ser_40" model="hospital.service">
+            <field name="name">Physical Medicine &amp;amp; Rehabilitation</field>
+            <field name="code">40</field>
+        </record>
+
+    
+
+        <record id="hsptl_ser_41" model="hospital.service">
+            <field name="name">Plastic Surgery</field>
+            <field name="code">41</field>
+        </record>
+
+    
+
+        <record id="hsptl_ser_42" model="hospital.service">
+            <field name="name">Prosthodontics</field>
+            <field name="code">42</field>
+        </record>
+
+    
+
+        <record id="hsptl_ser_43" model="hospital.service">
+            <field name="name">Psychiatry</field>
+            <field name="code">43</field>
+        </record>
+
+    
+
+        <record id="hsptl_ser_44" model="hospital.service">
+            <field name="name">Public Health Medicine</field>
+            <field name="code">44</field>
+        </record>
+
+    
+
+        <record id="hsptl_ser_45" model="hospital.service">
+            <field name="name">Radiation Oncology (Radiation Therapy)</field>
+            <field name="code">45</field>
+        </record>
+
+    
+
+        <record id="hsptl_ser_46" model="hospital.service">
+            <field name="name">Radiology</field>
+            <field name="code">46</field>
+        </record>
+
+    
+
+        <record id="hsptl_ser_47" model="hospital.service">
+            <field name="name">Restorative Dentistry / Endodontics / Periodontics</field>
+            <field name="code">47</field>
+        </record>
+
+    
+
+        <record id="hsptl_ser_48" model="hospital.service">
+            <field name="name">Sexual &amp;amp; Reproductive Health</field>
+            <field name="code">48</field>
+        </record>
+
+    
+
+        <record id="hsptl_ser_49" model="hospital.service">
+            <field name="name">Specialist Dentist</field>
+            <field name="code">49</field>
+        </record>
+
+    
+
+        <record id="hsptl_ser_50" model="hospital.service">
+            <field name="name">Urology</field>
+            <field name="code">50</field>
+        </record>
+
+    
+
+        <record id="hsptl_ser_51" model="hospital.service">
+            <field name="name">General Surgery</field>
+            <field name="code">51</field>
+        </record>
+
+    
+
+        <record id="hsptl_ser_52" model="hospital.service">
+            <field name="name">Gastroenterology</field>
+            <field name="code">52</field>
+        </record>
+
+    
+
+        <record id="hsptl_ser_53" model="hospital.service">
+            <field name="name">Anesthesia /Critical Care Medicine</field>
+            <field name="code">53</field>
+        </record>
+
+    
+
+        <record id="hsptl_ser_54" model="hospital.service">
+            <field name="name">Cardiac surgery</field>
+            <field name="code">54</field>
+        </record>
+
+    
+
+        <record id="hsptl_ser_55" model="hospital.service">
+            <field name="name">Cardiovascular Disease</field>
+            <field name="code">55</field>
+        </record>
+
+    
+
+        <record id="hsptl_ser_56" model="hospital.service">
+            <field name="name">Dermatology &amp;amp; Genito Urinary Medicine</field>
+            <field name="code">56</field>
+        </record>
+
+    
+
+        <record id="hsptl_ser_57" model="hospital.service">
+            <field name="name">Endocrinology</field>
+            <field name="code">57</field>
+        </record>
+
+    
+
+        <record id="hsptl_ser_58" model="hospital.service">
+            <field name="name">Endocrinology, Diabetes &amp;amp; Metabolic Diseases.</field>
+            <field name="code">58</field>
+        </record>
+
+    
+
+        <record id="hsptl_ser_59" model="hospital.service">
+            <field name="name">Family Medicine / Adolescent Medicine</field>
+            <field name="code">59</field>
+        </record>
+
+    
+
+        <record id="hsptl_ser_60" model="hospital.service">
+            <field name="name">General Pediatric</field>
+            <field name="code">60</field>
+        </record>
+
+    
+
+        <record id="hsptl_ser_61" model="hospital.service">
+            <field name="name">General Surgery/ Pediatric Surgery</field>
+            <field name="code">61</field>
+        </record>
+
+    
+
+        <record id="hsptl_ser_62" model="hospital.service">
+            <field name="name">Haematology</field>
+            <field name="code">62</field>
+        </record>
+
+    
+
+        <record id="hsptl_ser_63" model="hospital.service">
+            <field name="name">Histopathology</field>
+            <field name="code">63</field>
+        </record>
+
+    
+
+        <record id="hsptl_ser_64" model="hospital.service">
+            <field name="name">Infectious Diseases</field>
+            <field name="code">64</field>
+        </record>
+
+    
+
+        <record id="hsptl_ser_65" model="hospital.service">
+            <field name="name">Interventional Cardiology</field>
+            <field name="code">65</field>
+        </record>
+
+    
+
+        <record id="hsptl_ser_66" model="hospital.service">
+            <field name="name">Medical Microbiology</field>
+            <field name="code">66</field>
+        </record>
+
+    
+
+        <record id="hsptl_ser_67" model="hospital.service">
+            <field name="name">Medical Oncology</field>
+            <field name="code">67</field>
+        </record>
+
+    
+
+        <record id="hsptl_ser_68" model="hospital.service">
+            <field name="name">Neonatology</field>
+            <field name="code">68</field>
+        </record>
+
+    
+
+        <record id="hsptl_ser_69" model="hospital.service">
+            <field name="name">Nephrology</field>
+            <field name="code">69</field>
+        </record>
+
+    
+
+        <record id="hsptl_ser_70" model="hospital.service">
+            <field name="name">Neurological Surgery</field>
+            <field name="code">70</field>
+        </record>
+
+    
+
+        <record id="hsptl_ser_71" model="hospital.service">
+            <field name="name">Obs &amp;amp; Gyn/ Maternal &amp;amp; Fetal Medicine</field>
+            <field name="code">71</field>
+        </record>
+
+    
+
+        <record id="hsptl_ser_72" model="hospital.service">
+            <field name="name">Obs &amp;amp; Gyn/ Reproductive Endocrinology/ Infertility</field>
+            <field name="code">72</field>
+        </record>
+
+    
+
+        <record id="hsptl_ser_73" model="hospital.service">
+            <field name="name">Obstetrics &amp;amp; Gynecology/Urogynecology.</field>
+            <field name="code">73</field>
+        </record>
+
+    
+
+        <record id="hsptl_ser_74" model="hospital.service">
+            <field name="name">Orthopedic Surgery</field>
+            <field name="code">74</field>
+        </record>
+
+    
+
+        <record id="hsptl_ser_75" model="hospital.service">
+            <field name="name">Orthopedic Surgery/ Traumatology</field>
+            <field name="code">75</field>
+        </record>
+
+    
+
+        <record id="hsptl_ser_76" model="hospital.service">
+            <field name="name">Otolaryngology (ENT Surgery)</field>
+            <field name="code">76</field>
+        </record>
+
+    
+
+        <record id="hsptl_ser_77" model="hospital.service">
+            <field name="name">Pediatric Cardiology</field>
+            <field name="code">77</field>
+        </record>
+
+    
+
+        <record id="hsptl_ser_78" model="hospital.service">
+            <field name="name">Pediatric Endocrinology</field>
+            <field name="code">78</field>
+        </record>
+
+    
+
+        <record id="hsptl_ser_79" model="hospital.service">
+            <field name="name">Pediatric Gastroenterology</field>
+            <field name="code">79</field>
+        </record>
+
+    
+
+        <record id="hsptl_ser_80" model="hospital.service">
+            <field name="name">Pediatric Hematology - Oncology</field>
+            <field name="code">80</field>
+        </record>
+
+    
+
+        <record id="hsptl_ser_81" model="hospital.service">
+            <field name="name">Pediatric Intensive Care</field>
+            <field name="code">81</field>
+        </record>
+
+    
+
+        <record id="hsptl_ser_82" model="hospital.service">
+            <field name="name">Pediatric Neonatology</field>
+            <field name="code">82</field>
+        </record>
+
+    
+
+        <record id="hsptl_ser_83" model="hospital.service">
+            <field name="name">Pediatric Neurology</field>
+            <field name="code">83</field>
+        </record>
+
+    
+
+        <record id="hsptl_ser_84" model="hospital.service">
+            <field name="name">Pediatric Surgery</field>
+            <field name="code">84</field>
+        </record>
+
+    
+
+        <record id="hsptl_ser_85" model="hospital.service">
+            <field name="name">Pain Medicine</field>
+            <field name="code">85</field>
+        </record>
+
+    
+
+        <record id="hsptl_ser_86" model="hospital.service">
+            <field name="name">Pediatrics/ Pulmonology</field>
+            <field name="code">86</field>
+        </record>
+
+    
+
+        <record id="hsptl_ser_87" model="hospital.service">
+            <field name="name">Reproductive Medicine &amp;amp; Infertility</field>
+            <field name="code">87</field>
+        </record>
+
+    
+
+        <record id="hsptl_ser_88" model="hospital.service">
+            <field name="name">Respiratory Medicine</field>
+            <field name="code">88</field>
+        </record>
+
+    
+
+        <record id="hsptl_ser_89" model="hospital.service">
+            <field name="name">Rheumatology</field>
+            <field name="code">89</field>
+        </record>
+
+    
+
+        <record id="hsptl_ser_90" model="hospital.service">
+            <field name="name">Tropical Medicine</field>
+            <field name="code">90</field>
+        </record>
+
+    
+
+        <record id="hsptl_ser_91" model="hospital.service">
+            <field name="name">Dental</field>
+            <field name="code">91</field>
+        </record>
+
+    
+
+        <record id="hsptl_ser_92" model="hospital.service">
+            <field name="name">Dietetics</field>
+            <field name="code">92</field>
+        </record>
+
+    
+
+        <record id="hsptl_ser_93" model="hospital.service">
+            <field name="name">Med-Preventive</field>
+            <field name="code">93</field>
+        </record>
+
+    
+
+        <record id="hsptl_ser_94" model="hospital.service">
+            <field name="name">Speech Therapy</field>
+            <field name="code">94</field>
+        </record>
+
+    
+
+        <record id="hsptl_ser_95" model="hospital.service">
+            <field name="name">Podiatry</field>
+            <field name="code">95</field>
+        </record>
+
+    
+
+        <record id="hsptl_ser_96" model="hospital.service">
+            <field name="name">Pharmacy</field>
+            <field name="code">96</field>
+        </record>
+
+    
+
+        <record id="hsptl_ser_97" model="hospital.service">
+            <field name="name">Staff Health</field>
+            <field name="code">97</field>
+        </record>
+
+    
+
+        <record id="hsptl_ser_98" model="hospital.service">
+            <field name="name">Case Management</field>
+            <field name="code">98</field>
+        </record>
+
+    
+
+        <record id="hsptl_ser_99" model="hospital.service">
+            <field name="name">Social Services</field>
+            <field name="code">99</field>
+        </record>
+
+    
+
+        <record id="hsptl_ser_100" model="hospital.service">
+            <field name="name">Clinical Pharmacy</field>
+            <field name="code">100</field>
+        </record>
+
+    
+
+        <record id="hsptl_ser_101" model="hospital.service">
+            <field name="name">Wound Care</field>
+            <field name="code">101</field>
+        </record>
+
+    
+
+        <record id="hsptl_ser_102" model="hospital.service">
+            <field name="name">Geriatrics</field>
+            <field name="code">102</field>
+        </record>
+
+    
+
+        <record id="hsptl_ser_103" model="hospital.service">
+            <field name="name">Home Care</field>
+            <field name="code">103</field>
+        </record>
+
+    
+
+        <record id="hsptl_ser_104" model="hospital.service">
+            <field name="name">Palliative Medicine</field>
+            <field name="code">104</field>
+        </record>
+
+    
+
+        <record id="hsptl_ser_105" model="hospital.service">
+            <field name="name">Case Managers</field>
+            <field name="code">105</field>
+        </record>
+
+    
+
+        <record id="hsptl_ser_106" model="hospital.service">
+            <field name="name">Nursing</field>
+            <field name="code">106</field>
+        </record>
+
+    
+
+        <record id="hsptl_ser_107" model="hospital.service">
+            <field name="name">Stroke Nursing</field>
+            <field name="code">107</field>
+        </record>
+
+    
+
+        <record id="hsptl_ser_108" model="hospital.service">
+            <field name="name">Stoma Nurse</field>
+            <field name="code">108</field>
+        </record>
+
+    
+
+        <record id="hsptl_ser_109" model="hospital.service">
+            <field name="name">Customer Services</field>
+            <field name="code">109</field>
+        </record>
+
+    
+
+        <record id="hsptl_ser_110" model="hospital.service">
+            <field name="name">Breast Center  (MedDir.)</field>
+            <field name="code">110</field>
+        </record>
+
+    
+
+        <record id="hsptl_ser_111" model="hospital.service">
+            <field name="name">Molecular Biology/Cytogenetics</field>
+            <field name="code">111</field>
+        </record>
+
+    
+
+        <record id="hsptl_ser_112" model="hospital.service">
+            <field name="name">Surgery-Kidney Pancreas Transplant</field>
+            <field name="code">112</field>
+        </record>
+
+    
+
+        <record id="hsptl_ser_113" model="hospital.service">
+            <field name="name">Patient Relations</field>
+            <field name="code">113</field>
+        </record>
+
+    
+
+        <record id="hsptl_ser_114" model="hospital.service">
+            <field name="name">Employee Health</field>
+            <field name="code">114</field>
+        </record>
+
+    
+
+        <record id="hsptl_ser_115" model="hospital.service">
+            <field name="name">BSI Adolescent</field>
+            <field name="code">115</field>
+        </record>
+
+    
+
+        <record id="hsptl_ser_116" model="hospital.service">
+            <field name="name">BSI Child</field>
+            <field name="code">116</field>
+        </record>
+
+    
+
+        <record id="hsptl_ser_117" model="hospital.service">
+            <field name="name">BSI General</field>
+            <field name="code">117</field>
+        </record>
+
+    
+
+        <record id="hsptl_ser_118" model="hospital.service">
+            <field name="name">Consult Genetics</field>
+            <field name="code">118</field>
+        </record>
+
+    
+
+        <record id="hsptl_ser_119" model="hospital.service">
+            <field name="name">Pain Nurse</field>
+            <field name="code">119</field>
+        </record>
+
+    
+
+        <record id="hsptl_ser_120" model="hospital.service">
+            <field name="name">Consult Antimicrobial Stewardship Service</field>
+            <field name="code">120</field>
+        </record>
+
+    
+
+        <record id="hsptl_ser_121" model="hospital.service">
+            <field name="name">Wound Care Nurse</field>
+            <field name="code">121</field>
+        </record>
+
+    
+
+        <record id="hsptl_ser_122" model="hospital.service">
+            <field name="name">MI Surgery</field>
+            <field name="code">122</field>
+        </record>
+
+    
+
+        <record id="hsptl_ser_123" model="hospital.service">
+            <field name="name">Stroke Educator</field>
+            <field name="code">123</field>
+        </record>
+
+    
+
+        <record id="hsptl_ser_124" model="hospital.service">
+            <field name="name">Social Work</field>
+            <field name="code">124</field>
+        </record>
+
+    
+
+        <record id="hsptl_ser_125" model="hospital.service">
+            <field name="name">Surgery Bariatrics</field>
+            <field name="code">125</field>
+        </record>
+
+    
+
+        <record id="hsptl_ser_126" model="hospital.service">
+            <field name="name">Surgery Transplant</field>
+            <field name="code">126</field>
+        </record>
+
+    
+
+        <record id="hsptl_ser_127" model="hospital.service">
+            <field name="name">Bariatric Nurse Navigator</field>
+            <field name="code">127</field>
+        </record>
+
+    
+
+        <record id="hsptl_ser_128" model="hospital.service">
+            <field name="name">Acute Coronary Care Syndrome Nurse Navigator</field>
+            <field name="code">128</field>
+        </record>
+
+    
+
+        <record id="hsptl_ser_129" model="hospital.service">
+            <field name="name">End of Life Care Coordinator</field>
+            <field name="code">129</field>
+        </record>
+
+    
+
+        <record id="hsptl_ser_130" model="hospital.service">
+            <field name="name">Bariatric Surgery</field>
+            <field name="code">130</field>
+        </record>
+
+    
+
+        <record id="hsptl_ser_131" model="hospital.service">
+            <field name="name">Bariatric Medicine</field>
+            <field name="code">131</field>
+        </record>
+
+    
+
+        <record id="hsptl_ser_132" model="hospital.service">
+            <field name="name">Orthotics</field>
+            <field name="code">132</field>
+        </record>
+
+    
+
+        <record id="hsptl_ser_133" model="hospital.service">
+            <field name="name">Psychology</field>
+            <field name="code">133</field>
+        </record>
+
+    
+
+        <record id="hsptl_ser_134" model="hospital.service">
+            <field name="name">Speech &amp;amp; Language Therapy</field>
+            <field name="code">134</field>
+        </record>
+
+    
+
+        <record id="hsptl_ser_135" model="hospital.service">
+            <field name="name">Geriatric Medicine</field>
+            <field name="code">135</field>
+        </record>
+
+    
+
+        <record id="hsptl_ser_136" model="hospital.service">
+            <field name="name">Cardiothoracic surgery</field>
+            <field name="code">136</field>
+        </record>
+
+    
+
+        <record id="hsptl_ser_137" model="hospital.service">
+            <field name="name">Behavioral Health</field>
+            <field name="code">137</field>
+        </record>
+
+    
+
+        <record id="hsptl_ser_138" model="hospital.service">
+            <field name="name">Home Health Services</field>
+            <field name="code">138</field>
+        </record>
+
+    
+
+        <record id="hsptl_ser_139" model="hospital.service">
+            <field name="name">Travel Medicine</field>
+            <field name="code">139</field>
+        </record>
+
+    
+
+        <record id="hsptl_ser_140" model="hospital.service">
+            <field name="name">Optometry</field>
+            <field name="code">140</field>
+        </record>
+
+    
+
+        <record id="hsptl_ser_141" model="hospital.service">
+            <field name="name">Colorectal Surgery</field>
+            <field name="code">141</field>
+        </record>
+
+    
+
+        <record id="hsptl_ser_142" model="hospital.service">
+            <field name="name">Transplant Surgery</field>
+            <field name="code">142</field>
+        </record>
+
+    
+
+        <record id="hsptl_ser_143" model="hospital.service">
+            <field name="name">Ambulatory Surgery Centers</field>
+            <field name="code">143</field>
+        </record>
+
+    
+
+        <record id="hsptl_ser_144" model="hospital.service">
+            <field name="name">Chiropractic Medicine</field>
+            <field name="code">144</field>
+        </record>
+
+    
+
+        <record id="hsptl_ser_145" model="hospital.service">
+            <field name="name">DME</field>
+            <field name="code">145</field>
+        </record>
+
+    
+
+        <record id="hsptl_ser_146" model="hospital.service">
+            <field name="name">Electro diagnostic</field>
+            <field name="code">146</field>
+        </record>
+
+    
+
+        <record id="hsptl_ser_147" model="hospital.service">
+            <field name="name">Hand Surgery</field>
+            <field name="code">147</field>
+        </record>
+
+    
+
+        <record id="hsptl_ser_148" model="hospital.service">
+            <field name="name">Hospice</field>
+            <field name="code">148</field>
+        </record>
+
+    
+
+        <record id="hsptl_ser_149" model="hospital.service">
+            <field name="name">Managed Care</field>
+            <field name="code">149</field>
+        </record>
+
+    
+
+        <record id="hsptl_ser_150" model="hospital.service">
+            <field name="name">Manipulative</field>
+            <field name="code">150</field>
+        </record>
+
+    
+
+        <record id="hsptl_ser_151" model="hospital.service">
+            <field name="name">Medical Supply</field>
+            <field name="code">151</field>
+        </record>
+
+    
+
+        <record id="hsptl_ser_152" model="hospital.service">
+            <field name="name">Mental Health, Inpatient</field>
+            <field name="code">152</field>
+        </record>
+
+    
+
+        <record id="hsptl_ser_153" model="hospital.service">
+            <field name="name">Otology/Neuro Otology</field>
+            <field name="code">153</field>
+        </record>
+
+    
+
+        <record id="hsptl_ser_154" model="hospital.service">
+            <field name="name">Perinatology</field>
+            <field name="code">154</field>
+        </record>
+
+    
+
+        <record id="hsptl_ser_155" model="hospital.service">
+            <field name="name">Primary Care Physicians</field>
+            <field name="code">155</field>
+        </record>
+
+    
+
+        <record id="hsptl_ser_156" model="hospital.service">
+            <field name="name">Professional Counseling</field>
+            <field name="code">156</field>
+        </record>
+
+    
+
+        <record id="hsptl_ser_157" model="hospital.service">
+            <field name="name">Prosthetics</field>
+            <field name="code">157</field>
+        </record>
+
+    
+
+        <record id="hsptl_ser_158" model="hospital.service">
+            <field name="name">Referral Physician</field>
+            <field name="code">158</field>
+        </record>
+
+    
+
+        <record id="hsptl_ser_159" model="hospital.service">
+            <field name="name">Specialty Care Physician</field>
+            <field name="code">159</field>
+        </record>
+
+    
+
+        <record id="hsptl_ser_160" model="hospital.service">
+            <field name="name">Sports Medicine</field>
+            <field name="code">160</field>
+        </record>
+
+    
+
+        <record id="hsptl_ser_161" model="hospital.service">
+            <field name="name">Vision Services</field>
+            <field name="code">161</field>
+        </record>
+
+    
+
+        <record id="hsptl_ser_162" model="hospital.service">
+            <field name="name">ENT</field>
+            <field name="code">162</field>
+        </record>
+
+    
+
+        <record id="hsptl_ser_163" model="hospital.service">
+            <field name="name">Vascular Surgery</field>
+            <field name="code">163</field>
+        </record>
+
+    
+
+        <record id="hsptl_ser_164" model="hospital.service">
+            <field name="name">Beauty Clinic</field>
+            <field name="code">164</field>
+        </record>
+
+    
+
+        <record id="hsptl_ser_165" model="hospital.service">
+            <field name="name">Medical/Surgical</field>
+            <field name="code">165</field>
+        </record>
+
+    
+
+        <record id="hsptl_ser_166" model="hospital.service">
+            <field name="name">Peri-Operative</field>
+            <field name="code">166</field>
+        </record>
+
+    
+
+        <record id="hsptl_ser_167" model="hospital.service">
+            <field name="name">Clinical Psychology</field>
+            <field name="code">167</field>
+        </record>
+
+    
+
+        <record id="hsptl_ser_168" model="hospital.service">
+            <field name="name">Respiratory Medicine EHC Cluster Screening (MQ)</field>
+            <field name="code">168</field>
+        </record>
+
+    
+
+        <record id="hsptl_ser_169" model="hospital.service">
+            <field name="name">Respiratory Medicine COVID Worker Village Group F</field>
+            <field name="code">169</field>
+        </record>
+
+    
+
+        <record id="hsptl_ser_170" model="hospital.service">
+            <field name="name">Respiratory Medicine COVID Worker Village Group E</field>
+            <field name="code">170</field>
+        </record>
+
+    
+
+        <record id="hsptl_ser_171" model="hospital.service">
+            <field name="name">Respiratory Medicine COVID Worker Village Group D</field>
+            <field name="code">171</field>
+        </record>
+
+    
+
+        <record id="hsptl_ser_172" model="hospital.service">
+            <field name="name">Respiratory Medicine COVID Worker Village Group C</field>
+            <field name="code">172</field>
+        </record>
+
+    
+
+        <record id="hsptl_ser_173" model="hospital.service">
+            <field name="name">Respiratory Medicine COVID Worker Village Group B</field>
+            <field name="code">173</field>
+        </record>
+
+    
+
+        <record id="hsptl_ser_174" model="hospital.service">
+            <field name="name">Respiratory Medicine COVID Worker Village Group A</field>
+            <field name="code">174</field>
+        </record>
+
+    
+
+        <record id="hsptl_ser_175" model="hospital.service">
+            <field name="name">Respiratory Medicine COVID Tawazun Camp Group D</field>
+            <field name="code">175</field>
+        </record>
+
+    
+
+        <record id="hsptl_ser_176" model="hospital.service">
+            <field name="name">Respiratory Medicine COVID Tawazun Camp Group C</field>
+            <field name="code">176</field>
+        </record>
+
+    
+
+        <record id="hsptl_ser_177" model="hospital.service">
+            <field name="name">Respiratory Medicine COVID Tawazun Camp Group B</field>
+            <field name="code">177</field>
+        </record>
+
+    
+
+        <record id="hsptl_ser_178" model="hospital.service">
+            <field name="name">Respiratory Medicine COVID Tawazun Camp Group A</field>
+            <field name="code">178</field>
+        </record>
+
+    
+
+        <record id="hsptl_ser_179" model="hospital.service">
+            <field name="name">Respiratory Medicine COVID Tawam Compound</field>
+            <field name="code">179</field>
+        </record>
+
+    
+
+        <record id="hsptl_ser_180" model="hospital.service">
+            <field name="name">Respiratory Medicine COVID Screening</field>
+            <field name="code">180</field>
+        </record>
+
+    
+
+        <record id="hsptl_ser_181" model="hospital.service">
+            <field name="name">Respiratory Medicine COVID Pearl Rotana Hotel</field>
+            <field name="code">181</field>
+        </record>
+
+    
+
+        <record id="hsptl_ser_182" model="hospital.service">
+            <field name="name">Respiratory Medicine COVID Millennium C Gate Hotel</field>
+            <field name="code">182</field>
+        </record>
+
+    
+
+        <record id="hsptl_ser_183" model="hospital.service">
+            <field name="name">Respiratory Medicine COVID Maqam Dorm Block 9</field>
+            <field name="code">183</field>
+        </record>
+
+    
+
+        <record id="hsptl_ser_184" model="hospital.service">
+            <field name="name">Respiratory Medicine COVID Maqam Dorm Block 8</field>
+            <field name="code">184</field>
+        </record>
+
+    
+
+        <record id="hsptl_ser_185" model="hospital.service">
+            <field name="name">Respiratory Medicine COVID Maqam Dorm Block 7</field>
+            <field name="code">185</field>
+        </record>
+
+    
+
+        <record id="hsptl_ser_186" model="hospital.service">
+            <field name="name">Respiratory Medicine COVID Maqam Dorm Block 6</field>
+            <field name="code">186</field>
+        </record>
+
+    
+
+        <record id="hsptl_ser_187" model="hospital.service">
+            <field name="name">Respiratory Medicine COVID Maqam Dorm Block 5</field>
+            <field name="code">187</field>
+        </record>
+
+    
+
+        <record id="hsptl_ser_188" model="hospital.service">
+            <field name="name">Respiratory Medicine COVID Maqam Dorm Block 4</field>
+            <field name="code">188</field>
+        </record>
+
+    
+
+        <record id="hsptl_ser_189" model="hospital.service">
+            <field name="name">Respiratory Medicine COVID Maqam Dorm Block 3</field>
+            <field name="code">189</field>
+        </record>
+
+    
+
+        <record id="hsptl_ser_190" model="hospital.service">
+            <field name="name">Respiratory Medicine COVID Maqam Dorm Block 2</field>
+            <field name="code">190</field>
+        </record>
+
+    
+
+        <record id="hsptl_ser_191" model="hospital.service">
+            <field name="name">Respiratory Medicine COVID Maqam Dorm Block 11</field>
+            <field name="code">191</field>
+        </record>
+
+    
+
+        <record id="hsptl_ser_192" model="hospital.service">
+            <field name="name">Respiratory Medicine COVID Maqam Dorm Block 10</field>
+            <field name="code">192</field>
+        </record>
+
+    
+
+        <record id="hsptl_ser_193" model="hospital.service">
+            <field name="name">Respiratory Medicine COVID Maqam Dorm Block 1</field>
+            <field name="code">193</field>
+        </record>
+
+    
+
+        <record id="hsptl_ser_194" model="hospital.service">
+            <field name="name">Respiratory Medicine COVID Home Quarantine</field>
+            <field name="code">194</field>
+        </record>
+
+    
+
+        <record id="hsptl_ser_195" model="hospital.service">
+            <field name="name">Respiratory Medicine COVID Hameem Camp Bld 4</field>
+            <field name="code">195</field>
+        </record>
+
+    
+
+        <record id="hsptl_ser_196" model="hospital.service">
+            <field name="name">Respiratory Medicine COVID Hameem Camp Bld 3</field>
+            <field name="code">196</field>
+        </record>
+
+    
+
+        <record id="hsptl_ser_197" model="hospital.service">
+            <field name="name">Respiratory Medicine COVID Hameem Camp Bld 2</field>
+            <field name="code">197</field>
+        </record>
+
+    
+
+        <record id="hsptl_ser_198" model="hospital.service">
+            <field name="name">Respiratory Medicine COVID Hameem Camp Bld 1</field>
+            <field name="code">198</field>
+        </record>
+
+    
+
+        <record id="hsptl_ser_199" model="hospital.service">
+            <field name="name">Respiratory Medicine COVID Emirats Fields</field>
+            <field name="code">199</field>
+        </record>
+
+    
+
+        <record id="hsptl_ser_200" model="hospital.service">
+            <field name="name">Respiratory Medicine COVID EHC Cluster-4 B6</field>
+            <field name="code">200</field>
+        </record>
+
+    
+
+        <record id="hsptl_ser_201" model="hospital.service">
+            <field name="name">Respiratory Medicine COVID EHC Cluster-4 B5</field>
+            <field name="code">201</field>
+        </record>
+
+    
+
+        <record id="hsptl_ser_202" model="hospital.service">
+            <field name="name">Respiratory Medicine COVID EHC Cluster-4 A6</field>
+            <field name="code">202</field>
+        </record>
+
+    
+
+        <record id="hsptl_ser_203" model="hospital.service">
+            <field name="name">Respiratory Medicine COVID EHC Cluster-4 A5</field>
+            <field name="code">203</field>
+        </record>
+
+    
+
+        <record id="hsptl_ser_204" model="hospital.service">
+            <field name="name">Respiratory Medicine COVID EHC Cluster-3 B4</field>
+            <field name="code">204</field>
+        </record>
+
+    
+
+        <record id="hsptl_ser_205" model="hospital.service">
+            <field name="name">Respiratory Medicine COVID EHC Cluster-3 B3</field>
+            <field name="code">205</field>
+        </record>
+
+    
+
+        <record id="hsptl_ser_206" model="hospital.service">
+            <field name="name">Respiratory Medicine COVID EHC Cluster-3 A4</field>
+            <field name="code">206</field>
+        </record>
+
+    
+
+        <record id="hsptl_ser_207" model="hospital.service">
+            <field name="name">Respiratory Medicine COVID EHC Cluster-3 A3</field>
+            <field name="code">207</field>
+        </record>
+
+    
+
+        <record id="hsptl_ser_208" model="hospital.service">
+            <field name="name">Respiratory Medicine COVID EHC Cluster Screening</field>
+            <field name="code">208</field>
+        </record>
+
+    
+
+        <record id="hsptl_ser_209" model="hospital.service">
+            <field name="name">Respiratory Medicine COVID EHC A D6 Screening</field>
+            <field name="code">209</field>
+        </record>
+
+    
+
+        <record id="hsptl_ser_210" model="hospital.service">
+            <field name="name">Respiratory Medicine COVID Dar AlShifaa</field>
+            <field name="code">210</field>
+        </record>
+
+    
+
+        <record id="hsptl_ser_211" model="hospital.service">
+            <field name="name">Respiratory Medicine COVID Danat Hotel</field>
+            <field name="code">211</field>
+        </record>
+
+    
+
+        <record id="hsptl_ser_212" model="hospital.service">
+            <field name="name">Respiratory Medicine COVID Bab Al Qasr Hotel</field>
+            <field name="code">212</field>
+        </record>
+
+    
+
+        <record id="hsptl_ser_213" model="hospital.service">
+            <field name="name">Respiratory Medicine COVID Al Mafraq Work City - 6</field>
+            <field name="code">213</field>
+        </record>
+
+    
+
+        <record id="hsptl_ser_214" model="hospital.service">
+            <field name="name">Respiratory Medicine COVID Al Mafraq Work City - 5</field>
+            <field name="code">214</field>
+        </record>
+
+    
+
+        <record id="hsptl_ser_215" model="hospital.service">
+            <field name="name">Respiratory Medicine COVID Al Mafraq Work City - 4</field>
+            <field name="code">215</field>
+        </record>
+
+    
+
+        <record id="hsptl_ser_216" model="hospital.service">
+            <field name="name">Respiratory Medicine COVID Al Mafraq Work City - 3</field>
+            <field name="code">216</field>
+        </record>
+
+    
+
+        <record id="hsptl_ser_217" model="hospital.service">
+            <field name="name">Respiratory Medicine COVID Al Mafraq Work City - 2</field>
+            <field name="code">217</field>
+        </record>
+
+    
+
+        <record id="hsptl_ser_218" model="hospital.service">
+            <field name="name">Respiratory Medicine COVID Al Mafraq Work City - 1</field>
+            <field name="code">218</field>
+        </record>
+
+    
+
+        <record id="hsptl_ser_219" model="hospital.service">
+            <field name="name">Respiratory Medicine COVID Al Dar Hospital</field>
+            <field name="code">219</field>
+        </record>
+
+    
+
+        <record id="hsptl_ser_220" model="hospital.service">
+            <field name="name">Respiratory Medicine COVID ADNEC</field>
+            <field name="code">220</field>
+        </record>
+
+    
+
+        <record id="hsptl_ser_221" model="hospital.service">
+            <field name="name">Respiratory Medicine COVID Al Dar 2 Hospital</field>
+            <field name="code">221</field>
+        </record>
+
+    
+
+        <record id="hsptl_ser_222" model="hospital.service">
+            <field name="name">Respiratory Medicine COVID Al Dar 3 Hospital</field>
+            <field name="code">222</field>
+        </record>
+
+    
+
+        <record id="hsptl_ser_223" model="hospital.service">
+            <field name="name">Respiratory Medicine COVID Al Dar 4 Hospital</field>
+            <field name="code">223</field>
+        </record>
+
+    
+
+        <record id="hsptl_ser_224" model="hospital.service">
+            <field name="name">Respiratory Medicine COVID Al Dar 5 Hospital</field>
+            <field name="code">224</field>
+        </record>
+
+    
+
+        <record id="hsptl_ser_225" model="hospital.service">
+            <field name="name">Respiratory Medicine COVID Sofitel Hotel </field>
+            <field name="code">225</field>
+        </record>
+
+    
+
+        <record id="hsptl_ser_226" model="hospital.service">
+            <field name="name">Respiratory Medicine COVID Tawam Nursing F</field>
+            <field name="code">226</field>
+        </record>
+
+    
+
+        <record id="hsptl_ser_227" model="hospital.service">
+            <field name="name">Respiratory Medicine COVID Maqam Dorm </field>
+            <field name="code">227</field>
+        </record>
+
+    
+
+        <record id="hsptl_ser_228" model="hospital.service">
+            <field name="name">Respiratory Medicine COVID Radisson Blue</field>
+            <field name="code">228</field>
+        </record>
+
+    
+
+        <record id="hsptl_ser_229" model="hospital.service">
+            <field name="name">Respiratory Medicine COVID MBZ Field Hospital</field>
+            <field name="code">229</field>
+        </record>
+
+    
+
+        <record id="hsptl_ser_230" model="hospital.service">
+            <field name="name">Respiratory Medicine COVID EHC Cluster-3 C2 F1</field>
+            <field name="code">230</field>
+        </record>
+
+    
+
+        <record id="hsptl_ser_231" model="hospital.service">
+            <field name="name">Respiratory Medicine COVID EHC Cluster-3 C2 F2</field>
+            <field name="code">231</field>
+        </record>
+
+    
+
+        <record id="hsptl_ser_232" model="hospital.service">
+            <field name="name">Respiratory Medicine COVID EHC Cluster-3 C2 F3</field>
+            <field name="code">232</field>
+        </record>
+
+    
+
+        <record id="hsptl_ser_233" model="hospital.service">
+            <field name="name">Respiratory Medicine COVID EHC Cluster-4 C2 F1</field>
+            <field name="code">233</field>
+        </record>
+
+    
+
+        <record id="hsptl_ser_234" model="hospital.service">
+            <field name="name">Respiratory Medicine COVID EHC Cluster-4 C2 F2</field>
+            <field name="code">234</field>
+        </record>
+
+    
+
+        <record id="hsptl_ser_235" model="hospital.service">
+            <field name="name">Respiratory Medicine COVID EHC Cluster-4 C2 F3</field>
+            <field name="code">235</field>
+        </record>
+
+    
+
+        <record id="hsptl_ser_236" model="hospital.service">
+            <field name="name">Long Term Care</field>
+            <field name="code">236</field>
+        </record>
+
+    
+
+        <record id="hsptl_ser_237" model="hospital.service">
+            <field name="name">Respiratory medicine COVID AH RD Home Isolation</field>
+            <field name="code">237</field>
+        </record>
+
+    
+
+        <record id="hsptl_ser_238" model="hospital.service">
+            <field name="name">Respiratory medicine COVID AH MA Home Isolation</field>
+            <field name="code">238</field>
+        </record>
+
+    
+
+        <record id="hsptl_ser_239" model="hospital.service">
+            <field name="name">Respiratory medicine COVID AH RD Home Smart Watch</field>
+            <field name="code">239</field>
+        </record>
+
+    
+
+        <record id="hsptl_ser_240" model="hospital.service">
+            <field name="name">Respiratory medicine COVID AH MA Home Smart Watch</field>
+            <field name="code">240</field>
+        </record>
+
+    
+
+        <record id="hsptl_ser_241" model="hospital.service">
+            <field name="name">Respiratory medicine COVID TW MBZ</field>
+            <field name="code">241</field>
+        </record>
+
+    
+
+        <record id="hsptl_ser_242" model="hospital.service">
+            <field name="name">Respiratory medicine COVID SKMC</field>
+            <field name="code">242</field>
+        </record>
+
+    
+
+        <record id="hsptl_ser_243" model="hospital.service">
+            <field name="name">Respiratory medicine COVID High Risk</field>
+            <field name="code">243</field>
+        </record>
+
+    
+
+        <record id="hsptl_ser_244" model="hospital.service">
+            <field name="name">Respiratory medicine COVID Ruwais City - Alyash 1</field>
+            <field name="code">244</field>
+        </record>
+
+    
+
+        <record id="hsptl_ser_245" model="hospital.service">
+            <field name="name">Respiratory medicine COVID Ruwais City - Alyash 2</field>
+            <field name="code">245</field>
+        </record>
+
+    
+
+        <record id="hsptl_ser_246" model="hospital.service">
+            <field name="name">Respiratory medicine COVID Al Dhafra Region</field>
+            <field name="code">246</field>
+        </record>
+
+    
+
+        <record id="hsptl_ser_248" model="hospital.service">
+            <field name="name">Laboratory Medicine</field>
+            <field name="code">248</field>
+        </record>
+
+    
+
+        <record id="hsptl_ser_249" model="hospital.service">
+            <field name="name">COVID Vaccine Trial </field>
+            <field name="code">249</field>
+        </record>
+
+    
+
+        <record id="hsptl_ser_250" model="hospital.service">
+            <field name="name">COVID-19 Vaccination</field>
+            <field name="code">250</field>
+        </record>
+
+    
+
+        <record id="hsptl_ser_251" model="hospital.service">
+            <field name="name">Prime Smart Watch</field>
+            <field name="code">251</field>
+        </record>
+
+    
+
+        <record id="hsptl_ser_252" model="hospital.service">
+            <field name="name">Respiratory Medicine COVID PAESS</field>
+            <field name="code">252</field>
+        </record>
+
+    
+
+        <record id="hsptl_ser_253" model="hospital.service">
+            <field name="name">Hepatology</field>
+            <field name="code">253</field>
+        </record>
+
+    
+
+        <record id="hsptl_ser_254" model="hospital.service">
+            <field name="name">Echocardiography</field>
+            <field name="code">254</field>
+        </record>
+
+    
+
+        <record id="hsptl_ser_255" model="hospital.service">
+            <field name="name">Occupational Therapy</field>
+            <field name="code">255</field>
+        </record>
+
+    
+
+        <record id="hsptl_ser_256" model="hospital.service">
+            <field name="name">Physiotherapy</field>
+            <field name="code">256</field>
+        </record>
+
+    
+
+        <record id="hsptl_ser_257" model="hospital.service">
+            <field name="name">Respiratory Therapy</field>
+            <field name="code">257</field>
+        </record>
+
+    
+
+        <record id="hsptl_ser_258" model="hospital.service">
+            <field name="name">Pediatric Genetics</field>
+            <field name="code">258</field>
+        </record>
+
+    
+
+        <record id="hsptl_ser_259" model="hospital.service">
+            <field name="name">Pediatric Dermatology</field>
+            <field name="code">259</field>
+        </record>
+
+    
+
+        <record id="hsptl_ser_260" model="hospital.service">
+            <field name="name">Pediatric Infectious Diseases</field>
+            <field name="code">260</field>
+        </record>
+
+    
+
+        <record id="hsptl_ser_261" model="hospital.service">
+            <field name="name">Pediatric Nephrology</field>
+            <field name="code">261</field>
+        </record>
+
+    
+
+        <record id="hsptl_ser_262" model="hospital.service">
+            <field name="name">Pediatric Neurology</field>
+            <field name="code">262</field>
+        </record>
+
+    
+
+        <record id="hsptl_ser_263" model="hospital.service">
+            <field name="name">Pediatric Rheumatology</field>
+            <field name="code">263</field>
+        </record>
+
+    
+
+        <record id="hsptl_ser_264" model="hospital.service">
+            <field name="name">Interventional Radiology</field>
+            <field name="code">264</field>
+        </record>
+
+    
+
+        <record id="hsptl_ser_265" model="hospital.service">
+            <field name="name">Cardio Diagnostics</field>
+            <field name="code">265</field>
+        </record>
+
+    
+
+        <record id="hsptl_ser_266" model="hospital.service">
+            <field name="name">Neuro Diagnostics</field>
+            <field name="code">266</field>
+        </record>
+
+    
+
+        <record id="hsptl_ser_267" model="hospital.service">
+            <field name="name">Pediatric Orthopedic</field>
+            <field name="code">267</field>
+        </record>
+
+    
+
+        <record id="hsptl_ser_268" model="hospital.service">
+            <field name="name">Maternal Education</field>
+            <field name="code">268</field>
+        </record>
+
+    </data>
+</odoo>

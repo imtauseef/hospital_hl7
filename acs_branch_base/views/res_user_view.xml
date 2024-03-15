@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="view_users_form" model="ir.ui.view">
+        <field name="name">view.users</field>
+        <field name="model">res.users</field>
+        <field name="inherit_id" ref="base.view_users_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//page[@name='access_rights']/group" position="after">
+                <group name="branch" string="Multi Branch" groups="acs_branch_base.group_multi_branch">
+                    <field name="branch_ids" widget="many2many_tags" options="{'no_create': True}" groups="acs_branch_base.group_multi_branch"/>
+                    <field name="branch_id" required="1" groups="acs_branch_base.group_multi_branch"/>
+                </group>
+            </xpath>
+        </field>
+    </record>
+
+    <record id="view_users_form_simple_modif" model="ir.ui.view">
+        <field name="name">res.user</field>
+        <field name="model">res.users</field>
+        <field name="inherit_id" ref="base.view_users_form_simple_modif"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='company_id']" position="after">
+                <field name="branch_id" options="{'no_create': True}" context="{'branch_id':branch_id}" required="1"/>
+            </xpath>
+        </field>
+    </record>
+
+</odoo>

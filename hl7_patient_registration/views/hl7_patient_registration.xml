@@ -1,0 +1,237 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <!-- tree view for Hospital Service -->
+    <record id="view_hospital_service_tree" model="ir.ui.view">
+        <field name="name">hospital.service.tree</field>
+        <field name="model">hospital.service</field>
+        <field name="arch" type="xml">
+            <tree string="Hospital Services">
+                <field name="name"/>
+                <field name="description"/>
+                <field name="code"/>
+            </tree>
+        </field>
+    </record>
+
+    <!-- form view for Hospital Service -->
+    <record id="view_hospital_service_form" model="ir.ui.view">
+        <field name="name">hospital.service.form</field>
+        <field name="model">hospital.service</field>
+        <field name="arch" type="xml">
+            <form string="Hospital Service">
+                <sheet>
+                    <group>
+                        <field name="name"/>
+                        <field name="description"/>
+                        <field name="code"/>
+                    </group>
+                </sheet>
+                <div class="oe_chatter">
+                    <field name="message_follower_ids"/>
+                    <field name="activity_ids"/>
+                    <field name="message_ids"/>
+                </div>
+            </form>
+        </field>
+    </record>
+    <record id="action_hospital_service" model="ir.actions.act_window">
+        <field name="name">Hospital Services</field>
+        <field name="res_model">hospital.service</field>
+        <field name="view_mode">tree,form</field>
+        <field name="domain">[]</field>
+        <field name="context">{}</field>
+        <field name="help">This is the action for Hospital Services.</field>
+        <field name="view_id" ref="view_hospital_service_tree" />
+    </record>
+    <record id="view_patient_form_inherited" model="ir.ui.view">
+    <field name="name">patient.form.inherited</field>
+    <field name="model">hms.patient</field>
+    <field name="inherit_id" ref="acs_hms_base.view_patient_form"/>
+    <field name="arch" type="xml">
+        <xpath expr="//field[@name='bmi']" position="after">
+            <!-- <page name="your_tab_name" string="Your Tab Name" groups="acs_hms.group_hms_nurse"> -->
+                <field name="hunt_and_hess_scale" placeholder="Predict the outcome for Patients"/>
+                <field name="rankin_scale" placeholder="Degree of Disability"/>
+                <field name="nih_stroke_scale" placeholder="Expected numerical results"/>
+            <!-- </page> -->
+        </xpath> 
+        <xpath expr="//field[@name='acs_tag_ids']" position="after">
+            <field name="social_history_bool_state" invisible="1"/>
+            <field name="family_bool" invisible="1"/>
+        </xpath>
+        <xpath expr="//page[@name='family_note']" position="attributes">
+            <attribute name="attrs">{'invisible': [('family_bool', '=', False)]}</attribute>
+        </xpath>
+
+        <xpath expr="//field[@name='family_member_ids']/tree/field[@name='related_patient_id']" position="before">
+                <field name="family_history_id">
+                </field>
+        </xpath>
+
+
+        <xpath expr="//field[@name='family_member_ids']/tree/field[@name='relation_id']" position="after">
+                <field name="family_member_gender" >
+                </field>
+                <!-- ['BRO', 'FTH', 'MTH']
+                attrs="{'invisible': [('relation_id', 'in', ['Brother','Father','Mother'])]} -->
+                
+                <field name="condition_presence">
+                </field>
+        </xpath>
+
+        <page name="family_note" position="after">
+            
+                <page string="Social History" attrs="{'invisible': [('social_history_bool_state', '=', False)]}">
+                    <group>
+                        <group>
+                            <field name="smoking_status" attrs="{'required': [('social_history_bool_state', '=', True)]}"/>
+                            <field name="p_smoking_frequency" attrs="{'required': [('social_history_bool_state', '=', True)]}"/>
+                            <field name="start_smoking_age" attrs="{'required': [('social_history_bool_state', '=', True)]}"/>
+                            <field name="substance_abuse_status" attrs="{'required': [('social_history_bool_state', '=', True)]}"/>
+                        </group>
+                        <group>
+                            <field name="smoking_device" attrs="{'required': [('social_history_bool_state', '=', True)]}"/>
+                            <field name="alcohol_drinking_status" attrs="{'required': [('social_history_bool_state', '=', True)]}"/>
+                            <field name="stop_smoking_age" attrs="{'required': [('social_history_bool_state', '=', True)]}"/>
+                            <field name="education_level" attrs="{'required': [('social_history_bool_state', '=', True)]}"/>
+                            <field name="patient_employment_status" attrs="{'required': [('social_history_bool_state', '=', True)]}"/>
+                        </group>
+                    </group>
+                </page>
+        </page>
+        
+    </field>
+    </record>
+
+     
+    <record id="patient_reg_hl7" model="ir.ui.view">
+        <field name="name">hms.patient.inherit.form</field>
+        <field name="model">hms.patient</field>
+        <field name="inherit_id" ref="acs_hms_base.view_patient_form"/>
+        <field name="arch" type="xml">
+
+
+
+            <xpath expr="//header" position="inside">
+
+                <button string="Confirm" type="object" class="oe_highlight"
+                        name="generate_outgoing_hl7_message"/>
+
+            </xpath>
+            <xpath expr="//field[@name='acs_tag_ids']" position="after">
+                <field name="date_and_time_now"/>
+                <field name="arrival_date_time" required="True"/>
+                <field name="doctor_seen_date_time" required="True"/>
+                <field name="send_app_code" required="True"/>
+                <field name="send_facility_code" required="True"/>
+                <field name="nk_state"/>
+                <field name="social_history_bool_state" />
+                <field name="family_bool"/>
+            </xpath>
+            <xpath expr="//field[@name='gender']" position="after">
+                <field name="gender_code" invisible="1"/>
+            </xpath>
+            <xpath expr="//field[@name='code']" position="after">
+                <field name="emirates_id"  required="True"/>
+            </xpath>
+            <xpath expr="//field[@name='email']" position="after">
+                <field name="business_contact_no"  required="True"/>
+            </xpath>
+            <xpath expr="//field[@name='religion']" position="attributes">
+                <attribute name="invisible">1</attribute>
+            </xpath>
+            <!-- <xpath expr="//field[@name='religion']" position="after">
+                <field name="religon_code"/>
+            </xpath> -->
+            <xpath expr="//field[@name='marital_status']" position="after">
+                <field name="marital_status_code"/>
+            </xpath>
+            <xpath expr="//field[@name='nationality_id']" position="after">
+                <field name="religion_hl7" required="True" />
+                <field name="nationality_code" />
+            </xpath>
+            
+            <xpath expr="//field[@name='phone']" position="before">
+                
+                <field name="birth_place"/>
+            </xpath>
+            <xpath expr="//field[@name='mobile']" position="after">
+                
+                <field name="second_mobile_no"/>
+            </xpath>
+            <xpath expr="//field[@name='nationality_id']" position="before">
+                
+                <field name="father_guardian_name"/>
+            </xpath>
+
+            <xpath expr="//field[@name='passport']" position="after"> 
+                <field name="employment_status"/> 
+                <field name="patient_employer"/>
+                 <field name="visa_or_file_no"/>
+            </xpath>
+
+            <xpath expr="//field[@name='primary_physician_id']" position="before">
+                <field name="doctor_id_code" invisible="1"/>
+            </xpath>
+
+            <xpath expr="//field[@name='primary_physician_id']" position="attributes">
+                <attribute name="required">True</attribute>
+            </xpath>
+
+            <xpath expr="//field[@name='title']" position="after">
+                <field name="message_control_id" required="True"/>
+                <field name="patient_class"/>
+                <!-- <field name="patient_class_code"/> -->
+                
+                <field name="consulting_doctor" attrs="{'invisible': [('patient_class', 'not in', ['E','O','UC','T','HC','P','R','B','C','N','DC'])]}"/>
+                <field name="doctor_id_code" attrs="{'invisible': [('patient_class', 'not in', ['E','O','UC','T','HC','P','R','B','C','N','DC'])]}"/>
+                <field name="hospital_service_id" options="{'no_create': True, 'no_edit': True}"/>
+                <field name="admit_source"/>
+                <!-- <field name="admit_source_code"/> -->
+            </xpath>
+            <xpath expr="//field[@name='registration_product_id']" position="after">
+                <field name="death_indicator" required="True"/>
+            </xpath>
+           
+            <xpath expr="//field[@name='date_of_death']" position="attributes">
+                <attribute name="attrs">{'invisible': [('death_indicator', '=', 'N')]}</attribute>
+            </xpath>
+
+            <xpath expr="//field[@name='date_of_death']" position="after">
+                <field name="death_time" required="True" attrs="{'invisible': [('death_indicator', '=', 'N')]}"/>
+            </xpath>
+
+            <xpath expr="//page[@name='hospital_info']" position="after">
+                 <page string="Next of Kin" attrs="{'invisible': [('nk_state', '=', False)]}">
+                    <group>
+                        <group>
+                            <field name="nk_name" attrs="{'required': [('nk_state', '=', True)]}"/>
+                            <field name="nk_relation" options="{'no_create': True, 'no_edit': True}" attrs="{'required': [('nk_state', '=', True)]}"/>
+                        </group>
+                        <group>
+                            <field name="nk_phone" attrs="{'required': [('nk_state', '=', True)]}"/>
+                        </group>
+                    </group>
+                </page>
+                <!-- <page string="Social History">
+                    <group>
+                        <group>
+                            <field name="smoking_status"/>
+                            <field name="smoking_frequency" />
+                            <field name="start_smoking_age" />
+                            <field name="substance_abuse_status" />
+                        </group>
+                        <group>
+                            <field name="smoking_device"/>
+                            <field name="alcohol_drinking_status" />
+                            <field name="stop_smoking_age" />
+                            <field name="education_level" />
+                            <field name="empoyment_status" />
+                        </group>
+                    </group>
+                </page> -->
+            </xpath>
+        </field>
+    </record>
+    
+</odoo>

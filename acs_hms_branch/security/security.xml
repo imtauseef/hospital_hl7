@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="0">
+        
+        <record model="ir.rule" id="patient_branch_rule">
+            <field name="name">Patient multi-branch</field>
+            <field name="model_id" ref="model_hms_patient"/>
+            <field name="domain_force">['|',('branch_id','=',False),('branch_id', 'in', branch_ids)]</field>
+        </record>
+        <record model="ir.rule" id="physician_branch_rule">
+            <field name="name">Physician multi-branch</field>
+            <field name="model_id" ref="model_hms_physician"/>
+            <field name="domain_force">['|',('branch_id','=',False),('branch_id', 'in', branch_ids)]</field>
+        </record>
+        <record model="ir.rule" id="treatment_branch_rule">
+            <field name="name">Treatment multi-branch</field>
+            <field name="model_id" ref="model_hms_treatment"/>
+            <field name="domain_force">['|',('branch_id','=',False),('branch_id', 'in', branch_ids)]</field>
+        </record>
+
+        <record model="ir.rule" id="appointment_branch_rule">
+            <field name="name">Appointment multi-branch</field>
+            <field name="model_id" ref="model_hms_appointment"/>
+            <field name="domain_force">['|',('branch_id','=',False),('branch_id', 'in', branch_ids)]</field>
+        </record>
+        
+        <record model="ir.rule" id="prescription_branch_rule">
+            <field name="name">Prescription multi-branch</field>
+            <field name="model_id" ref="model_prescription_order"/>
+            <field name="domain_force">['|',('branch_id','=',False),('branch_id', 'in', branch_ids)]</field>
+        </record>
+
+    </data>
+</odoo>

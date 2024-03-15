@@ -1,0 +1,9 @@
+@mixin expense-view() {
+    .o_expense_container {
+        .o_expense_card {
+            span, b {
+                color: var(--brand-primary) !important;
+            }
+        }
+    }
+}

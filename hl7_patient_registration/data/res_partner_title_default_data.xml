@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="0">
+        <record id="res_partner_title_1" model="res.partner.title">
+            <field name="name">A Doctor Of Philosophy</field>
+            <field name="shortcut">PHD</field>
+        </record>
+        <record id="res_partner_title_2" model="res.partner.title">
+            <field name="name">Certified Nurses Aid</field>
+            <field name="shortcut">CNA</field>
+        </record>
+        <record id="res_partner_title_3" model="res.partner.title">
+            <field name="name">Doctor</field>
+            <field name="shortcut">DR</field>
+        </record>
+        <record id="res_partner_title_4" model="res.partner.title">
+            <field name="name">Doctor Of Dental Surgery</field>
+            <field name="shortcut">DDS</field>
+        </record>
+        <record id="res_partner_title_5" model="res.partner.title">
+            <field name="name">Doctor Of Medicine In Dentistry</field>
+            <field name="shortcut">DMD</field>
+        </record>
+        <record id="res_partner_title_6" model="res.partner.title">
+            <field name="name">Doctor Of Veterinary Medicine</field>
+            <field name="shortcut">DVM</field>
+        </record>
+        <record id="res_partner_title_7" model="res.partner.title">
+            <field name="name">Esquire</field>
+            <field name="shortcut">ESQ</field>
+        </record>
+        <record id="res_partner_title_8" model="res.partner.title">
+            <field name="name">Junior </field>
+            <field name="shortcut">IR</field>
+        </record>
+        <record id="res_partner_title_9" model="res.partner.title">
+            <field name="name">Junior Doctor Of Dental Surgery</field>
+            <field name="shortcut">IRDDS</field>
+        </record>
+        <record id="res_partner_title_10" model="res.partner.title">
+            <field name="name">Junior Doctor Of Philosophy</field>
+            <field name="shortcut">IRPHD</field>
+        </record>
+        <record id="res_partner_title_11" model="res.partner.title">
+            <field name="name">Junior Esquire</field>
+            <field name="shortcut">IRESO</field>
+        </record>
+        <record id="res_partner_title_12" model="res.partner.title">
+            <field name="name">Junior Medical Doctor</field>
+            <field name="shortcut">IRMD</field>
+        </record>
+        <record id="res_partner_title_13" model="res.partner.title">
+            <field name="name">Licensed Vocational Nurses</field>
+            <field name="shortcut">LVN</field>
+        </record>
+                <record id="res_partner_title_14" model="res.partner.title">
+            <field name="name">Medical Doctor</field>
+            <field name="shortcut">MD</field>
+        </record>
+        <record id="res_partner_title_15" model="res.partner.title">
+            <field name="name">Medical Doctor Esquire</field>
+            <field name="shortcut">MDESO</field>
+        </record>
+        <record id="res_partner_title_16" model="res.partner.title">
+            <field name="name">MISS</field>
+            <field name="shortcut">MISS</field>
+        </record>
+        <record id="res_partner_title_17" model="res.partner.title">
+            <field name="name">Mr</field>
+            <field name="shortcut">MR</field>
+        </record>
+        <record id="res_partner_title_18" model="res.partner.title">
+            <field name="name">Mrs</field>
+            <field name="shortcut">MRS</field>
+        </record>
+        <record id="res_partner_title_19" model="res.partner.title">
+            <field name="name">MS</field>
+            <field name="shortcut">MS</field>
+        </record>
+        <record id="res_partner_title_20" model="res.partner.title">
+            <field name="name">Registered Nurse</field>
+            <field name="shortcut">RN</field>
+        </record>
+        <record id="res_partner_title_21" model="res.partner.title">
+            <field name="name">Reverend </field>
+            <field name="shortcut">REV</field>
+        </record>
+        <record id="res_partner_title_22" model="res.partner.title">
+            <field name="name">Senior</field>
+            <field name="shortcut">SR</field>
+        </record>
+        <record id="res_partner_title_23" model="res.partner.title">
+            <field name="name">Senior Doctor Of Dental Surgery</field>
+            <field name="shortcut">SRDDS</field>
+        </record>
+        <record id="res_partner_title_24" model="res.partner.title">
+            <field name="name">Senior Doctor Of Philosophy</field>
+            <field name="shortcut">SRPHD</field>
+        </record>
+        <record id="res_partner_title_25" model="res.partner.title">
+            <field name="name">Senior Esquire</field>
+            <field name="shortcut">SRESO</field>
+        </record>
+        <record id="res_partner_title_26" model="res.partner.title">
+            <field name="name">Senior Medical Doctor</field>
+            <field name="shortcut">SRMD</field>
+        </record>
+                <record id="res_partner_title_27" model="res.partner.title">
+            <field name="name">Sheikh</field>
+            <field name="shortcut">Sheikh</field>
+        </record>
+        <record id="res_partner_title_28" model="res.partner.title">
+            <field name="name">Sheikha</field>
+            <field name="shortcut">Sheikha</field>
+        </record>
+        <record id="res_partner_title_29" model="res.partner.title">
+            <field name="name">Sultan</field>
+            <field name="shortcut">Sultan</field>
+        </record>
+        <record id="res_partner_title_30" model="res.partner.title">
+            <field name="name">The Doctorate Of Medicine And Of Philosophy</field>
+            <field name="shortcut">MDPHD</field>
+        </record>
+        <record id="res_partner_title_31" model="res.partner.title">
+            <field name="name">His Excellency</field>
+            <field name="shortcut">HE</field>
+        </record>
+        <record id="res_partner_title_32" model="res.partner.title">
+            <field name="name">His/Her Highness</field>
+            <field name="shortcut">HH</field>
+        </record>
+        <record id="res_partner_title_33" model="res.partner.title">
+            <field name="name">Professor</field>
+            <field name="shortcut">Prof</field>
+        </record>
+        
+    <!-- 33 -->
+    </data>
+</odoo>

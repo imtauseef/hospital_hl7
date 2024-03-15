@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+	<menuitem id="acs_branch_menu" 
+			name="Branches" 
+			parent="base.menu_users" 
+			action="acs_branch_action"
+			groups="group_branch_user" 
+			sequence="50"/>
+
+</odoo>

@@ -1,0 +1,133 @@
+@mixin burger-menu() {
+	.o_burger_menu {
+		.o_burger_menu_topbar {
+			display: flex !important;
+    		flex-direction: row-reverse;
+    		background: white;
+    		color: black;
+			.__main_menu {
+	            display: flex;
+	            text-align: center;
+	            justify-content: start;
+	            width: 100%;
+	            margin-bottom: 15px;
+	            padding-top: 15px;
+	            position: relative;
+	            z-index: 2;
+	            background: transparent;
+	            left: 12px;
+
+	            .__menu_icon {
+	                width: 50px;
+	                height: 50px;
+	                overflow: hidden;
+	                margin-right: 12px;
+	                position: relative;
+	                background-repeat: no-repeat;
+	                background-position: center;
+	                background-size: cover;
+	                background-size: 98%;
+	            }
+
+	            .__menu_title {
+	                color: var(--menu-main-title);
+	                text-transform: uppercase;
+	                font-weight: 600;
+	                width: auto;
+	                margin: auto 0px;
+	                font-size: 18px;
+	                white-space: nowrap;
+	                overflow: hidden;
+	                text-overflow: ellipsis;
+	            }
+
+	            +a.dropdown-item {
+	                padding: 0;
+
+	                &:before {
+	                    display: none;
+	                }
+
+	                &:after {
+	                    display: none;
+	                }
+	            }
+	        }
+		}
+        .o_burger_menu_content {
+        	background-color: white;
+        	ul {
+        		background-color: white;
+        		li {
+        		 	background-color: white;
+					color: black;
+					cursor: pointer;
+					ul {
+						background-color: white;
+						color: black;
+						overflow: hidden;
+						li {
+							position: relative;
+							color: black;
+							&:before {
+								content: "";
+							    position: absolute;
+							    display: block;
+							    background-color: #dee2e6;
+							    width: 1px;
+							    height: 100%;
+							    left: 19px;
+							    bottom: 50%;
+							    margin-right: 12px;
+							}
+							&:after {
+								content: "";
+							    position: absolute;
+							    display: block;
+							    background-color: #dee2e6;
+							    width: 20px;
+							    height: 1px;
+							    left: 20px;
+							    top: 50%;
+							    bottom: auto;
+							    margin-right: 5px;
+							}
+							ul {
+								background-color: white;
+								color: black;
+								overflow: hidden;
+								li {
+									position: relative;
+									color: black;
+									&:before {
+										content: "";
+									    position: absolute;
+									    display: block;
+									    background-color: #dee2e6;
+									    width: 1px;
+									    height: 100%;
+									    left: 19px;
+									    bottom: 50%;
+									    margin-right: 12px;
+									}
+									&:after {
+										content: "";
+									    position: absolute;
+									    display: block;
+									    background-color: #dee2e6;
+									    width: 20px;
+									    height: 1px;
+									    left: 20px;
+									    top: 50%;
+									    bottom: auto;
+									    margin-right: 5px;
+									}
+								}
+							}
+						}
+					}
+        		 }
+        	}
+        }
+	}
+}

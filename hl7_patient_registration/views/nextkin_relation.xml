@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <!-- tree view for Next of kin relation -->
+    <record id="view_nextkin_relation_tree" model="ir.ui.view">
+        <field name="name">Next of Kin</field>
+        <field name="model">next.kin.relation</field>
+        <field name="arch" type="xml">
+            <tree string="Next of Kin">
+                <field name="name"/>
+                <field name="code"/>
+            </tree>
+        </field>
+    </record>
+
+    <!-- form view for Next of kin relation -->
+    <record id="view_nextkin_relation_form" model="ir.ui.view">
+        <field name="name">Next of Kin</field>
+        <field name="model">next.kin.relation</field>
+        <field name="arch" type="xml">
+
+            <form string="Next of Kin">
+                <sheet>
+                    <group>
+                        <field name="name"/>
+                        <field name="code"/>
+                    </group>
+                </sheet>
+                <div class="oe_chatter">
+                    <field name="message_follower_ids"/>
+                    <field name="activity_ids"/>
+                    <field name="message_ids"/>
+                </div>
+            </form>
+
+        </field>
+    </record>
+
+    <!-- action for Next of kin relation -->
+    <record id="action_nextkin_relation" model="ir.actions.act_window">
+        <field name="name">Next of Kin</field>
+        <field name="res_model">next.kin.relation</field>
+        <field name="view_mode">tree,form</field>
+        <field name="domain">[]</field>
+        <field name="context">{}</field>
+        <field name="help">Create a new Relation</field>
+        <field name="view_id" ref="view_nextkin_relation_tree" />
+    </record>
+
+    
+    
+</odoo>
