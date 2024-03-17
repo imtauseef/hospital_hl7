@@ -9,7 +9,7 @@
     'category': 'Category/Industry',
     'author': 'Your Name',
     'website': 'Your Website URL',
-    'depends': ['base', 'acs_hms'],  # List of dependencies
+    'depends': ['base', 'acs_hms', 'hl7_patient_appointment'],  # List of dependencies
     'data': [
         'views/hl7_patient_appointment.xml',
         # 'security/ir.model.access.csv', 

@@ -41,6 +41,12 @@ class Appointment(models.Model):
         ('Waitlist', 'Appointment has been placed on a waiting list for a particular slot, or set of slots'),
     ], string='Filler Status Code')
 
+    # added for RGS segment
+    rgs_action_code = fields.Selection([('A', 'Add/Insert'), ('D', 'Delete'), ('U', 'Update')], string="Action Code")
+
+    # added for AIS segment
+    ais_action_code = fields.Selection([('A', 'Add/Insert'), ('D', 'Delete'), ('U', 'Update')], string="Action Code")
+    hospital_service_id = fields.Many2one('hospital.service', string="Speciality")
 
     @api.model
     def generate_hl7_message(self, integration_record):
@@ -51,12 +57,21 @@ class Appointment(models.Model):
             f"MSH|^~\&|SYSTEMCODE^SYSTEMCODE|SYSTEMCODE^SYSTEMCODE|Rhapsody^MALAFFI|ADHIE|{local_time.strftime('%Y%m%d%H%M%S')}+0400||SIU^S12|{integration_record.message_control_id}|P|2.3\n"
             f"SCH||{integration_record.filler_appointment_id}^^SYSTEMCODE|{integration_record.occurrence_number}||||{integration_record.appointment_reason}^{APPOINTMENT_REASON_CODE[integration_record.appointment_reason]}^MALAFFI||||^^^{integration_record.date}^{integration_record.date_to}|||||{integration_record.filler_contact_person}||||||{integration_record.appointment_mode}^MALAFFI|||{integration_record.filler_status_code}^MALAFFI||\n"
             # f"ODE||||1|||Booked^The indicated appointment is booked^MALAFFI||\n"
-            f"PID|1||patient_identifier_list^^^&SYSTEMCODE||{integration_record.patient_id.name}^^^^^^P||{integration_record.patient_id.birthday:%Y%m%d}|{integration_record.patient_id.gender_code}||||||{integration_record.patient_id.business_contact_no}^^CC||{integration_record.patient_id.marital_status_code}^{integration_record.patient_id.marital_status}^MALAFFI|{integration_record.patient_id.religion_hl7}||{integration_record.patient_id.emirates_id}|||||||||{integration_record.nationality_code}^{integration_record.nationality_id.name}^MALAFFI||N\n"
+        )
 
-            f"PV1|1|O|CARDIOLOGY^^^MF123&SYSTEMCODE-DOHID||||||GD11111^Test1^test4^^^^^^&SYSTEMCODE-\n"
-            f"DOHID|162||||P|||||101^^^&SYSTEMCODE|||||||||||||||||8||||||||20210114120000|20210114120000\n"
-            f"RGS|1|A|1^INTERNAL MEDICINE^SYSTEMCODE\n"
-            f"AIS|1|A|001^GI EXAM^SYSTEMCODE^7^Cardiology^MALAFFI|20210114120000|||30|min^minute^Malaffi||Booked^The indicated appointment is booked^MALAFFI||\n"
+        if integration_record.patient_id.death_indicator == 'Y':
+            hl7_message += (
+                f"PID|1||patient_identifier_list^^^&SYSTEMCODE||{integration_record.patient_id.name}^^^^^^P||{integration_record.patient_id.birthday:%Y%m%d}|{integration_record.patient_id.gender_code}||||||{integration_record.patient_id.business_contact_no}^^CC||{integration_record.patient_id.marital_status_code}^{integration_record.patient_id.marital_status}^MALAFFI|{integration_record.patient_id.religion_hl7}||{integration_record.patient_id.emirates_id}|||||||||{integration_record.patient_id.nationality_code}^{integration_record.patient_id.nationality_id.name}^MALAFFI|{integration_record.patient_id.date_of_death:%Y%m%d}|{integration_record.patient_id.death_indicator}\n"
+            )
+        else:
+            hl7_message += (
+                f"PID|1||patient_identifier_list^^^&SYSTEMCODE||{integration_record.patient_id.name}^^^^^^P||{integration_record.patient_id.birthday:%Y%m%d}|{integration_record.patient_id.gender_code}||||||{integration_record.patient_id.business_contact_no}^^CC||{integration_record.patient_id.marital_status_code}^{integration_record.patient_id.marital_status}^MALAFFI|{integration_record.patient_id.religion_hl7}||{integration_record.patient_id.emirates_id}|||||||||{integration_record.nationality_code}^{integration_record.nationality_id.name}^MALAFFI||{integration_record.patient_id.death_indicator}\n"
+            )
+
+        hl7_message += (
+            # f"PV1|1|O|CARDIOLOGY^^^MF123&SYSTEMCODE-DOHID||||||GD11111^Test1^test4^^^^^^&SYSTEMCODE-DOHID|162||||P|||||101^^^&SYSTEMCODE|||||||||||||||||8||||||||20210114120000|20210114120000\n"
+            f"RGS|1|{integration_record.rgs_action_code}|\n"
+            f"AIS|1|{integration_record.ais_action_code}|001^GI EXAM^SYSTEMCODE^{integration_record.hospital_service_id.code}^{integration_record.hospital_service_id.name}^MALAFFI|20210114120000|||30|min^minute^Malaffi||Booked^The indicated appointment is booked^MALAFFI||\n"
             f"NTE|1||Notes 1\n"
             f"NTE|2||Notes 2\n"
             f"AIG|1|A|399^COLONOSCOPY ROOM^SYSTEMCODE^^^^|2^RESOURCE^SYSTEMCODE||||20210114120000|||30|min^minute^Malaffi||Booked^The indicated appointment is booked^MALAFFI\n"
