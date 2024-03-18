@@ -9,14 +9,14 @@
     'category': 'Category/Industry',
     'author': 'Your Name',
     'website': 'Your Website URL',
-    'depends': ['base', 'acs_hms', 'hl7_patient_appointment'],  # List of dependencies
+    'depends': ['base', 'acs_hms', 'hl7_patient_registration'],  # List of dependencies
     'data': [
         'views/hl7_patient_appointment.xml',
         # 'security/ir.model.access.csv', 
         # Add other data files here (e.g., data files, security rules)
     ],
     'demo': [
-        'demo/demo_data.xml',  # Demo data for the module
+        # 'demo/demo_data.xml',  # Demo data for the module
     ],
     'installable': True,  # Whether the module can be installed or not
     'auto_install': False,  # Whether the module should be auto-installed

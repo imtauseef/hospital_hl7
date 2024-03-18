@@ -20,6 +20,7 @@
             </xpath>
             <xpath expr="//field[@name='appointment_duration']" position="after">
                 <field name="filler_contact_person"/>
+<!--                <field name="start_date_time" placeholder=' Additional Service time after appointment'/>-->
 
 
             </xpath>
