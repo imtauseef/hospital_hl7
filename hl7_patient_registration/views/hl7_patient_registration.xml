@@ -51,7 +51,7 @@
         <xpath expr="//field[@name='bmi']" position="after">
             <!-- <page name="your_tab_name" string="Your Tab Name" groups="acs_hms.group_hms_nurse"> -->
                 <field name="hunt_and_hess_scale" placeholder="Predict the outcome for Patients"/>
-                <field name="rankin_scale" placeholder="Degree of Disability"/>
+                <field name="rankin_scale" placeholder="Select Degree of Disability"/>
                 <field name="nih_stroke_scale" placeholder="Expected numerical results"/>
             <!-- </page> -->
         </xpath> 
@@ -98,6 +98,31 @@
                         </group>
                     </group>
                 </page>
+
+                <page string="Procedures">
+                    <field name="patient_procedure_ids" nolabel="1">
+                        <tree editable="top">
+                            <field name="patient_id" />
+                            <field name="product_id" required="1"/>
+                            <field name="procedure_datetime" string="Date Time" required="1"/>
+                            <field name="proc_func_type" string="Functional type" required="1"/>
+                            <field name="anesthesiologist" required="1"/>
+                            <field name="anesthesia_code" />
+                            <field name="surgeon" string="Surgeon" required="1"/>
+                            <field name="procedure_practioner" string="Practioner"/>
+                            <field name="consent_code" />
+                            <field name="procdure_priority" string="Priority" required="1"/>
+                            <field name="associated_diagnosis_code" required="1"/>
+                            <field name="state" optional="hide"/>
+                            <field name="price_unit" optional="hide"/>
+                            <field name="company_id" optional="hide"/>
+                        </tree>
+                    </field>
+
+                </page>
+
+
+
         </page>
         
     </field>
@@ -179,7 +204,7 @@
             </xpath>
 
             <xpath expr="//field[@name='title']" position="after">
-                <field name="message_control_id" required="True"/>
+                <field name="message_control_id" required="True" placeholder="Must be unique"/>
                 <field name="patient_class"/>
                 <!-- <field name="patient_class_code"/> -->
                 
@@ -187,6 +212,7 @@
                 <field name="doctor_id_code" attrs="{'invisible': [('patient_class', 'not in', ['E','O','UC','T','HC','P','R','B','C','N','DC'])]}"/>
                 <field name="hospital_service_id" options="{'no_create': True, 'no_edit': True}"/>
                 <field name="admit_source"/>
+                <field name="assigned_patient_location"/>
                 <!-- <field name="admit_source_code"/> -->
             </xpath>
             <xpath expr="//field[@name='registration_product_id']" position="after">
@@ -230,6 +256,61 @@
                         </group>
                     </group>
                 </page> -->
+            </xpath>
+        </field>
+    </record>
+
+    <record id="view_patient_form" model="ir.ui.view">
+        <field name="name">view.hms.patient</field>
+        <field name="model">hms.patient</field>
+        <field name="inherit_id" ref="acs_hms.view_patient_form"/>
+        <field name="arch" type="xml">
+            <div name="button_box" position="inside">
+                <button name="action_insurance_policy" type="object" class="oe_stat_button" icon="fa-medkit" string="Insurance Policy" groups="acs_hms_insurance.group_hms_insurance_officer"/>
+                <button name="action_claim_view" type="object" class="oe_stat_button" icon="fa-ticket" title="Claims" groups="acs_hms_insurance.group_hms_insurance_officer">
+                    <field string="Claims" name="claim_count" widget="statinfo"/>
+                </button>
+            </div>
+            <xpath expr="//page[@name='family_note']" position='after'>
+                <page string="Insurance" name="patient_insurance">
+                    <sheet>
+                        <group>
+                            <group>
+                                <field name="insurance_company_id"/>
+                                <field name="policy_number"/>
+                                <field name="insurance_plan_id" domain="[('insurance_company_id','=',insurance_company_id)]"/>
+                                <field name="insured_id_no"/>
+                                <!-- <field name="pricelist_id" groups="product.group_product_pricelist" options="{'no_open':True,'no_create': True}"/> -->
+                            </group>
+                            <group>
+                                <field name="insured_value"/>
+                                <field name="validity"/>
+                                <field name="company_id" groups="base.group_multi_company" string="Hospital" options="{'no_create': True}"/>
+                            </group>
+    
+                            <group>
+                                <field name="insurance_active"/>
+                                <field name="allow_appointment_insurance"/>
+                                <field name="create_claim"/>
+                                <field name="app_insurance_type" attrs="{'invisible': [('allow_appointment_insurance', '=', False)]}"/>
+                                <field name="app_insurance_percentage" attrs="{'invisible': ['|',('allow_appointment_insurance', '=', False),('app_insurance_type','=','fix')]}"/>
+                                <field name="app_insurance_amount" attrs="{'invisible': ['|',('allow_appointment_insurance', '=', False),('app_insurance_type','=','percentage')]}"/>
+    
+                                <field name="allow_pharmacy_insurance"/>
+                                <field name="pha_create_claim"/>
+                                <field name="pha_insurance_type" attrs="{'invisible': [('allow_pharmacy_insurance', '=', False)]}"/>
+                                <field name="pha_insurance_percentage" attrs="{'invisible': ['|',('allow_pharmacy_insurance', '=', False),('pha_insurance_type','=','fix')]}"/>
+                                <field name="pha_insurance_amount" attrs="{'invisible': ['|',('allow_pharmacy_insurance', '=',False),('pha_insurance_type','=','percentage')]}"/>
+                            </group>
+                            <group>
+                                <field name="app_insurance_limit" attrs="{'invisible': [('allow_appointment_insurance', '=', False)]}"/>
+                                
+                                <field name="pha_insurance_limit" attrs="{'invisible': [('allow_pharmacy_insurance', '=', False)]}"/>
+                            </group>
+                        </group>
+                        <field name="note" placeholder="Notes"/>
+                    </sheet>
+                </page>
             </xpath>
         </field>
     </record>

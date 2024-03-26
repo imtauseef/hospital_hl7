@@ -20,7 +20,7 @@
     'version': '0.1',
 
     # any module necessary for this one to work correctly
-    'depends': ['base', 'acs_hms_base','acs_hms'],
+    'depends': ['base', 'acs_hms_base','acs_hms', 'acs_hms_insurance'],
 
     # always loaded
     'data': [

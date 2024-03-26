@@ -6,23 +6,88 @@
         <field name="model">hms.appointment</field>
         <field name="inherit_id" ref="acs_hms.view_hms_appointment_form"/>
         <field name="arch" type="xml">
-            <xpath expr="//field[@name='cabin_id']" position="after">
+            <!-- <xpath expr="//field[@name='cabin_id']" position="after">
                 <field name="message_control_id"/>
                 <field name="filler_appointment_id"/>
                 <field name="filler_status_code"/>
                 <field name="occurrence_number"/>
 
-            </xpath>
-            <xpath expr="//field[@name='urgency']" position="after">
+            </xpath> -->
+            <xpath expr="//field[@name='cabin_id']" position="after">
                 <field name="appointment_reason"/>
                 <field name="appointment_mode"/>
 
             </xpath>
-            <xpath expr="//field[@name='appointment_duration']" position="after">
+            <xpath expr="//page[@name='other_info']/group[@name='extra_info']/group[2]" position="inside">
                 <field name="filler_contact_person"/>
-<!--                <field name="start_date_time" placeholder=' Additional Service time after appointment'/>-->
+            </xpath>
+            <xpath expr="//page[@name='other_info']/group[@name='extra_info']/group[1]" position="inside">
+                <field name="message_control_id"/>
+                <field name="filler_appointment_id"/>
+                <field name="filler_status_code"/>
+                <field name="occurrence_number"/>
+            </xpath>
+            <!-- <xpath expr="//field[@name='appointment_duration']" position="after">
+                <field name="filler_contact_person"/>
+               <field name="start_date_time" placeholder=' Additional Service time after appointment'/>
 
 
+            </xpath> -->
+            <xpath expr="//page[@name='other_info']" position="after">
+                <page string="Appointment Information">
+                    <group>
+                        <group>
+                            <field name="ais_universal_service_identifier_name"/>
+                            <field name="ais_start_date_time"/>
+                        </group>
+                        <group>
+                            <field name="ais_universal_service_identifier_code"/>
+                            <field name="filler_status_code"/>
+                        </group>
+                    </group>
+                    <notebook>
+                        <!-- Child Tabs -->
+                        <page string="General Resource" name="general_resource_tab">
+                           <group>
+                                <group>
+                                    <field name="aig_resource_name"/>
+                                    <field name="aig_resource_id"/>
+                                </group>
+                                <group>
+                                    <field name="aig_resource_type_name"/>
+                                    <field name="aig_resource_type_id"/>
+                                    <field name="aig_start_date_time"/>
+                                </group>
+                            </group>
+                        </page>
+
+                        <page string="Location Resource" name="location_resource_tab">
+                           <group>
+                                <group>
+                                    <field name="ail_location_type"/>
+                                    
+                                </group>
+                                <group>
+                                    <field name="ail_start_date_time"/>
+                                    
+                                </group>
+                            </group>
+                        </page>
+
+                        <page string="Personnel Resource" name="personnel_resource_tab">
+                            <group>
+                                <group>
+                                    <field name="aip_resource_staff_type"/>
+                                    
+                                </group>
+                                <group>
+                                    <field name="aip_start_date_time"/>
+                                    
+                                </group>
+                            </group>
+                        </page>
+                    </notebook>
+                </page>
             </xpath>
 
         </field>

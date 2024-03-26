@@ -80,6 +80,38 @@ class HospitalService(models.Model):
 
     code = fields.Char(string='Code', required=True)
 
+class AcsPatientProcedure(models.Model):
+    _inherit = "acs.patient.procedure"
+
+     # Procedures fields
+    # procedure_code = fields.Char(string="Procedure Code")
+    # procedure_description = fields.Char(string="Procedure Description")
+    procedure_datetime = fields.Datetime(string='Procedure Date/Time')
+    proc_func_type = fields.Selection([('A', 'Anesthesia'), ('P', 'Procedure for treatment'), ('I', 'Invasive procedure'), ('D', 'Diagnostic procedure')], string="Procedure Functional Type")
+    procedure_minutes = fields.Integer(string="Procedure Minutes")
+    procedure_practioner = fields.Many2one('hms.physician', string="Procedure Practioner")
+    consent_code = fields.Char(string="Consent Code")
+    procdure_priority = fields.Selection([('0', 'Admitting Procedure'), ('1', 'Primary Procedure'), ('2', 'Secondary Procedures')])
+    associated_diagnosis_code = fields.Char(string="Associated Diagnosis Code")
+    anesthesiologist = fields.Many2one('hms.physician', string="Anesthesiologist")
+    anesthesia_code = fields.Char(string="Anesthesia Code")
+    surgeon = fields.Many2one('hms.physician', string="Surgeon")
+
+
+
+# @api.onchange('patient_id')
+    # def req_anesthesiologist(self):
+    #     print(f"{self.patient_id.patient_class}====================")
+    #     scheduled_obj = self.env['hms.patient'].search_read([('id', '=', self.patient_id.id)], fields=('patient_class'))
+    #     print(f"{scheduled_obj}====================")
+
+    #     if scheduled_obj == 'I':
+    #         return {'anesthesiologist': {'required': True} }
+    #     else:
+    #         return
+
+
+
 
 class HmsPatient(models.Model):
     _inherit = 'hms.patient'
@@ -107,6 +139,8 @@ class HmsPatient(models.Model):
 
     doctor_id_code = fields.Char(string='Code', related='primary_physician_id.code', store=True)
 
+    assigned_patient_location = fields.Char(string='Assigned Patient Location', required=True)
+
     hunt_and_hess_scale =fields.Selection([
         ('G1', 'Grade 1'),
         ('G2', 'Grade 2'),
@@ -123,9 +157,9 @@ class HmsPatient(models.Model):
         ('4', '4'),
         ('5', '5'),
         ('6', '6'),
-    ], string='Rankin Scale', default='0', required=True)
+    ], string='Rankin Scale', required=True, placeholder="Select Degree of Disability")
 
-    nih_stroke_scale = fields.Integer(string='NIH Stroke scale', required=True)
+    nih_stroke_scale = fields.Integer(string='NIH Stroke scale', required=True, placeholder="Expected numerical results")
 
     # death_date = fields.Date(string='Patient Death Date', required=False)
     death_time = fields.Float(string='Patient Death Time (in hours)', required=False)
@@ -236,8 +270,8 @@ class HmsPatient(models.Model):
                                 ('N', 'Not applicable'), ('DC', 'Day Case')]
 
     patient_class = fields.Selection(PATIENT_CLASS_SELECTION, string='Patient Class', required=True)
-    
-    second_mobile_no = fields.Char(string='Second Mobile No')
+
+    second_mobile_no = fields.Char(string="Second Mobile No")
 
     employment_status = fields.Selection([
         ('full_time', 'Full Time'),
@@ -282,6 +316,65 @@ class HmsPatient(models.Model):
     emirates_id = fields.Char(string="Emirates_id", required=True)
 
     consulting_doctor = fields.Char(string='Consulting Doctor', compute='_compute_consulting_doctor', store=True)
+
+    #insurance fields start form here
+    insurance_company_id = fields.Many2one('hms.insurance.company', string ="Insurance Company", required=True)
+    insurance_plan_id = fields.Many2one('acs.insurance.plan', string ="Insurance Plan", required=True)
+    policy_number = fields.Char(string ="Policy Number")
+    insured_value = fields.Float(string ="Insured Value")
+    validity = fields.Date(string="Validity")
+    insurance_active = fields.Boolean(string="Active Insurance", default=True)
+    note = fields.Text("Notes")
+
+    allow_appointment_insurance = fields.Boolean(string="Insured Appointments")
+    app_insurance_type = fields.Selection([
+        ('percentage', 'Percentage'),
+        ('fix', 'Fix-amount')], 'Appointment Insurance Type', default='percentage')
+    app_insurance_amount = fields.Float(string="Appointment Co-payment", help="The patient should pay specific amount 50QR")
+    app_insurance_percentage = fields.Float(string="Appointment Insured Percentage")
+    app_insurance_limit = fields.Float(string="Appointment Insurance Limit")
+    create_claim = fields.Boolean(string="Appointment Create Claim")
+    insured_id_no = fields.Char(string="Insured's ID No.", required=True)
+    
+    allow_pharmacy_insurance = fields.Boolean(string="Insured Pharmacy", default=False)
+    pha_insurance_type = fields.Selection([
+        ('percentage', 'Percentage'),
+        ('fix', 'Fix-amount')], 'Pharmacy Insurance Type', default='percentage')
+    pha_insurance_amount = fields.Float(string="Pharmacy Co-payment", help="The patient should pay specific amount 50QR")
+    pha_insurance_percentage = fields.Float(string="Pharmacy Insured Percentage")
+    pha_insurance_limit = fields.Float(string="Pharmacy Insurance Limit")
+    pha_create_claim = fields.Boolean(string="Pharmacy Create Claim", default=False)
+    company_id = fields.Many2one('res.company', 'Hospital', default=lambda self: self.env.company)
+
+    #insurance fields end here
+
+    @api.model
+    def create(self, vals):
+        rec = super(HmsPatient, self).create(vals)
+
+        self.env['hms.patient.insurance'].create({
+            'patient_id': rec.id,
+            'insurance_company_id': rec.insurance_company_id.id,
+            'policy_number': rec.policy_number,
+            'insurance_plan_id': rec.insurance_plan_id.id,
+            'company_id': rec.company_id.id
+        })
+        return rec
+    
+    def write(self, vals):
+        rec = super(HmsPatient, self).write(vals)
+        if self.env['hms.patient.insurance'].search(['patient_id', '=', rec.id], limit=1):
+            return rec
+        else:
+            self.env['hms.patient.insurance'].create({
+            'patient_id': rec.id,
+            'insurance_company_id': rec.insurance_company_id.id,
+            'policy_number': rec.policy_number,
+            'insurance_plan_id': rec.insurance_plan_id.id,
+            'company_id': rec.company_id.id
+            })
+        return rec
+   
 
     @api.depends('smoking_device')
     def _compute_p_smoking_frequency(self):
@@ -331,8 +424,6 @@ class HmsPatient(models.Model):
 
 
 
-
-
     @api.model
     def generate_hl7_message(self, integration_record):
         local_tz = pytz.timezone('Asia/Dubai')
@@ -360,15 +451,37 @@ class HmsPatient(models.Model):
             hl7_message += f"NK1|1|{integration_record.nk_name}|{integration_record.nk_relation.code}^{integration_record.nk_relation.name}^MALAFFI||{integration_record.nk_phone}^^CC|^^^|\n"
 
         hl7_message += (
-            f"PV1|1|{integration_record.patient_class}|^^^MF3333&SYSTEMCODE-DOHID||||||{integration_record.doctor_id_code}^{integration_record.title.name}^{integration_record.primary_physician_id.name}^^^^^^&SYSTEMCODE-DOHID|{integration_record.hospital_service_id.code}||||{ADMIT_SOURCE_CODE[integration_record.admit_source]}|||||{integration_record.code}^^^&SYSTEMCODE|||||||||||||||||||||||||{local_time.strftime('%Y%m%d%H%M%S')}\n"
+            f"PV1|1|{integration_record.patient_class}|^^^{integration_record.assigned_patient_location}&SYSTEMCODE-DOHID||||||{integration_record.doctor_id_code}^{integration_record.title.name}^{integration_record.primary_physician_id.name}^^^^^^&SYSTEMCODE-DOHID|{integration_record.hospital_service_id.code}||||{ADMIT_SOURCE_CODE[integration_record.admit_source]}|||||{integration_record.code}^^^&SYSTEMCODE|||||||||||||||||||||||||{local_time.strftime('%Y%m%d%H%M%S')}\n"
             
-            f"ZPV1||||||||{integration_record.arrival_date_time}|{integration_record.doctor_seen_date_time}|{integration_record.hunt_and_hess_scale}^{HUNT_HESS_CODE[integration_record.hunt_and_hess_scale]}^MALAFFI|{integration_record.rankin_scale}|{integration_record.nih_stroke_scale}\n"
+            f"ZPV1||||||||{integration_record.arrival_date_time}|{integration_record.doctor_seen_date_time}|{integration_record.hunt_and_hess_scale}^{HUNT_HESS_CODE[integration_record.hunt_and_hess_scale]}^MALAFFI|{integration_record.rankin_scale}|{integration_record.nih_stroke_scale}\n")
+
+        # if integration_record.patient_procedure_ids:
+        #     pr_code = 1
+        #     for procedure in integration_record.patient_procedure_ids:
+        #         hl7_message += (
+        #             f"PR1|{pr_code}||{procedure.product_id.default_code}^{procedure.product_id.name}^CPT|{procedure.product_id.description}|{procedure.procedure_datetime}|||{procedure.anesthesiologist.code}^^^{procedure.anesthesiologist.name}^^Dr^^^&SYSTEMCODE-DOHID|{procedure.anesthesia_code if procedure.anesthesia_code else ''}||{procedure.surgeon.code}^^^{procedure.surgeon.name}^^Dr^^^&SYSTEMCODE-DOHID|{procedure.procedure_practioner.code}^^^{procedure.procedure_practioner.name}^^^^^&SYSTEMCODE-DOHID|{procedure.consent_code}|{procedure.procdure_priority}|{procedure.associated_diagnosis_code}^^ICD10\n"
+        #         )
+        #         pr_code += 1
+
+        if integration_record.patient_procedure_ids:
+            pr_code = 1
+            for procedure in integration_record.patient_procedure_ids:
+                if integration_record.patient_class == 'I':
+                    hl7_message += (
+                        f"PR1|{pr_code}||{procedure.product_id.default_code}^{procedure.product_id.name}^CPT|{procedure.product_id.description}|{procedure.procedure_datetime}|||{procedure.anesthesiologist.code}^^^{procedure.anesthesiologist.name}^^Dr^^^&SYSTEMCODE-DOHID|{procedure.anesthesia_code if procedure.anesthesia_code else ''}||{procedure.surgeon.code}^^^{procedure.surgeon.name}^^Dr^^^&SYSTEMCODE-DOHID|{procedure.procedure_practioner.code}^^^{procedure.procedure_practioner.name}^^^^^&SYSTEMCODE-DOHID|{procedure.consent_code}|{procedure.procdure_priority}|{procedure.associated_diagnosis_code}^^ICD10\n"
+                    )
+                else:
+                    hl7_message += (
+                        f"PR1|{pr_code}||{procedure.product_id.default_code}^{procedure.product_id.name}^CPT|{procedure.product_id.description}|{procedure.procedure_datetime}||||{procedure.anesthesia_code if procedure.anesthesia_code else ''}||{procedure.surgeon.code}^^^{procedure.surgeon.name}^^Dr^^^&SYSTEMCODE-DOHID|{procedure.procedure_practioner.code}^^^{procedure.procedure_practioner.name}^^^^^&SYSTEMCODE-DOHID|{procedure.consent_code}|{procedure.procdure_priority}|{procedure.associated_diagnosis_code}^^ICD10\n"
+                    )
+                pr_code += 1
+            # f"PR1|1|CPT|49080^PUNCTURE PERITONEAL CAVITY^CPT|PERITONEOCENTESIS, ABDOMINAL PARACENTESIS, OR PERITONEAL LAVAGE (DIAGNOSTIC ORTHERAPEUTIC); INITIAL|20180725120000|||GD18123^testdoc1^testere1^mname1^^Dr^^^&SYSTEMCODE-DOHID|||GD18668^testdoc2^testere2^^^Dr^^^&SYSTEMCODE-DOHID|GD18668^testdoc3^testere3^^^^^^&SYSTEMCODE-DOHID||1|E11.65^Type 2 diabetesmellitus with hyperglycemia^ICD10\n"
             
-            f"PR1|1|CPT|49080^PUNCTURE PERITONEAL CAVITY^CPT|PERITONEOCENTESIS, ABDOMINAL PARACENTESIS, OR PERITONEAL LAVAGE (DIAGNOSTIC ORTHERAPEUTIC); INITIAL|20180725120000|||GD18123^testdoc1^testere1^mname1^^Dr^^^&SYSTEMCODE-DOHID|||GD18668^testdoc2^testere2^^^Dr^^^&SYSTEMCODE-DOHID|GD18668^testdoc3^testere3^^^^^^&SYSTEMCODE-DOHID||1|E11.65^Type 2 diabetesmellitus with hyperglycemia^ICD10\n"
+            # f"PR1|2|CPT|93320^ECHO DPPLER CMPL^CPT|HC ECHO DPPLER CMPL|20180501120000||||||GD21223^asdasd^asdasd^^^^^^&SYSTEMCODE-DOHID|GD21223^asdasd^asdasd^^^^^^&SYSTEMCODE-DOHID||2|D64.9^Anemia^ICD10\n")
             
-            f"PR1|2|CPT|93320^ECHO DPPLER CMPL^CPT|HC ECHO DPPLER CMPL|20180501120000||||||GD21223^asdasd^asdasd^^^^^^&SYSTEMCODE-DOHID|GD21223^asdasd^asdasd^^^^^^&SYSTEMCODE-DOHID||2|D64.9^Anemia^ICD10\n"
-            
-            f"IN1|1|{integration_record.insurance_plan_id.id}|{integration_record.insurance_company_id.id}|{integration_record.insurance_company_id.name}|||||||||||||||||||||||||||||||||||||||||||||abc1234\n"
+        hl7_message += (
+
+            f"IN1|1|{integration_record.insurance_plan_id.id}|{integration_record.insurance_company_id.id}|{integration_record.insurance_company_id.name}|||||||||||||||||||||||||||||||||||||||||||||{integration_record.policy_number}\n"
             
             # f"ZFH|161062006^Child abuse in family^MALAFFI|SIS^Sister^MALAFFI|F|Yes\n"
             #
@@ -425,6 +538,7 @@ class HmsPatient(models.Model):
             integration_record = self.browse(integration_record_id)
             hl7_message = self.generate_hl7_message(integration_record)
             print("Generated HL7 Message:", hl7_message)
+            integration_record.message_post(body=f"Generated HL7 Message: {hl7_message}")
 
             external_system_ip = '127.0.0.1'  # Replace with the actual IP address
             external_system_port = 1234  # Replace with the actual port number

@@ -1,60 +1,6 @@
 <?xml version="1.0"?>
 <odoo>        
 
-    <record id="view_patient_form" model="ir.ui.view">
-        <field name="name">view.hms.patient</field>
-        <field name="model">hms.patient</field>
-        <field name="inherit_id" ref="acs_hms.view_patient_form"/>
-        <field name="arch" type="xml">
-            <div name="button_box" position="inside">
-                <button name="action_insurance_policy" type="object" class="oe_stat_button" icon="fa-medkit" string="Insurance Policy" groups="acs_hms_insurance.group_hms_insurance_officer"/>
-                <button name="action_claim_view" type="object" class="oe_stat_button" icon="fa-ticket" title="Claims" groups="acs_hms_insurance.group_hms_insurance_officer">
-                    <field string="Claims" name="claim_count" widget="statinfo"/>
-                </button>
-            </div>
-            <xpath expr="//page[@name='family_note']" position='after'>
-                <page string="Insurance" name="patient_insurance">
-                    <sheet>
-                        <group>
-                            <group>
-                                <field name="insurance_company_id"/>
-                                <field name="policy_number"/>
-                                <field name="insurance_plan_id" domain="[('insurance_company_id','=',insurance_company_id)]"/>
-                                <field name="insured_id_no"/>
-                                <!-- <field name="pricelist_id" groups="product.group_product_pricelist" options="{'no_open':True,'no_create': True}"/> -->
-                            </group>
-                            <group>
-                                <field name="insured_value"/>
-                                <field name="validity"/>
-                                <field name="company_id" groups="base.group_multi_company" string="Hospital" options="{'no_create': True}"/>
-                            </group>
-    
-                            <group>
-                                <field name="insurance_active"/>
-                                <field name="allow_appointment_insurance"/>
-                                <field name="create_claim"/>
-                                <field name="app_insurance_type" attrs="{'invisible': [('allow_appointment_insurance', '=', False)]}"/>
-                                <field name="app_insurance_percentage" attrs="{'invisible': ['|',('allow_appointment_insurance', '=', False),('app_insurance_type','=','fix')]}"/>
-                                <field name="app_insurance_amount" attrs="{'invisible': ['|',('allow_appointment_insurance', '=', False),('app_insurance_type','=','percentage')]}"/>
-    
-                                <field name="allow_pharmacy_insurance"/>
-                                <field name="pha_create_claim"/>
-                                <field name="pha_insurance_type" attrs="{'invisible': [('allow_pharmacy_insurance', '=', False)]}"/>
-                                <field name="pha_insurance_percentage" attrs="{'invisible': ['|',('allow_pharmacy_insurance', '=', False),('pha_insurance_type','=','fix')]}"/>
-                                <field name="pha_insurance_amount" attrs="{'invisible': ['|',('allow_pharmacy_insurance', '=',False),('pha_insurance_type','=','percentage')]}"/>
-                            </group>
-                            <group>
-                                <field name="app_insurance_limit" attrs="{'invisible': [('allow_appointment_insurance', '=', False)]}"/>
-                                
-                                <field name="pha_insurance_limit" attrs="{'invisible': [('allow_pharmacy_insurance', '=', False)]}"/>
-                            </group>
-                        </group>
-                        <field name="note" placeholder="Notes"/>
-                    </sheet>
-                </page>
-            </xpath>
-        </field>
-    </record>
 
     <!-- Invoice -->
     <record id="view_move_form" model="ir.ui.view">

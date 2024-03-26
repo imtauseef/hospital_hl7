@@ -16,38 +16,6 @@ class ACSPatient(models.Model):
     claim_count = fields.Integer(compute='_rec_count', string='# Claims')
     insurance_ids = fields.One2many('hms.patient.insurance', 'patient_id', string='Insurance')
 
-    #insurance fields start form here
-    insurance_company_id = fields.Many2one('hms.insurance.company', string ="Insurance Company", required=True)
-    insurance_plan_id = fields.Many2one('acs.insurance.plan', string ="Insurance Plan", required=True)
-    policy_number = fields.Char(string ="Policy Number")
-    insured_value = fields.Float(string ="Insured Value")
-    validity = fields.Date(string="Validity")
-    insurance_active = fields.Boolean(string="Active Insurance", default=True)
-    note = fields.Text("Notes")
-
-    allow_appointment_insurance = fields.Boolean(string="Insured Appointments")
-    app_insurance_type = fields.Selection([
-        ('percentage', 'Percentage'),
-        ('fix', 'Fix-amount')], 'Appointment Insurance Type', default='percentage')
-    app_insurance_amount = fields.Float(string="Appointment Co-payment", help="The patient should pay specific amount 50QR")
-    app_insurance_percentage = fields.Float(string="Appointment Insured Percentage")
-    app_insurance_limit = fields.Float(string="Appointment Insurance Limit")
-    create_claim = fields.Boolean(string="Appointment Create Claim")
-    insured_id_no = fields.Char(string="Insured's ID No.", required=True)
-    
-    allow_pharmacy_insurance = fields.Boolean(string="Insured Pharmacy", default=False)
-    pha_insurance_type = fields.Selection([
-        ('percentage', 'Percentage'),
-        ('fix', 'Fix-amount')], 'Pharmacy Insurance Type', default='percentage')
-    pha_insurance_amount = fields.Float(string="Pharmacy Co-payment", help="The patient should pay specific amount 50QR")
-    pha_insurance_percentage = fields.Float(string="Pharmacy Insured Percentage")
-    pha_insurance_limit = fields.Float(string="Pharmacy Insurance Limit")
-    pha_create_claim = fields.Boolean(string="Pharmacy Create Claim", default=False)
-    company_id = fields.Many2one('res.company', 'Hospital', default=lambda self: self.env.company)
-
-    #insurance fields end here
-
-
     def action_insurance_policy(self):
         action = self.env["ir.actions.actions"]._for_xml_id("acs_hms_insurance.action_hms_patient_insurance")
         action['domain'] = [('patient_id', '=', self.id)]

@@ -6,6 +6,8 @@ import hl7
 from .hl7_codes_dictionary import APPOINTMENT_REASON_CODE, FILLER_STATUS_CODE, AIL_LOCATION_TYPE_CODE, \
     AIP_RESOURCE_STAFF_TYPE_CODE
 import pytz
+from odoo.exceptions import UserError
+
 
 
 class Appointment(models.Model):
@@ -49,17 +51,19 @@ class Appointment(models.Model):
     aig_action_code = fields.Selection([('A', 'Add/Insert'), ('D', 'Delete'), ('U', 'Update')], string="Action Code")
     ail_action_code = fields.Selection([('A', 'Add/Insert'), ('D', 'Delete'), ('U', 'Update')], string="Action Code")
     aip_action_code = fields.Selection([('A', 'Add/Insert'), ('D', 'Delete'), ('U', 'Update')], string="Action Code")
-    hospital_service_id = fields.Many2one('hospital.service', string="Speciality")
+
+    hospital_service_id = fields.Many2one('hospital.service',  related="patient_id.hospital_service_id", string="Speciality")
+
     ais_start_date_time = fields.Datetime(string='Start Date/Time')
-    ais_universal_service_identifier_code = fields.Integer(string='Universal Service Identifier Code')
-    ais_universal_service_identifier_name = fields.Integer(string='Universal Service Identifier Name')
+    ais_universal_service_identifier_code = fields.Char(string='Universal Service Identifier Code')
+    ais_universal_service_identifier_name = fields.Char(string='Universal Service Identifier Name')
     aig_start_date_time = fields.Datetime(string='Start Date/Time')
     ail_start_date_time = fields.Datetime(string='Start Date/Time')
     aip_start_date_time = fields.Datetime(string='Start Date/Time')
-    aig_resource_id = fields.Integer(string='Resource ID')
-    aig_resource_name = fields.Integer(string='Resource Name')
-    aig_resource_type_id = fields.Integer(string='Resource Type ID')
-    aig_resource_type_name = fields.Integer(string='Resource Type Name')
+    aig_resource_id = fields.Char(string='Resource ID')
+    aig_resource_name = fields.Char(string='Resource Name')
+    aig_resource_type_id = fields.Char(string='Resource Type ID')
+    aig_resource_type_name = fields.Char(string='Resource Type Name')
     ail_location_type = fields.Selection([
         ('C', 'Clinic'),
         ('D', 'Department'),
@@ -79,32 +83,71 @@ class Appointment(models.Model):
         ('OTHERALLDHLTH', 'Other Allied health'),
     ], string='Resource/Staff Type')
 
+    @api.model_create_multi
+    def create(self, vals_list):
+        rec = super(Appointment, self).create(vals_list)
+        rec.rgs_action_code,rec.ais_action_code,rec.aig_action_code,rec.ail_action_code,rec.aip_action_code = ('A', 'A','A', 'A', 'A')
+        return rec
+
+
+    @api.onchange('aig_start_date_time', 'aig_resource_id', 'aig_resource_name', 'aig_resource_type_id', 'aig_resource_type_name')
+    def _onchange_aig_fields(self):
+        if self.aig_action_code:
+            self.aig_action_code = 'U'
+        if (self.aig_start_date_time or self.aig_resource_id or self.aig_resource_name, self.aig_resource_type_id, self.aig_resource_type_name) == None:
+            self.aig_action_code = 'D'
+        return
+    
+    @api.onchange('ail_start_date_time', 'ail_location_type')
+    def _onchange_ail_fields(self):
+        if self.ail_action_code:
+            self.ail_action_code = 'U'
+        if (self.ail_start_date_time or self.ail_location_type) == None:
+            self.ail_action_code = 'D'
+        return
+    
+    @api.onchange('aip_start_date_time', 'aip_resource_staff_type')
+    def _onchange_aip_fields(self):
+        if self.aip_action_code:
+            self.aip_action_code = 'U'
+        if (self.aip_start_date_time or self.aip_resource_staff_type) == None:
+            self.aip_action_code = 'D'
+        return
+    
+    @api.onchange('ais_start_date_time', 'ais_universal_service_identifier_code', 'ais_universal_service_identifier_name')
+    def _onchange_ais_fields(self):
+        if self.ais_action_code:
+            self.ais_action_code = 'U'
+        if (self.ais_start_date_time or self.ais_universal_service_identifier_code or self.ais_universal_service_identifier_name) == None:
+            self.ais_action_code = 'D'
+        return
+
     @api.model
     def generate_hl7_message(self, integration_record):
         local_tz = pytz.timezone('Asia/Dubai')
         local_time = datetime.now(local_tz)
-        self.patient_id.patient_identifier_list
+        # self.patient_id.patient_identifier_list
 
         hl7_message = (
             f"MSH|^~\&|SYSTEMCODE^SYSTEMCODE|SYSTEMCODE^SYSTEMCODE|Rhapsody^MALAFFI|ADHIE|{local_time.strftime('%Y%m%d%H%M%S')}+0400||SIU^S12|{integration_record.message_control_id}|P|2.3\n"
-            f"SCH||{integration_record.filler_appointment_id}^^SYSTEMCODE|{integration_record.occurrence_number}||||{integration_record.appointment_reason}^{APPOINTMENT_REASON_CODE[integration_record.appointment_reason]}^MALAFFI||||^^^{integration_record.date}^{integration_record.date_to}|||||{integration_record.filler_contact_person}||||||{integration_record.appointment_mode}^MALAFFI|||{integration_record.filler_status_code}^MALAFFI||\n"
+            f"SCH||{integration_record.filler_appointment_id}^^SYSTEMCODE|{integration_record.occurrence_number}||||{integration_record.appointment_reason}^{APPOINTMENT_REASON_CODE[integration_record.appointment_reason]}^MALAFFI||||^^^{integration_record.date:%Y%m%d}^{integration_record.date_to:%Y%m%d}|||||{integration_record.filler_contact_person}||||||{integration_record.appointment_mode}^MALAFFI|||{integration_record.filler_status_code}^MALAFFI||\n"
             # f"ODE||||1|||Booked^The indicated appointment is booked^MALAFFI||\n"
         )
 
         if integration_record.patient_id.death_indicator == 'Y':
             hl7_message += (
-                f"PID|1||{integration_record.patient_id.code}^^^&SYSTEMCODE||{integration_record.patient_id.name}^^^^^^P||{integration_record.patient_id.birthday:%Y%m%d}|{integration_record.patient_id.gender_code}||||||{integration_record.patient_id.business_contact_no}^^CC||{integration_record.patient_id.marital_status_code}^{integration_record.patient_id.marital_status}^MALAFFI|{integration_record.patient_id.religion_hl7}||{integration_record.patient_id.emirates_id}|||||||||{integration_record.patient_id.nationality_code}^{integration_record.patient_id.nationality_id.name}^MALAFFI|{integration_record.patient_id.date_of_death:%Y%m%d}|{integration_record.patient_id.death_indicator}\n"
+                f"PID|1||{integration_record.patient_id.code}^^^&SYSTEMCODE||{integration_record.patient_id.name}^^^^^^P||{integration_record.patient_id.birthday:%Y%m%d}|{integration_record.patient_id.gender_code}||||||{integration_record.patient_id.business_contact_no}^^CC||{integration_record.patient_id.marital_status_code}^{integration_record.patient_id.marital_status}^MALAFFI|{integration_record.patient_id.religion_hl7}||{integration_record.patient_id.emirates_id}|||||||||{integration_record.patient_id.nationality_id.id}^{integration_record.patient_id.nationality_id.name}^MALAFFI|{integration_record.patient_id.date_of_death:%Y%m%d}|{integration_record.patient_id.death_indicator}\n"
             )
         else:
             hl7_message += (
-                f"PID|1||{integration_record.patient_id.code}^^^&SYSTEMCODE||{integration_record.patient_id.name}^^^^^^P||{integration_record.patient_id.birthday:%Y%m%d}|{integration_record.patient_id.gender_code}||||||{integration_record.patient_id.business_contact_no}^^CC||{integration_record.patient_id.marital_status_code}^{integration_record.patient_id.marital_status}^MALAFFI|{integration_record.patient_id.religion_hl7}||{integration_record.patient_id.emirates_id}|||||||||{integration_record.nationality_code}^{integration_record.nationality_id.name}^MALAFFI||{integration_record.patient_id.death_indicator}\n"
+                f"PID|1||{integration_record.patient_id.code}^^^&SYSTEMCODE||{integration_record.patient_id.name}^^^^^^P||{integration_record.patient_id.birthday:%Y%m%d}|{integration_record.patient_id.gender_code}||||||{integration_record.patient_id.business_contact_no}^^CC||{integration_record.patient_id.marital_status_code}^{integration_record.patient_id.marital_status}^MALAFFI|{integration_record.patient_id.religion_hl7}||{integration_record.patient_id.emirates_id}|||||||||{integration_record.patient_id.nationality_id.id}^{integration_record.patient_id.nationality_id.name}^MALAFFI||{integration_record.patient_id.death_indicator}\n"
             )
 
         hl7_message += (
             # f"PV1|1|O|CARDIOLOGY^^^MF123&SYSTEMCODE-DOHID||||||GD11111^Test1^test4^^^^^^&SYSTEMCODE-DOHID|162||||P|||||101^^^&SYSTEMCODE|||||||||||||||||8||||||||20210114120000|20210114120000\n"
             f"RGS|1|{integration_record.rgs_action_code}|\n"
             f"AIS|1|{integration_record.ais_action_code}|{integration_record.ais_universal_service_identifier_code}^{integration_record.ais_universal_service_identifier_name}^SYSTEMCODE^{integration_record.hospital_service_id.code}^{integration_record.hospital_service_id.name}^MALAFFI|{integration_record.ais_start_date_time:%Y%m%d%H%M%S}||||||{integration_record.filler_status_code}^{FILLER_STATUS_CODE[integration_record.filler_status_code]}^MALAFFI||\n"
-            f"AIG|1|{integration_record.aig_action_code}|{integration_record.aig_resource_id}^{integration_record.aig_resource_name}^SYSTEMCODE^^^^|{integration_record.resource_type_id}^{integration_record.resource_type_name}^SYSTEMCODE||||{integration_record.ais_start_date_time:%Y%m%d%H%M%S}||||||{integration_record.filler_status_code}^{FILLER_STATUS_CODE[integration_record.filler_status_code]}^MALAFFI\n"
+            f"AIG|1|{integration_record.aig_action_code}|{integration_record.aig_resource_id}^{integration_record.aig_resource_name}^SYSTEMCODE^^^^|{integration_record.aig_resource_type_id}^{integration_record.aig_resource_type_name}^SYSTEMCODE||||{integration_record.aig_start_date_time:%Y%m%d%H%M%S}||||||{integration_record.filler_status_code}^{FILLER_STATUS_CODE[integration_record.filler_status_code]}^MALAFFI\n"
             f"AIL|1|{integration_record.ail_action_code}|CARDIOLOGY^^^MF123&SYSTEMCODE-DOHID|{integration_record.ail_location_type}^{AIL_LOCATION_TYPE_CODE[integration_record.ail_location_type]}^MALAFFI||{integration_record.ail_start_date_time:%Y%m%d%H%M%S}||||||{integration_record.filler_status_code}^{FILLER_STATUS_CODE[integration_record.filler_status_code]}^MALAFFI\n"
             f"AIP|1|{integration_record.aip_action_code}|{integration_record.patient_id.id}^{integration_record.patient_id.name}^^^^^^&SYSTEMCODE-DOHID|{integration_record.aip_resource_staff_type}^{AIP_RESOURCE_STAFF_TYPE_CODE[integration_record.aip_resource_staff_type]}^MALAFFI||{integration_record.aip_start_date_time:%Y%m%d%H%M%S}||||||{integration_record.filler_status_code}^{FILLER_STATUS_CODE[integration_record.filler_status_code]}^MALAFFI\n"
         )
@@ -128,10 +171,11 @@ class Appointment(models.Model):
         except Exception as e:
             print("Error Sending HL7 Message:", e)
 
-    @api.model
-    def generate_outgoing_hl7_message(self, integration_record_id):
+
+    def appointment_confirm(self):
+       
         try:
-            integration_record = self.browse(integration_record_id)
+            integration_record = self.browse(self.id)
             hl7_message = self.generate_hl7_message(integration_record)
             print("Generated HL7 Message:", hl7_message)
 
@@ -144,11 +188,29 @@ class Appointment(models.Model):
             acknowledgment_message = (
                f"HL7 Message for Patient Registration has been created Successfully and sent to the designated Server.")
 
-            return self.display_acknowledgment_message(acknowledgment_message)
-
         except Exception as e:
-            error_message = f"Error generating or sending HL7 Message: {e}"
-            return self.display_acknowledgment_message(error_message)
+            acknowledgment_message = f"Error generating or sending HL7 Message: {e}"
+
+         #####################code of the inherited method, starts from here
+        if not self._context.get('acs_online_transaction'):
+            if self.appointment_invoice_policy=='advance' and not self.invoice_id:
+                raise UserError(_('Invoice is not created yet'))
+
+            elif self.invoice_id and self.company_id.acs_check_appo_payment and self.payment_state not in ['in_payment','paid']:
+                raise UserError(_('Invoice is not Paid yet.')) 
+
+        if not self.user_id:
+            self.user_id = self.env.user.id
+
+        if self.patient_id.email and (self.company_id.acs_auto_appo_confirmation_mail or self._context.get('acs_online_transaction')):
+            template = self.env.ref('acs_hms.acs_appointment_email')
+            template.sudo().send_mail(self.id, raise_exception=False)
+        self.state = 'confirm'
+        #####################code of the inherited method, ends here
+
+
+        return self.display_acknowledgment_message(acknowledgment_message)
+
 
     @api.model
     def display_acknowledgment_message(self, message):
@@ -164,10 +226,10 @@ class Appointment(models.Model):
         }
         return action
 
-    def appointment_confirm(self):
-        rec = super(Appointment, self).appointment_confirm()
-        print(f"{self.date}    {self.date_to}--------------------------------------------------")
-        # rec.generate_outgoing_hl7_message()
-
-        return rec
+    # def appointment_confirm(self):
+    #     rec = super(Appointment, self).appointment_confirm()
+    #     print(f"{self.date}    {self.date_to}--------------------------------------------------")
+    #     rec.generate_outgoing_hl7_message()
+    #
+    #     return rec
 
